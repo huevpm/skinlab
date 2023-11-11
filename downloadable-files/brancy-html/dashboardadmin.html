@@ -41,7 +41,7 @@
     <div class="wrapper">
 
         <!--== Start Header Wrapper ==-->
-        <header class="header-area sticky-header">
+        <header class="header-area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-5 col-sm-6 col-lg-3">
@@ -119,130 +119,244 @@
         <!--== End Header Wrapper ==-->
 
         <main class="main-content">
-            <!--== Start Page Header Area Wrapper ==-->
-            <nav aria-label="breadcrumb" class="breadcrumb-style1">
-                <div class="container">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Faq</li>
-                    </ol>
-                </div>
-            </nav>
 
-            <!--== Start Faq Area Wrapper ==-->
-            <section class="faq-area">
+            <!--== Start Page Header Area Wrapper ==-->
+            <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
                 <div class="container">
-                    <div class="row flex-xl-row-reverse">
-                        <div class="col-lg-6 col-xl-7">
-                            <div class="faq-thumb">
-                                <img src="assets/images/photos/faq-home.png" width="601" height="368" alt="Image">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xl-5">
-                            <div class="faq-content">
-                                <div class="faq-text-img"><img src="assets/images/photos/faq.webp" width="199" height="169" alt="Image"></div>
-                                <h2 class="faq-title">Frequently Questions</h2>
-                                <div class="faq-line"></div>
-                                <p class="faq-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem has been the industry's standard</p>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="page-header-st3-content text-center text-md-start">
+                                <ol class="breadcrumb justify-content-center justify-content-md-start">
+                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active text-dark" aria-current="page">Tài khoản quản trị viên</li>
+                                </ol>
+                                <h2 class="page-header-title">Admin</h2>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <!--== End Page Header Area Wrapper ==-->
+
+            <!--== Start My Account Area Wrapper ==-->
+            <section class="my-account-area section-space">
+                <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="accordion" id="FaqAccordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading1">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                            Mauris congue euismod purus at semper. Morbi et vulputate massa?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="my-account-tab-menu nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="dashboad-tab" data-bs-toggle="tab" data-bs-target="#dashboad" type="button" role="tab" aria-controls="dashboad" aria-selected="true">Bảng điều khiển</button>
+                                <button class="nav-link" id="products-tab" data-bs-toggle="tab" data-bs-target="#products" type="button" role="tab" aria-controls="products" aria-selected="false"> Quản lý sản phẩm</button>
+                                <button class="nav-link" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="false"> Quản lý đơn hàng</button>
+                                <button class="nav-link" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs" type="button" role="tab" aria-controls="blogs" aria-selected="false"> Quản lý bài đăng</button>
+                                <button class="nav-link" id="account-info-tab" data-bs-toggle="tab" data-bs-target="#account-info" type="button" role="tab" aria-controls="account-info" aria-selected="false">Quản trị tài khoản</button>
+                                <button class="nav-link" onclick="window.location.href='account-login.html'" type="button">Đăng xuất</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="dashboad" role="tabpanel" aria-labelledby="dashboad-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Bảng điều khiển</h3>
+                                        <div class="welcome">
+                                            <p>Hello, <strong>Alex Tuntuni</strong> (If Not <strong>Tuntuni !</strong><a href="account-login.html" class="logout"> Logout</a>)</p>
+                                        </div>
+                                        <p>From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Quản lý sản phẩm</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Tên</th>
+                                                        <th>Dung tích</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Sữa rửa mặt</td>
+                                                        <td>300ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/BallPointPen.png" width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/Waste.png" width="20" height="20" alt="Images"></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tẩy trang</td>
+                                                        <td>50ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/BallPointPen.png" width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/Waste.png" width="20" height="20" alt="Images"></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Toner</td>
+                                                        <td>550ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/BallPointPen.png" width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img src="assets/images/icons/Waste.png" width="20" height="20" alt="Images"></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading2">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                            Donec mattis finibus elit ut tristique?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                                <div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách đơn hàng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Đơn</th>
+                                                        <th>Ngày đặt</th>
+                                                        <th>Trạng thái</th>
+                                                        <th>Thành tiền</th>
+                                                        <th>Chi tiết</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>DH0000001</td>
+                                                        <td>22/10/2023</td>
+                                                        <td>Đang giao hàng</td>
+                                                        <td>570.000</td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>DH0000002</td>
+                                                        <td>23/10/2023</td>
+                                                        <td>Đang xử lý</td>
+                                                        <td> 230.000 </td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading3">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                            Aenean elit orci, efficitur quis nisl at, accumsan?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                                <div class="tab-pane fade" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách bài đăng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Người đăng</th>
+                                                        <th>Thời gian</th>
+                                                        <th>Tiêu đề</th>
+                                                        <th>Chủ đề</th>
+                                                        <th>Chi tiết</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>22/10/2023</td>
+                                                        <td>Cách chọn sữa rửa mặt dành cho da dầu?</td>
+                                                        <td>Da dầu</td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td>23/10/2023</td>
+                                                        <td>Thực phẩm cải thiện làn da buổi sáng</td>
+                                                        <td> Kiến thức </td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading4">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                            Pellentesque habitant morbi tristique senectus et netus?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                               
+                                <div class="tab-pane fade" id="account-info" role="tabpanel" aria-labelledby="account-info-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Chỉnh sửa thông tin tài khoản</h3>
+                                        <div class="account-details-form">
+                                            <form action="#">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="single-input-item">
+                                                            <label for="email" class="required">Email</label>
+                                                            <input type="email" id="email" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="single-input-item">
+                                                            <label for="fullname" class="required">Họ và tên</label>
+                                                            <input type="text" id="fullname" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="phone" class="required">Số điện thoại</label>
+                                                    <input type="number" id="phone" />
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="address" class="required">Địa chỉ</label>
+                                                    <input type="text" id="address" />
+                                                </div>
+                                        
+                                                <div class="single-input-item">
+                                                    <button class="check-btn sqr-btn">Lưu thay đổi</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading5">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                            Nam pellentesque aliquam metus?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách Admin</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Email</th>
+                                                        <th>Họ và tên</th>
+                                                        <th>SĐT</th>  
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading6">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                            Aenean elit orci, efficitur quis nisl at?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading7">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                            Morbi gravida, nisi id fringilla ultricies, elit lorem?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading8">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                            Aenean elit orci, efficitur quis nisl at, accumsan?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#FaqAccordion">
-                                        <div class="accordion-body">
-                                            <p>Donec mattis finibus elit ut tristique. Nullam tempus nunc eget arcu vulputate, eu porttitor tellus commodo. Aliquam erat volutpat. Aliquam consectetur lorem eu viverra lobortis. Morbi gravida, nisi id fringilla ultricies, elit lorem eleifend lorem</p>
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách Khách hàng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Email</th>
+                                                        <th>Họ và tên</th>
+                                                        <th>SĐT</th>  
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -251,7 +365,7 @@
                     </div>
                 </div>
             </section>
-            <!--== End Faq Area Wrapper ==-->
+            <!--== End My Account Area Wrapper ==-->
 
         </main>
 
