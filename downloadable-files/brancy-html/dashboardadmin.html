@@ -42,7 +42,7 @@
     <div class="wrapper">
 
         <!--== Start Header Wrapper ==-->
-        <header class="header-area sticky-header">
+        <header class="header-area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-5 col-sm-6 col-lg-3">
@@ -181,26 +181,17 @@
         <main class="main-content">
 
             <!--== Start Page Header Area Wrapper ==-->
-            <nav aria-label="breadcrumb" class="breadcrumb-style1 mb-10">
+            <section class="page-header-area pt-10 pb-9" data-bg-color="#FFF3DA">
                 <div class="container">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                    </ol>
-                </div>
-            </nav>
-
-            <section class="page-header-area page-header-style2-area"
-                data-bg-img="assets/images/photos/page-header1.png">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-7">
-                            <div class="page-header-content page-header-st2-content">
-                                <div class="title-img"><img src="assets/images/photos/page-header-text1.webp"
-                                        alt="Image"></div>
-                                <h2 class="page-header-title">Whats the beauty secrets?</h2>
-                                <p class="page-header-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                                    aliquam, purus sit amet luctus venenatis.</p>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="page-header-st3-content text-center text-md-start">
+                                <ol class="breadcrumb justify-content-center justify-content-md-start">
+                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active text-dark" aria-current="page">Tài khoản quản trị
+                                        viên</li>
+                                </ol>
+                                <h2 class="page-header-title">Admin</h2>
                             </div>
                         </div>
                     </div>
@@ -208,384 +199,277 @@
             </section>
             <!--== End Page Header Area Wrapper ==-->
 
-            <!--== Start Blog Area Wrapper ==-->
-            <section class="section-space pb-0">
+            <!--== Start My Account Area Wrapper ==-->
+            <section class="my-account-area section-space">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="section-title text-center">
-                                <h2 class="title">New Posts</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                                    luctus venenatis</p>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="my-account-tab-menu nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="dashboad-tab" data-bs-toggle="tab"
+                                    data-bs-target="#dashboad" type="button" role="tab" aria-controls="dashboad"
+                                    aria-selected="true">Bảng điều khiển</button>
+                                <button class="nav-link" id="products-tab" data-bs-toggle="tab"
+                                    data-bs-target="#products" type="button" role="tab" aria-controls="products"
+                                    aria-selected="false"> Quản lý sản phẩm</button>
+                                <button class="nav-link" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders"
+                                    type="button" role="tab" aria-controls="orders" aria-selected="false"> Quản lý đơn
+                                    hàng</button>
+                                <button class="nav-link" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs"
+                                    type="button" role="tab" aria-controls="blogs" aria-selected="false"> Quản lý bài
+                                    đăng</button>
+                                <button class="nav-link" id="account-info-tab" data-bs-toggle="tab"
+                                    data-bs-target="#account-info" type="button" role="tab" aria-controls="account-info"
+                                    aria-selected="false">Quản trị tài khoản</button>
+                                <button class="nav-link" onclick="window.location.href='account-login.html'"
+                                    type="button">Đăng xuất</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-n9">
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/1.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
+                        <div class="col-lg-9 col-md-8">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="dashboad" role="tabpanel"
+                                    aria-labelledby="dashboad-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Bảng điều khiển</h3>
+                                        <div class="welcome">
+                                            <p>Hello, <strong>Alex Tuntuni</strong> (If Not <strong>Tuntuni !</strong><a
+                                                    href="account-login.html" class="logout"> Logout</a>)</p>
+                                        </div>
+                                        <p>From your account dashboard. you can easily check & view your recent orders,
+                                            manage your shipping and billing addresses and edit your password and
+                                            account details.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/4.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-two" data-bg-color="#A49CFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Benefit of Hot Ston Spa for your
-                                            health & life.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-12 col-lg-4 mb-8">
-                            <div class="row mb-n10">
-                                <div class="col-md-6  col-lg-12 mb-10">
-                                    <!--== Start Blog Item ==-->
-                                    <div class="post-item">
-                                        <div class="content">
-                                            <h4 class="title mt-0"><a href="blog-details.html">Lorem ipsum dolor sit
-                                                    amet, consectetur adipiscing</a></h4>
-                                            <p class="desc">Lorem ipsum dolor sit amet, conseur adipiscing elit ut
-                                                aliqua, purus sit amet luctus venenatis.</p>
-                                            <a class="btn-link" href="blog.html">Learn more</a>
+                                <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Quản lý sản phẩm</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Tên</th>
+                                                        <th>Dung tích</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Sữa rửa mặt</td>
+                                                        <td>300ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tẩy trang</td>
+                                                        <td>50ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Toner</td>
+                                                        <td>550ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    width="30" height="30" alt="Images"></a>
+                                                            <a href="#" class="check-btn sqr-btn "><img
+                                                                    src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images"></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                    <!--== End Blog Item ==-->
                                 </div>
-                                <div class="col-md-6  col-lg-12 mb-10 pt-0 pt-lg-4">
-                                    <!--== Start Blog Item ==-->
-                                    <div class="post-item">
-                                        <div class="content">
-                                            <h4 class="title mt-0"><a href="blog-details.html">Facial Scrub is natural
-                                                    treatment for face.</a></h4>
-                                            <p class="desc">Lorem ipsum dolor sit amet, conseur adipiscing elit ut
-                                                aliqua, purus.</p>
-                                            <a class="btn-link" href="blog.html">Learn more</a>
+                                <div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách đơn hàng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Đơn</th>
+                                                        <th>Ngày đặt</th>
+                                                        <th>Trạng thái</th>
+                                                        <th>Thành tiền</th>
+                                                        <th>Chi tiết</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>DH0000001</td>
+                                                        <td>22/10/2023</td>
+                                                        <td>Đang giao hàng</td>
+                                                        <td>570.000</td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i
+                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>DH0000002</td>
+                                                        <td>23/10/2023</td>
+                                                        <td>Đang xử lý</td>
+                                                        <td> 230.000 </td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i
+                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                    <!--== End Blog Item ==-->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End Blog Area Wrapper ==-->
+                                <div class="tab-pane fade" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách bài đăng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Người đăng</th>
+                                                        <th>Thời gian</th>
+                                                        <th>Tiêu đề</th>
+                                                        <th>Chủ đề</th>
+                                                        <th>Chi tiết</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>22/10/2023</td>
+                                                        <td>Cách chọn sữa rửa mặt dành cho da dầu?</td>
+                                                        <td>Da dầu</td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i
+                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td>23/10/2023</td>
+                                                        <td>Thực phẩm cải thiện làn da buổi sáng</td>
+                                                        <td> Kiến thức </td>
+                                                        <td><a href="#/" class="check-btn sqr-btn"><i
+                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <!--== Start Blog Area Wrapper ==-->
-            <section class="section-space">
-                <div class="container">
-                    <div class="row mb-n9">
-                        <div class="col-sm-6 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/col6-1.png" width="570" height="340"
-                                        alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <h4 class="title"><a href="blog-details.html">Facial Scrub is natural treatment for
-                                            face.</a></h4>
-                                    <p class="desc">Lorem ipsum dolor sit amet, conseur adipiscing elit ut aliqua, purus
-                                        sit amet luctus venenatis.</p>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/col6-2.png" width="570" height="340"
-                                        alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <h4 class="title"><a href="blog-details.html">Benefit of Hot Ston Spa for your
-                                            health</a></h4>
-                                    <p class="desc">Lorem ipsum dolor sit amet, conseur adipiscing elit ut aliqua, purus
-                                        sit amet luctus venenatis.</p>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End Blog Area Wrapper ==-->
+                                <div class="tab-pane fade" id="account-info" role="tabpanel"
+                                    aria-labelledby="account-info-tab">
+                                    <div class="myaccount-content">
+                                        <h3>Chỉnh sửa thông tin tài khoản</h3>
+                                        <div class="account-details-form">
+                                            <form action="#">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="single-input-item">
+                                                            <label for="email" class="required">Email</label>
+                                                            <input type="email" id="email" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="single-input-item">
+                                                            <label for="fullname" class="required">Họ và tên</label>
+                                                            <input type="text" id="fullname" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="phone" class="required">Số điện thoại</label>
+                                                    <input type="number" id="phone" />
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="address" class="required">Địa chỉ</label>
+                                                    <input type="text" id="address" />
+                                                </div>
 
-            <!--== Start Blog Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-title text-center">
-                                <h2 class="title">Others Posts</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                                    luctus venenatis</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-n9">
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/1.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
+                                                <div class="single-input-item">
+                                                    <button class="check-btn sqr-btn">Lưu thay đổi</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách Admin</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Email</th>
+                                                        <th>Họ và tên</th>
+                                                        <th>SĐT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="myaccount-content">
+                                        <h3>Danh sách Khách hàng</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Email</th>
+                                                        <th>Họ và tên</th>
+                                                        <th>SĐT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/2.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-two" data-bg-color="#A49CFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/3.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-three" data-bg-color="#9CDBFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/5.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/6.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-two" data-bg-color="#A49CFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/7.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-three" data-bg-color="#9CDBFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
                         </div>
                     </div>
                 </div>
             </section>
-            <!--== End Blog Area Wrapper ==-->
-
-            <!--== Start Product Banner Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-sm-10 col-lg-8">
-                            <!--== Start Product Category Item ==-->
-                            <a href="product.html" class="product-banner-item">
-                                <img src="assets/images/shop/banner/8.png" width="770" height="250" alt="Image-HasTech">
-                            </a>
-                            <!--== End Product Category Item ==-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End Product Banner Area Wrapper ==-->
-
-            <!--== Start Blog Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="row mb-n9">
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/1.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category" href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/2.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-two" data-bg-color="#A49CFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <!--== Start Blog Item ==-->
-                            <div class="post-item">
-                                <a href="blog-details.html" class="thumb">
-                                    <img src="assets/images/blog/3.png" width="370" height="320" alt="Image-HasTech">
-                                </a>
-                                <div class="content">
-                                    <a class="post-category post-category-three" data-bg-color="#9CDBFF"
-                                        href="blog.html">beauty</a>
-                                    <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor sit amet consectetur
-                                            adipiscing.</a></h4>
-                                    <ul class="meta">
-                                        <li class="author-info"><span>By:</span> <a href="blog.html">Tomas De Momen</a>
-                                        </li>
-                                        <li class="post-date">February 13, 2022</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--== End Blog Item ==-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End Blog Area Wrapper ==-->
-
-            <!--== Start News Letter Area Wrapper ==-->
-            <section class="section-space pt-0">
-                <div class="container">
-                    <div class="newsletter-content-wrap" data-bg-img="assets/images/photos/bg1.webp">
-                        <div class="newsletter-content">
-                            <div class="section-title mb-0">
-                                <h2 class="title">Join with us</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.</p>
-                            </div>
-                        </div>
-                        <div class="newsletter-form">
-                            <form>
-                                <input type="email" class="form-control" placeholder="enter your email">
-                                <button class="btn-submit" type="submit"><i class="fa fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--== End News Letter Area Wrapper ==-->
+            <!--== End My Account Area Wrapper ==-->
 
         </main>
 
@@ -655,6 +539,7 @@
             <!--== End Footer Bottom ==-->
         </footer>
         <!--== End Footer Area Wrapper ==-->
+
 
         <!--== Scroll Top Button ==-->
         <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
