@@ -33,6 +33,43 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 500px; /* Đặt kích thước chiều rộng */
+            height: 800px; /* Đặt kích thước chiều cao */
+            border: 300px;
+        }
+        /* CSS nút tắt modal */
+            .closemodal button{
+            width:40px;
+            height:40px;
+            font-size:20px;
+            padding:0px;
+            border-radius:100%;
+            background:#333;
+            color:#fff;
+            border:none;
+            }
+            .nenmodal.active .nenmodal2 {
+            display:block;
+            }
+        /* CSS bao bọc của nút tắt Modal */
+            .nenmodal .closemodal {
+            text-align:center;
+            margin-top:-30px;
+            margin-bottom:10px;
+            }
+
+    </style>
+    
 
 </head>
 
@@ -257,20 +294,58 @@
                                                         <td>Sữa rửa mặt</td>
                                                         <td>300ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png"
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
                                                                     width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png" width="20"
-                                                                    height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
-
+                                                    <div id="popup1" class="popup">
+                                                        <div class="closemodal"><button onclick="closePopup(popup1)">×</button></div>
+                                                        <h3>Cập nhật thông tin sản phẩm</h3>
+                                                        <div class="account-details-form">
+                                                            <form action="#">
+                                                                <div class="nenmodal2"></div>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name" class="required">Tên sản phẩm</label>
+                                                                    <input type="text" id="display-name" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="danhmuc" class="required">Danh mục</label>
+                                                                    <input type="danhmuc" id="danhmuc" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="trongluong" class="required">Trọng lượng</label>
+                                                                    <input type="trongluong" id="trongluong" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="price" class="required">Giá bán</label>
+                                                                    <input type="price" id="price" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="description" class="required">Mô tả sản phẩm</label>
+                                                                    <input type="description" id="description" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    Cập nhật hình ảnh
+                                                                    <label>
+                                                                        <a href="#/" class="check-btn sqr-btn">
+                                                                            <i class="fa fa-cloud-upload"></i> Tải ảnh lên </a>
+                                                                    </label>
+                                                                    
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                                </div>
+                                                        </div>
+                                                    </div>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Tẩy trang</td>
                                                         <td>50ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn "><img
-                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
                                                                     width="30" height="30" alt="Images"></a>
                                                             <a href="#" class="check-btn sqr-btn "><img
                                                                     src="assets/images/icons/Waste.png" width="20"
@@ -282,7 +357,7 @@
                                                         <td>Toner</td>
                                                         <td>550ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn "><img
-                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    src="assets/images/icons/BallPointPen.png"  onclick="showPopup('popup1')"
                                                                     width="30" height="30" alt="Images"></a>
                                                             <a href="#" class="check-btn sqr-btn "><img
                                                                     src="assets/images/icons/Waste.png" width="20"
@@ -373,7 +448,46 @@
 
                                 <div class="tab-pane fade" id="account-info" role="tabpanel"
                                     aria-labelledby="account-info-tab">
+                                    
                                     <div class="myaccount-content">
+                                        <h3>Danh sách Admin</h3>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Email</th>
+                                                        <th>Họ và tên</th>
+                                                        <th>SĐT</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="popup2" class="popup">
+                                        <div class="closemodal"><button onclick="closePopup(popup2)">×</button></div>
                                         <h3>Chỉnh sửa thông tin tài khoản</h3>
                                         <div class="account-details-form">
                                             <form action="#">
@@ -399,40 +513,11 @@
                                                     <label for="address" class="required">Địa chỉ</label>
                                                     <input type="text" id="address" />
                                                 </div>
-
                                                 <div class="single-input-item">
                                                     <button class="check-btn sqr-btn">Lưu thay đổi</button>
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>
-                                    <div class="myaccount-content">
-                                        <h3>Danh sách Admin</h3>
-                                        <div class="myaccount-table table-responsive text-center">
-                                            <table class="table table-bordered">
-                                                <thead class="thead-light">
-                                                    <tr>
-                                                        <th>STT</th>
-                                                        <th>Email</th>
-                                                        <th>Họ và tên</th>
-                                                        <th>SĐT</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>abc@gmail.com</td>
-                                                        <td>Nguyễn Văn A</td>
-                                                        <td>0919000000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>xyz@gmail.com</td>
-                                                        <td>Nguyễn Thị B</td>
-                                                        <td> 012345877999</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                     <div class="myaccount-content">
@@ -799,6 +884,19 @@
 
     <!-- Custom Main JS -->
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        function showPopup(popupId) {
+        var popup = document.getElementById(popupId);
+        popup.style.display = "block";
+        }
+        function closePopup(popupId) {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+
+        
+    </script>
 
 </body>
 
