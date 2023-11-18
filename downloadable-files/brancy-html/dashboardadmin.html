@@ -302,7 +302,7 @@
                                                         </td>
                                                     </tr>
                                                     <div id="popup1" class="popup">
-                                                        <div class="closemodal"><button onclick="closePopup(popup1)">×</button></div>
+                                                        <div class="closemodal"><button onclick="closePopup('popup1')">×</button></div>
                                                         <h3>Cập nhật thông tin sản phẩm</h3>
                                                         <div class="account-details-form">
                                                             <form action="#">
@@ -481,45 +481,49 @@
                                                         <td>xyz@gmail.com</td>
                                                         <td>Nguyễn Thị B</td>
                                                         <td> 012345877999</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
                                                     </tr>
+                                                    <div id="popup2" class="popup">
+                                                        <div class="closemodal"><button onclick="closePopup('popup2')">×</button>
+                                                        </div>
+                                                        <h3>Chỉnh sửa thông tin tài khoản</h3>
+                                                        <div class="account-details-form">
+                                                            <form action="#">
+                                                                <div class="nenmodal2"></div>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name" class="required">Email</label>
+                                                                    <input type="email" id="email" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="name" class="required">Họ và tên</label>
+                                                                    <input type="text" id="name" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="address" class="required">Địa chỉ</label>
+                                                                    <input type="text" id="address" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="phone" class="required">Số điện thoại</label>
+                                                                    <input type="phone" id="phone" />
+                                                                </div>
+                                                        
+                                                                <div class="single-input-item">
+                                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                                </div>
+                                                            </div>
+                                                    </div>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div id="popup2" class="popup">
-                                        <div class="closemodal"><button onclick="closePopup(popup2)">×</button></div>
-                                        <h3>Chỉnh sửa thông tin tài khoản</h3>
-                                        <div class="account-details-form">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="single-input-item">
-                                                            <label for="email" class="required">Email</label>
-                                                            <input type="email" id="email" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="single-input-item">
-                                                            <label for="fullname" class="required">Họ và tên</label>
-                                                            <input type="text" id="fullname" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="single-input-item">
-                                                    <label for="phone" class="required">Số điện thoại</label>
-                                                    <input type="number" id="phone" />
-                                                </div>
-                                                <div class="single-input-item">
-                                                    <label for="address" class="required">Địa chỉ</label>
-                                                    <input type="text" id="address" />
-                                                </div>
-                                                <div class="single-input-item">
-                                                    <button class="check-btn sqr-btn">Lưu thay đổi</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        </div>
-                                    </div>
+                                                
+
                                     <div class="myaccount-content">
                                         <h3>Danh sách Khách hàng</h3>
                                         <div class="myaccount-table table-responsive text-center">
@@ -538,12 +542,26 @@
                                                         <td>abc@gmail.com</td>
                                                         <td>Nguyễn Văn A</td>
                                                         <td>0919000000</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>xyz@gmail.com</td>
                                                         <td>Nguyễn Thị B</td>
                                                         <td> 012345877999</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -891,11 +909,9 @@
         popup.style.display = "block";
         }
         function closePopup(popupId) {
-            var popup = document.getElementById("popup");
+            var popup = document.getElementById(popupId);
             popup.style.display = "none";
         }
-
-        
     </script>
 
 </body>
