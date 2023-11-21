@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Brancy - Cosmetic & Beauty Salon Website Template</title>
+    <title>Skinlab - dashboard admin</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="Brancy - Cosmetic & Beauty Salon Website Template">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +44,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             width: 500px; /* Đặt kích thước chiều rộng */
-            height: 800px; /* Đặt kích thước chiều cao */
+            height: 760px; /* Đặt kích thước chiều cao */
             border: 300px;
         }
         /* CSS nút tắt modal */
@@ -63,11 +63,9 @@
             }
         /* CSS bao bọc của nút tắt Modal */
             .nenmodal .closemodal {
-            text-align:center;
-            margin-top:-30px;
-            margin-bottom:10px;
+            padding-top: 10px;
+            padding-right: 10px;
             }
-
     </style>
     
 
@@ -85,7 +83,7 @@
                     <div class="col-5 col-sm-6 col-lg-3">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img class="logo-main" src="assets/images/logo.webp" width="95" height="68"
+                                <img class="logo-main" src="assets/images/logo.png" width="95" height="68"
                                     alt="Logo" />
                             </a>
                         </div>
@@ -224,11 +222,11 @@
                         <div class="col-md-5">
                             <div class="page-header-st3-content text-center text-md-start">
                                 <ol class="breadcrumb justify-content-center justify-content-md-start">
-                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Trang chủ</a></li>
                                     <li class="breadcrumb-item active text-dark" aria-current="page">Tài khoản quản trị
                                         viên</li>
                                 </ol>
-                                <h2 class="page-header-title">Admin</h2>
+                                <h2 class="page-header-title">Quản trị viên</h2>
                             </div>
                         </div>
                     </div>
@@ -289,18 +287,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Sữa rửa mặt</td>
-                                                        <td>300ml</td>
-                                                        <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
-                                                            <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
-                                                        </td>
-                                                    </tr>
+                                                    <!--Start Popup Edit Inf Product-->
                                                     <div id="popup1" class="popup">
                                                         <div class="closemodal"><button onclick="closePopup('popup1')">×</button></div>
                                                         <h3>Cập nhật thông tin sản phẩm</h3>
@@ -340,6 +327,19 @@
                                                                 </div>
                                                         </div>
                                                     </div>
+                                                    <!--End Popup Edit Inf Product-->
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Sữa rửa mặt</td>
+                                                        <td>300ml</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Tẩy trang</td>
@@ -390,7 +390,7 @@
                                                         <td>Đang giao hàng</td>
                                                         <td>570.000</td>
                                                         <td><a href="#/" class="check-btn sqr-btn"><i
-                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                                    class="fa fa-cloud-download"></i> Tải chi tiết</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -399,7 +399,7 @@
                                                         <td>Đang xử lý</td>
                                                         <td> 230.000 </td>
                                                         <td><a href="#/" class="check-btn sqr-btn"><i
-                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                                    class="fa fa-cloud-download"></i> Tải chi tiết </a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -463,33 +463,8 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>abc@gmail.com</td>
-                                                        <td>Nguyễn Văn A</td>
-                                                        <td>0919000000</td>
-                                                        <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
-                                                            <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>xyz@gmail.com</td>
-                                                        <td>Nguyễn Thị B</td>
-                                                        <td> 012345877999</td>
-                                                        <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
-                                                            <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
-                                                        </td>
-                                                    </tr>
-                                                    <div id="popup2" class="popup">
+                                                     <!--Start Popup edit inf Admin and Customer-->
+                                                     <div id="popup2" class="popup">
                                                         <div class="closemodal"><button onclick="closePopup('popup2')">×</button>
                                                         </div>
                                                         <h3>Chỉnh sửa thông tin tài khoản</h3>
@@ -518,12 +493,37 @@
                                                                 </div>
                                                             </div>
                                                     </div>
+                                                     <!--End Popup edit inf Admin and Customer-->
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>abc@gmail.com</td>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>0919000000</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>xyz@gmail.com</td>
+                                                        <td>Nguyễn Thị B</td>
+                                                        <td> 012345877999</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
+                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png"  
+                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>
-                                                
-
+                                    </div>   
                                     <div class="myaccount-content">
                                         <h3>Danh sách Khách hàng</h3>
                                         <div class="myaccount-table table-responsive text-center">
