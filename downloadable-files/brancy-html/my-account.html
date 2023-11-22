@@ -29,9 +29,47 @@
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/plugins/fancybox.min.css">
     <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            /* Đặt kích thước chiều rộng */
+            height: 760px;
+            /* Đặt kích thước chiều cao */
+            border: 300px;
+        }
+
+        /* CSS nút tắt modal */
+        .closemodal button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            padding: 0px;
+            border-radius: 100%;
+            background: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .nenmodal.active .nenmodal2 {
+            display: block;
+        }
+
+        /* CSS bao bọc của nút tắt Modal */
+        .nenmodal .closemodal {
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+    </style>
 
 </head>
 
@@ -293,15 +331,53 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel" aria-labelledby="address-edit-tab">
+                                    <div>
+                                        <!--Start Popup Edit Inf Product-->
+                                        <div id="popup1" class="popup">
+                                            <div class="closemodal"><button
+                                                    onclick="closePopup('popup1')">×</button></div>
+                                            <h3>Cập nhật thông tin sản phẩm</h3>
+                                            <div class="account-details-form">
+                                                <form action="#">
+                                                    <div class="nenmodal2"></div>
+                                                    <div class="single-input-item">
+                                                        <label for="display-name" class="required">Tên người nhận</label>
+                                                        <input type="text" id="display-name" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <label for="diachi" class="required">Địa chỉ</label>
+                                                        <input type="diachi" id="diachi" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <label for="sodienthoai" class="required">Số điện thoại</label>
+                                                        <input type="sodienthoai" id="sodienthoai" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <button class="check-btn sqr-btn">LƯU THAY
+                                                            ĐỔI</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--End Popup Edit Inf Product-->
+                                    </div>
                                     <div class="myaccount-content">
                                         <h3>Địa chỉ giao hàng</h3>
                                         <address>
-                                            <p><strong>Nguyễn Thị Ngọc</strong>  <a href="#/" class="check-btn sqr-btn"><i class="fa fa-delete"></i><img src="assets/images/icons/Waste.png" style="float: right";></a></p>
-                                            <p>1355 Phạm Văn Đồng, phường 5, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+                                            <p><strong>Nguyễn Thị Ngọc</strong> 
+                                                <a href="#" class="check-btn sqr-btn "><img
+                                                    src="assets/images/icons/Waste.png" style="float: right" width="20"
+                                                    height="20" alt="Images"></a>
+                                                <a href="#" class="check-btn sqr-btn " onclick="showPopup('popup1')"><img
+                                                    src="assets/images/icons/BallPointPen.png" style="float: right"
+                                                    width="30" height="30"
+                                                    alt="Images"></a>
+                                            <p>1355 Phạm Văn Đồng, phường 5, TP. Thủ Đức, TP. Hồ Chí Minh</p> 
                                             <p>Số điện thoại: 0123456789</p>
                                         </address>
-                                        <a href="#/" class="check-btn sqr-btn"><i class="fa fa-edit"></i>Thay đổi địa chỉ giao hàng</a>
+                                        <a href="#/" class="check-btn sqr-btn">+&nbsp;&nbsp;Thêm địa chỉ giao hàng</a>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -588,6 +664,16 @@
 
     <!-- Custom Main JS -->
     <script src="./assets/js/main.js"></script>
+    <script>
+        function showPopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = "block";
+        }
+        function closePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = "none";
+        }
+    </script>
 
 </body>
 
