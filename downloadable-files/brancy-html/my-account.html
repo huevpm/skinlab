@@ -50,14 +50,15 @@
 
         /* CSS nút tắt modal */
         .closemodal button {
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
             padding: 0px;
             border-radius: 100%;
             background: #333;
             color: #fff;
             border: none;
+            float: right;
         }
 
         .nenmodal.active .nenmodal2 {
@@ -349,12 +350,12 @@
                                             <p>1355 Phạm Văn Đồng, phường 5, TP. Thủ Đức, TP. Hồ Chí Minh</p> 
                                             <p>Số điện thoại: 0123456789</p>
                                         </address>
-                                        <a href="#/" class="check-btn sqr-btn">+&nbsp;&nbsp;Thêm địa chỉ giao hàng</a>
-                                        <!--Start Popup Edit Inf Product-->
-                                        <div id="popup1" class="popup">
+                                        <a href="#" class="check-btn sqr-btn" onclick="showPopup('popup2')" style="color: red">+&nbsp;&nbsp;Thêm địa chỉ giao hàng</a>
+                                        <!--Start Popup Add New Address-->
+                                        <div id="popup2" class="popup">
                                             <div class="closemodal"><button
-                                                    onclick="closePopup('popup1')">×</button></div>
-                                            <h3>Cập nhật thông tin sản phẩm</h3>
+                                                    onclick="closePopup('popup2')">×</button></div>
+                                            <h3>Thêm Địa Chỉ Mới</h3>
                                             <div class="account-details-form">
                                                 <form action="#">
                                                     <div class="nenmodal2"></div>
@@ -371,13 +372,39 @@
                                                         <input type="sodienthoai" id="sodienthoai" />
                                                     </div>
                                                     <div class="single-input-item">
-                                                        <button class="check-btn sqr-btn">LƯU THAY
-                                                            ĐỔI</button>
+                                                        <button class="check-btn sqr-btn">LƯU</button>
                                                     </div>
                                                 </form>
                                             </div>
                                         </div>
-                                        <!--End Popup Edit Inf Product-->
+                                        <!--End Popup Add New Address-->
+                                        <!--Start Popup Edit Address-->
+                                        <div id="popup1" class="popup">
+                                            <div class="closemodal"><button
+                                                    onclick="closePopup('popup1')">×</button></div>
+                                            <h3>Cập Nhật Địa Chỉ</h3>
+                                            <div class="account-details-form">
+                                                <form action="#">
+                                                    <div class="nenmodal2"></div>
+                                                    <div class="single-input-item">
+                                                        <label for="display-name" class="required">Tên người nhận</label>
+                                                        <input type="text" id="display-name" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <label for="diachi" class="required">Địa chỉ</label>
+                                                        <input type="diachi" id="diachi" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <label for="sodienthoai" class="required">Số điện thoại</label>
+                                                        <input type="sodienthoai" id="sodienthoai" />
+                                                    </div>
+                                                    <div class="single-input-item">
+                                                        <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--End Popup Edit Address-->
                                     </div>
                                     
                                 </div>
