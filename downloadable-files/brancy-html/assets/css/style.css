@@ -3256,6 +3256,24 @@ hr {
   text-align: center;
 }
 
+.product-action-modal .product-action-view-content .button-delete {
+  border: none;
+  background-color: #FF6565;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px 40px;
+  line-height: 1;
+  color: #fff;
+  font-size: 13px;
+  margin-left: 80px;
+  
+}
+.product-action-modal .product-action-view-content .button-delete:hover {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
 .shop-top-bar-area {
   border-bottom: 1px solid #A8DADC;
 }

@@ -43,31 +43,36 @@
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 500px; /* Đặt kích thước chiều rộng */
-            height: 760px; /* Đặt kích thước chiều cao */
+            width: 500px;
+            /* Đặt kích thước chiều rộng */
+            height: 760px;
+            /* Đặt kích thước chiều cao */
             border: 300px;
         }
+
         /* CSS nút tắt modal */
-            .closemodal button{
-            width:40px;
-            height:40px;
-            font-size:20px;
-            padding:0px;
-            border-radius:100%;
-            background:#333;
-            color:#fff;
-            border:none;
-            }
-            .nenmodal.active .nenmodal2 {
-            display:block;
-            }
+        .closemodal button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            padding: 0px;
+            border-radius: 100%;
+            background: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .nenmodal.active .nenmodal2 {
+            display: block;
+        }
+
         /* CSS bao bọc của nút tắt Modal */
-            .nenmodal .closemodal {
+        .nenmodal .closemodal {
             padding-top: 10px;
             padding-right: 10px;
-            }
+        }
     </style>
-    
+
 
 </head>
 
@@ -83,8 +88,7 @@
                     <div class="col-5 col-sm-6 col-lg-3">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img class="logo-main" src="assets/images/logo.png" width="95" height="68"
-                                    alt="Logo" />
+                                <img class="logo-main" src="assets/images/logo.png" width="95" height="68" alt="Logo" />
                             </a>
                         </div>
                     </div>
@@ -222,7 +226,8 @@
                         <div class="col-md-5">
                             <div class="page-header-st3-content text-center text-md-start">
                                 <ol class="breadcrumb justify-content-center justify-content-md-start">
-                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Trang chủ</a></li>
+                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Trang chủ</a>
+                                    </li>
                                     <li class="breadcrumb-item active text-dark" aria-current="page">Tài khoản quản trị
                                         viên</li>
                                 </ol>
@@ -289,7 +294,8 @@
                                                 <tbody>
                                                     <!--Start Popup Edit Inf Product-->
                                                     <div id="popup1" class="popup">
-                                                        <div class="closemodal"><button onclick="closePopup('popup1')">×</button></div>
+                                                        <div class="closemodal"><button
+                                                                onclick="closePopup('popup1')">×</button></div>
                                                         <h3>Cập nhật thông tin sản phẩm</h3>
                                                         <div class="account-details-form">
                                                             <form action="#">
@@ -311,20 +317,23 @@
                                                                     <input type="price" id="price" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <label for="description" class="required">Mô tả sản phẩm</label>
+                                                                    <label for="description" class="required">Mô tả sản
+                                                                        phẩm</label>
                                                                     <input type="description" id="description" />
                                                                 </div>
                                                                 <div class="single-input-item">
                                                                     Cập nhật hình ảnh
                                                                     <label>
                                                                         <a href="#/" class="check-btn sqr-btn">
-                                                                            <i class="fa fa-cloud-upload"></i> Tải ảnh lên </a>
+                                                                            <i class="fa fa-cloud-upload"></i> Tải ảnh
+                                                                            lên </a>
                                                                     </label>
-                                                                    
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                                    <button class="check-btn sqr-btn">LƯU THAY
+                                                                        ĐỔI</button>
                                                                 </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                     <!--End Popup Edit Inf Product-->
@@ -333,11 +342,14 @@
                                                         <td>Sữa rửa mặt</td>
                                                         <td>300ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup1')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -345,8 +357,9 @@
                                                         <td>Tẩy trang</td>
                                                         <td>50ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn "><img
-                                                                    src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup1')"
-                                                                    width="30" height="30" alt="Images"></a>
+                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup1')" width="30" height="30"
+                                                                    alt="Images"></a>
                                                             <a href="#" class="check-btn sqr-btn "><img
                                                                     src="assets/images/icons/Waste.png" width="20"
                                                                     height="20" alt="Images"></a>
@@ -357,8 +370,9 @@
                                                         <td>Toner</td>
                                                         <td>550ml</td>
                                                         <td><a href="#" class="check-btn sqr-btn "><img
-                                                                    src="assets/images/icons/BallPointPen.png"  onclick="showPopup('popup1')"
-                                                                    width="30" height="30" alt="Images"></a>
+                                                                    src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup1')" width="30" height="30"
+                                                                    alt="Images"></a>
                                                             <a href="#" class="check-btn sqr-btn "><img
                                                                     src="assets/images/icons/Waste.png" width="20"
                                                                     height="20" alt="Images"></a>
@@ -418,7 +432,7 @@
                                                         <th>Thời gian</th>
                                                         <th>Tiêu đề</th>
                                                         <th>Chủ đề</th>
-                                                        <th>Chi tiết</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -427,8 +441,15 @@
                                                         <td>22/10/2023</td>
                                                         <td>Cách chọn sữa rửa mặt dành cho da dầu?</td>
                                                         <td>Da dầu</td>
-                                                        <td><a href="#/" class="check-btn sqr-btn"><i
-                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#action-ConfirmModal"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -436,8 +457,15 @@
                                                         <td>23/10/2023</td>
                                                         <td>Thực phẩm cải thiện làn da buổi sáng</td>
                                                         <td> Kiến thức </td>
-                                                        <td><a href="#/" class="check-btn sqr-btn"><i
-                                                                    class="fa fa-cloud-download"></i> Download File</a>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -448,7 +476,7 @@
 
                                 <div class="tab-pane fade" id="account-info" role="tabpanel"
                                     aria-labelledby="account-info-tab">
-                                    
+
                                     <div class="myaccount-content">
                                         <h3>Danh sách Admin</h3>
                                         <div class="myaccount-table table-responsive text-center">
@@ -459,20 +487,22 @@
                                                         <th>Email</th>
                                                         <th>Họ và tên</th>
                                                         <th>SĐT</th>
-                                                       
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                     <!--Start Popup edit inf Admin and Customer-->
-                                                     <div id="popup2" class="popup">
-                                                        <div class="closemodal"><button onclick="closePopup('popup2')">×</button>
+                                                    <!--Start Popup edit inf Admin and Customer-->
+                                                    <div id="popup2" class="popup">
+                                                        <div class="closemodal"><button
+                                                                onclick="closePopup('popup2')">×</button>
                                                         </div>
                                                         <h3>Chỉnh sửa thông tin tài khoản</h3>
                                                         <div class="account-details-form">
                                                             <form action="#">
                                                                 <div class="nenmodal2"></div>
                                                                 <div class="single-input-item">
-                                                                    <label for="display-name" class="required">Email</label>
+                                                                    <label for="display-name"
+                                                                        class="required">Email</label>
                                                                     <input type="email" id="email" />
                                                                 </div>
                                                                 <div class="single-input-item">
@@ -480,31 +510,38 @@
                                                                     <input type="text" id="name" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <label for="address" class="required">Địa chỉ</label>
+                                                                    <label for="address" class="required">Địa
+                                                                        chỉ</label>
                                                                     <input type="text" id="address" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <label for="phone" class="required">Số điện thoại</label>
+                                                                    <label for="phone" class="required">Số điện
+                                                                        thoại</label>
                                                                     <input type="phone" id="phone" />
                                                                 </div>
-                                                        
+
                                                                 <div class="single-input-item">
-                                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                                    <button class="check-btn sqr-btn">LƯU THAY
+                                                                        ĐỔI</button>
                                                                 </div>
-                                                            </div>
+                                                            </form>
+                                                        </div>
                                                     </div>
-                                                     <!--End Popup edit inf Admin and Customer-->
+                                                    <!--End Popup edit inf Admin and Customer-->
                                                     <tr>
                                                         <td>1</td>
                                                         <td>abc@gmail.com</td>
                                                         <td>Nguyễn Văn A</td>
                                                         <td>0919000000</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -513,17 +550,20 @@
                                                         <td>Nguyễn Thị B</td>
                                                         <td> 012345877999</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>   
+                                    </div>
                                     <div class="myaccount-content">
                                         <h3>Danh sách Khách hàng</h3>
                                         <div class="myaccount-table table-responsive text-center">
@@ -543,11 +583,14 @@
                                                         <td>Nguyễn Văn A</td>
                                                         <td>0919000000</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -556,11 +599,14 @@
                                                         <td>Nguyễn Thị B</td>
                                                         <td> 012345877999</td>
                                                         <td><a href="#" class="check-btn sqr-btn ">
-                                                            <img src="assets/images/icons/BallPointPen.png" onclick="showPopup('popup2')"
-                                                                    width="30" height="30" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>            
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup2')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                             <a href="#" class="check-btn sqr-btn ">
-                                                                <img src="assets/images/icons/Waste.png"  
-                                                                width="20" height="20" alt="Images" id ="popup-editpd"  class="popup-trigger"></a>
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -699,6 +745,57 @@
             </div>
         </aside>
         <!--== End Product Quick Add Cart Modal ==-->
+
+        <!--Start Popup Confirm Inf Product-->
+        <!-- <div id="popupconfirm" class="popup">
+            <div class="closemodal"><button
+                    onclick="closePopup('popup1')">×</button></div>
+            <h3>Chắc chắn muốn xóa?</h3>
+            <div class="account-details-form">
+                <div class="single-input-item">
+                    <button class="check-btn sqr-btn 
+                    onc" data-bs-toggle="modal" data-bs-target="#action-DeleteModal">XÓA</button>
+                </div>
+            </div>
+        </div> -->
+        <!--End Popup Edit Inf Product-->
+
+        <!--== Start Confirm Modal ==-->
+        <aside class="product-action-modal modal fade" id="action-ConfirmModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="product-action-view-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-action-messages">
+                                <i class="fa fa-check-square-o"></i> Chắc chắn muốn xóa?
+                            </div>
+                            <button type="button" class="button-delete" data-bs-toggle="modal" data-bs-target="#action-DeleteModal">XÓA</button>
+                            <button type="button" class="button-delete" data-bs-dismiss="modal">HỦY</button>
+
+                        </div>
+                    </div>
+                </div>
+        </aside>
+        <!--== End Delete Modal ==-->
+
+        <!--== Start Delete Modal ==-->
+        <aside class="product-action-modal modal fade" id="action-DeleteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="product-action-view-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-action-messages">Xóa dữ liệu thành công!</div>
+                        </div>
+                    </div>
+                </div>
+        </aside>
+        <!--== End Delete Modal ==-->
 
         <!--== Start Aside Search Form ==-->
         <aside class="aside-search-box-wrapper offcanvas offcanvas-top" tabindex="-1" id="AsideOffcanvasSearch"
@@ -905,8 +1002,8 @@
 
     <script>
         function showPopup(popupId) {
-        var popup = document.getElementById(popupId);
-        popup.style.display = "block";
+            var popup = document.getElementById(popupId);
+            popup.style.display = "block";
         }
         function closePopup(popupId) {
             var popup = document.getElementById(popupId);
