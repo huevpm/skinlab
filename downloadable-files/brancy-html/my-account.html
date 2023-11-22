@@ -329,7 +329,101 @@
                                 <div class="tab-pane fade" id="payment-method" role="tabpanel" aria-labelledby="payment-method-tab">
                                     <div class="myaccount-content">
                                         <h3>Phương thức thanh toán</h3>
-                                        <p class="saved-message">Bạn chưa lưu các phương thức thanh toán.</p>
+                                        <div class="myaccount-table table-responsive text-center">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>STT</th>
+                                                        <th>Phương thức</th>
+                                                        <th>Số tài khoản</th>
+                                                        <th>Tùy chỉnh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!--Start Popup edit Payment Method-->
+                                                    <div id="popup3" class="popup">
+                                                        <div class="closemodal"><button
+                                                                onclick="closePopup('popup3')">×</button>
+                                                        </div>
+                                                        <h3>Chỉnh Sửa Phương Thức Thanh Toán</h3>
+                                                        <div class="account-details-form">
+                                                            <form action="#">
+                                                                <div class="nenmodal2"></div>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name"
+                                                                        class="required">Phương thức</label>
+                                                                    <input type="phuongthuc" id="phuongthuc" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="sotaikhoan" class="required">Số tài khoản</label>
+                                                                    <input type="text" id="sotaikhoan" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!--End Popup edit Payment Method-->
+                                                    <!--Start Popup Add Payment Method-->
+                                                    <div id="popup4" class="popup">
+                                                        <div class="closemodal"><button
+                                                                onclick="closePopup('popup4')">×</button>
+                                                        </div>
+                                                        <h3>Thêm Phương Thức Thanh Toán</h3>
+                                                        <div class="account-details-form">
+                                                            <form action="#">
+                                                                <div class="nenmodal2"></div>
+                                                                <div class="single-input-item">
+                                                                    <label for="display-name"
+                                                                        class="required">Phương thức</label>
+                                                                    <input type="phuongthuc" id="phuongthuc" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <label for="sotaikhoan" class="required">Số tài khoản</label>
+                                                                    <input type="text" id="sotaikhoan" />
+                                                                </div>
+                                                                <div class="single-input-item">
+                                                                    <button class="check-btn sqr-btn">LƯU</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!--End Popup Add Payment Method-->
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Thẻ ngân hàng</td>
+                                                        <td>0123456789</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup3')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Tiền mặt</td>
+                                                        <td>__</td>
+                                                        <td><a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/BallPointPen.png"
+                                                                    onclick="showPopup('popup3')" width="30" height="30"
+                                                                    alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="check-btn sqr-btn" onclick="showPopup('popup4')" style="color: red">+&nbsp;&nbsp;Thêm phương thức thanh toán</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel" aria-labelledby="address-edit-tab">
