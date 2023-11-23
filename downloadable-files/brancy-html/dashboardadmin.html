@@ -34,6 +34,15 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <style>
+        .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your liking */
+        display: none; /* Initially hide the overlay */
+        }
         .popup {
             display: none;
             position: absolute;
@@ -70,22 +79,14 @@
             padding-top: 10px;
             padding-right: 10px;
         }
-        .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your liking */
-        display: none; /* Initially hide the overlay */
-        }
+        
     </style>
 
 
 </head>
 
 <body>
-
+    
     <!--== Wrapper Start ==-->
     <div class="wrapper">
 
@@ -405,6 +406,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    
                                                     <tr>
                                                         <td>DH0000001</td>
                                                         <td>22/10/2023</td>
@@ -430,11 +432,9 @@
                                 </div>
                                 <div class="tab-pane fade" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
                                     <div class="myaccount-content">
-                                        <h3>Danh sách bài đăng</h3>
+                                        <h3>Quản lý bài đăng</h3>
                                         <div class="myaccount-table table-responsive text-center">
-                                            <table class=
-                                            
-                                            >
+                                            <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
                                                         <th>Người đăng</th>
@@ -474,14 +474,12 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="tab-pane fade" id="account-info" role="tabpanel"
                                     aria-labelledby="account-info-tab">
 
                                     <div class="myaccount-content">
                                         <h3>Danh sách Admin</h3>
                                         <div class="myaccount-table table-responsive text-center">
-                                            
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
@@ -494,6 +492,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <!--Start Popup edit inf Admin and Customer-->
+                                                    <div id="overlay" class="overlay"></div>
                                                     <div id="popup2" class="popup">
                                                         <div class="closemodal"><button
                                                                 onclick="closePopup('popup2')">×</button>
@@ -1013,6 +1012,7 @@
             popup.style.display = "none";
             document.getElementById('overlay').style.display = 'none';
         }
+        
 
     </script>
 
