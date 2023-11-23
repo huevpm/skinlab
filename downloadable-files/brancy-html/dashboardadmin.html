@@ -52,14 +52,15 @@
 
         /* CSS nút tắt modal */
         .closemodal button {
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
             padding: 0px;
             border-radius: 100%;
             background: #333;
             color: #fff;
             border: none;
+            float: right;
         }
 
         .nenmodal.active .nenmodal2 {
@@ -296,12 +297,12 @@
                                                     <div id="popup1" class="popup">
                                                         <div class="closemodal"><button
                                                                 onclick="closePopup('popup1')">×</button></div>
-                                                        <h3>Cập nhật thông tin sản phẩm</h3>
-                                                        <div class="account-details-form">
+                                                        <h3 style="text-align: left;">Cập nhật thông tin sản phẩm</h3>
+                                                        <div class="account-details-form" style="text-align: left;">
                                                             <form action="#">
                                                                 <div class="nenmodal2"></div>
                                                                 <div class="single-input-item">
-                                                                    <label for="display-name" class="required">Tên sản phẩm</label>
+                                                                    <label for="display-name" class="required" >Tên sản phẩm</label>
                                                                     <input type="text" id="display-name" />
                                                                 </div>
                                                                 <div class="single-input-item">
@@ -322,14 +323,10 @@
                                                                     <input type="description" id="description" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    Cập nhật hình ảnh
-                                                                    <label>
-                                                                        <a href="#/" class="check-btn sqr-btn">
-                                                                            <i class="fa fa-cloud-upload"></i> Tải ảnh
-                                                                            lên </a>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="single-input-item">
+                                                                    <label for="hinh-anh">Tải hình ảnh</label>
+                                                                    <input type="file" name="hinh-anh" id="hinh-anh">
+                                                                  </div>
+                                                                <div class="single-input-item" style="text-align: center;">
                                                                     <button class="check-btn sqr-btn">LƯU THAY
                                                                         ĐỔI</button>
                                                                 </div>
@@ -496,8 +493,8 @@
                                                         <div class="closemodal"><button
                                                                 onclick="closePopup('popup2')">×</button>
                                                         </div>
-                                                        <h3>Chỉnh sửa thông tin tài khoản</h3>
-                                                        <div class="account-details-form">
+                                                        <h3 style="text-align: left;">Chỉnh sửa thông tin tài khoản</h3>
+                                                        <div class="account-details-form" style="text-align: left;">
                                                             <form action="#">
                                                                 <div class="nenmodal2"></div>
                                                                 <div class="single-input-item">
@@ -520,7 +517,7 @@
                                                                     <input type="phone" id="phone" />
                                                                 </div>
 
-                                                                <div class="single-input-item">
+                                                                <div class="single-input-item" style="text-align: center;">
                                                                     <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
                                                                 </div>
                                                             </form>
