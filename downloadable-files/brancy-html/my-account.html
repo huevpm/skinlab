@@ -32,22 +32,29 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <style>
+        .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your liking */
+        display: none; /* Initially hide the overlay */
+        }
         .popup {
             display: none;
-            position: fixed;
-            top: 50%;
+            position: absolute;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 500px;
+            width: 800px;
             /* Đặt kích thước chiều rộng */
-            height: 760px;
-            /* Đặt kích thước chiều cao */
-            border: 300px;
+            border: 50px;
         }
-
+        
         /* CSS nút tắt modal */
         .closemodal button {
             width: 30px;
@@ -70,6 +77,7 @@
             padding-top: 10px;
             padding-right: 10px;
         }
+        
     </style>
 
 </head>
@@ -176,7 +184,6 @@
                 </div>
             </section>
             <!--== End Page Header Area Wrapper ==-->
-
             <!--== Start My Account Area Wrapper ==-->
             <section class="my-account-area section-space">
                 <div class="container">
@@ -195,36 +202,69 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="account-info" role="tabpanel" aria-labelledby="account-info-tab">
                                     <div class="myaccount-content">
+                                    <div id="overlay" class="overlay"></div>
+                                    <!--Start Popup Edit Inf User-->
+                                    <div id="popup5" class="popup">
+                                        <div class="closemodal"><button
+                                                onclick="closePopup('popup5')">×</button></div>
+                                        <h3 style="text-align: left;">Cập nhật thông tin tài khoản</h3>
+                                        <div class="account-details-form" style="text-align: left;">
+                                            <form action="#">
+                                                <div class="nenmodal2"></div>
+                                                <div class="single-input-item">
+                                                    <label for="display-name" class="required" >Họ và tên</label>
+                                                    <input type="text" id="display-name" />
+                                                </div>
+
+                                                <div class="single-input-item">
+                                                    <label for="trongluong" class="required">Tên tài khoản</label>
+                                                    <input type="trongluong" id="trongluong" />
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="price" class="required">Email</label>
+                                                    <input type="price" id="price" />
+                                                </div>
+                                                <div class="single-input-item">
+                                                    <label for="description" class="required">Số điện thoại</label>
+                                                    <input type="description" id="description" />
+                                                </div>
+                                                <div class="single-input-item" style="text-align: center;">
+                                                    <button class="check-btn sqr-btn">LƯU THAY
+                                                        ĐỔI</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--End Popup Edit Inf User-->
+                                        <a href="#" class="check-btn sqr-btn " onclick="showPopup('popup5')"><img
+                                            src="assets/images/icons/BallPointPen.png" style="float: right"
+                                            width="30" height="30"
+                                            alt="Images"></a>
                                         <h3>Thông tin tài khoản</h3>
                                         <div class="account-details-form">
                                             <form action="#">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="single-input-item">
-                                                            <label for="first-name" class="required">Họ</label>
-                                                            <input type="text" id="first-name" />
+                                                            <label for="first-name" class="required"><strong>Họ và tên:</strong></label>
+                                                            <input type="text" id="first-name" value="Nguyễn Thị Ngọc"/>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="single-input-item">
-                                                            <label for="last-name" class="required">Tên</label>
-                                                            <input type="text" id="last-name" />
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="single-input-item">
                                                     <label for="display-name" class="required">Tên tài khoản</label>
-                                                    <input type="text" id="display-name" />
+                                                    <input type="text" id="display-name" value="ngthingoc123" />
                                                 </div>
                                                 <div class="single-input-item">
                                                     <label for="email" class="required">Email</label>
-                                                    <input type="email" id="email" />
+                                                    <input type="email" id="email" value="ngthingon123@gmail.com" />
                                                 </div>
                                                 <div class="single-input-item">
                                                     <label for="phone" class="required">Số điện thoại</label>
-                                                    <input type="phone" id="phone" />
+                                                    <input type="phone" id="phone" value="12345678 " />
                                                 </div>
-                                                <fieldset>
+                                                <!--<fieldset>
                                                     <legend>Đổi mật khẩu</legend>
                                                     <div class="single-input-item">
                                                         <label for="current-pwd" class="required">Mật khẩu hiện tại</label>
@@ -244,10 +284,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </fieldset>
-                                                <div class="single-input-item">
-                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
-                                                </div>
+                                                </fieldset>-->
+                                                
                                             </form>
                                         </div>
                                     </div>
@@ -304,7 +342,8 @@
                                                         <th>Tên sản phẩm</th>
                                                         <th>Dung tích</th>
                                                         <th>Xuất xứ</th>
-                                                        <th>Tải hình ảnh</th>
+                                                        <th>Xoá</th>
+                                                        <th>Thêm vào giỏ hàng</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -313,13 +352,29 @@
                                                         <td>Kem dưỡng ẩm ban đêm Klairs</td>
                                                         <td>60ml</td>
                                                         <td>Hàn Quốc</td>
-                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i>Tải xuống</a></td>
+                                                        <td>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                        </td>
+                                                        <td class="product-add-to-cart">
+                                                            <a class="btn-shop-cart" href="product-cart.html">Thêm vào giỏ</a>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Mặt nạ ngủ cho môi Berry Laneige</td>
                                                         <td>100ml</td>
                                                         <td>Hàn Quốc</td>
-                                                        <td><a href="#/" class="check-btn sqr-btn"><i class="fa fa-cloud-download"></i>Tải xuống</a></td>
+                                                        <td>
+                                                            <a href="#" class="check-btn sqr-btn ">
+                                                                <img src="assets/images/icons/Waste.png" width="20"
+                                                                    height="20" alt="Images" id="popup-editpd"
+                                                                    class="popup-trigger"></a>
+                                                        </td>
+                                                        <td class="product-add-to-cart">
+                                                            <a class="btn-shop-cart" href="product-cart.html">Thêm vào giỏ</a>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -446,6 +501,7 @@
                                         </address>
                                         <a href="#" class="check-btn sqr-btn" onclick="showPopup('popup2')" style="color: red">+&nbsp;&nbsp;Thêm địa chỉ giao hàng</a>
                                         <!--Start Popup Add New Address-->
+                                        <div id="overlay" class="overlay"></div>
                                         <div id="popup2" class="popup">
                                             <div class="closemodal"><button
                                                     onclick="closePopup('popup2')">×</button></div>
@@ -473,6 +529,7 @@
                                         </div>
                                         <!--End Popup Add New Address-->
                                         <!--Start Popup Edit Address-->
+                                        <div id="overlay" class="overlay"></div>
                                         <div id="popup1" class="popup">
                                             <div class="closemodal"><button
                                                     onclick="closePopup('popup1')">×</button></div>
@@ -791,11 +848,15 @@
         function showPopup(popupId) {
             var popup = document.getElementById(popupId);
             popup.style.display = "block";
+            document.getElementById('overlay').style.display = 'block';
         }
         function closePopup(popupId) {
             var popup = document.getElementById(popupId);
             popup.style.display = "none";
+            document.getElementById('overlay').style.display = 'none';
         }
+        
+
     </script>
 
 </body>
