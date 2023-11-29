@@ -402,7 +402,9 @@
                                                             <a href="#" class="check-btn sqr-btn ">
                                                                 <img src="assets/images/icons/Waste.png" width="20"
                                                                     height="20" alt="Images" id="popup-editpd"
-                                                                    class="popup-trigger"></a>
+                                                                    class="popup-trigger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#action-ConfirmModal"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -417,7 +419,9 @@
                                                             <a href="#" class="check-btn sqr-btn ">
                                                                 <img src="assets/images/icons/Waste.png" width="20"
                                                                     height="20" alt="Images" id="popup-editpd"
-                                                                    class="popup-trigger"></a>
+                                                                    class="popup-trigger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#action-ConfirmModal"></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -436,7 +440,9 @@
                                             <p><strong>Nguyễn Thị Ngọc</strong> 
                                                 <a href="#" class="check-btn sqr-btn "><img
                                                     src="assets/images/icons/Waste.png" style="float: right" width="20"
-                                                    height="20" alt="Images"></a>
+                                                    height="20" alt="Images"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#action-ConfirmModal"></a>
                                                 <a href="#" class="check-btn sqr-btn " onclick="showPopup('popup1')"><img
                                                     src="assets/images/icons/BallPointPen.png" style="float: right"
                                                     width="30" height="30"
@@ -508,7 +514,6 @@
                 </div>
             </section>
             <!--== End My Account Area Wrapper ==-->
-
         </main>
 
         <!--== Start Footer Area Wrapper ==-->
@@ -745,6 +750,42 @@
             </div>
         </aside>
         <!--== End Aside Cart ==-->
+         <!--== Start Confirm Modal ==-->
+         <aside class="product-action-modal modal fade" id="action-ConfirmModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="product-action-view-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-action-messages">
+                                <i class="fa fa-check-square-o"></i> Chắc chắn muốn xóa?
+                            </div>
+                            <button type="button" class="button-delete" data-bs-toggle="modal" data-bs-target="#action-DeleteModal">XÓA</button>
+                            <button type="button" class="button-delete" data-bs-dismiss="modal">HỦY</button>
+
+                        </div>
+                    </div>
+                </div>
+        </aside>
+        <!--== End Delete Modal ==-->
+
+        <!--== Start Delete Modal ==-->
+        <aside class="product-action-modal modal fade" id="action-DeleteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="product-action-view-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-action-messages">Xóa dữ liệu thành công!</div>
+                        </div>
+                    </div>
+                </div>
+        </aside>
+        <!--== End Delete Modal ==-->
 
         <!--== Start Aside Menu ==-->
         <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu"
@@ -768,6 +809,7 @@
             </div>
         </aside>
         <!--== End Aside Menu ==-->
+    
 
     </div>
     <!--== Wrapper End ==-->
