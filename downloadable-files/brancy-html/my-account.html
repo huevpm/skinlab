@@ -402,7 +402,9 @@
                                                             <a href="#" class="check-btn sqr-btn ">
                                                                 <img src="assets/images/icons/Waste.png" width="20"
                                                                     height="20" alt="Images" id="popup-editpd"
-                                                                    class="popup-trigger"></a>
+                                                                    class="popup-trigger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#action-ConfirmModal"></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -438,7 +440,9 @@
                                             <p><strong>Nguyễn Thị Ngọc</strong> 
                                                 <a href="#" class="check-btn sqr-btn "><img
                                                     src="assets/images/icons/Waste.png" style="float: right" width="20"
-                                                    height="20" alt="Images"></a>
+                                                    height="20" alt="Images"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#action-ConfirmModal"></a>
                                                 <a href="#" class="check-btn sqr-btn " onclick="showPopup('popup1')"><img
                                                     src="assets/images/icons/BallPointPen.png" style="float: right"
                                                     width="30" height="30"
@@ -746,31 +750,8 @@
             </div>
         </aside>
         <!--== End Aside Cart ==-->
-
-        <!--== Start Aside Menu ==-->
-        <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu"
-            aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-                <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
-                <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i
-                        class="fa fa-chevron-left"></i></button>
-            </div>
-            <div class="offcanvas-body">
-                <div id="offcanvasNav" class="offcanvas-menu-nav">
-                    <ul>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="index.html">home</a></li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">about</a></li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="product-left-sidebar.html">shop</a></li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="blog.html">Blog</a></li>
-                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-        <!--== End Aside Menu ==-->
          <!--== Start Confirm Modal ==-->
-        <aside class="product-action-modal modal fade" id="action-ConfirmModal" tabindex="-1" aria-hidden="true">
+         <aside class="product-action-modal modal fade" id="action-ConfirmModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -805,6 +786,30 @@
                 </div>
         </aside>
         <!--== End Delete Modal ==-->
+
+        <!--== Start Aside Menu ==-->
+        <aside class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h1 class="d-none" id="offcanvasExampleLabel">Aside Menu</h1>
+                <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i
+                        class="fa fa-chevron-left"></i></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="offcanvasNav" class="offcanvas-menu-nav">
+                    <ul>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="index.html">home</a></li>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="about-us.html">about</a></li>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="product-left-sidebar.html">shop</a></li>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="blog.html">Blog</a></li>
+                        <li class="offcanvas-nav-parent"><a class="offcanvas-nav-item" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!--== End Aside Menu ==-->
+    
 
     </div>
     <!--== Wrapper End ==-->
