@@ -542,7 +542,10 @@
                                                     class="required">*</span></label>
                                         </div>
                                     </div>
-                                    <a href="account.html" class="btn-place-order">Đặt hàng</a>
+                                    
+                                    <a href="#" class="btn-place-order" onclick="showOrderModal()">Đặt hàng</a>
+
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -648,6 +651,31 @@
         </div>
     </aside>
     <!--== End Product Quick Wishlist Modal ==-->
+    <!--== Start Noti Succesfull Modal ==-->
+    <aside class="product-action-modal modal fade" id="action-OrderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="product-action-view-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <div class="modal-action-messages">
+
+                            <i class="fa fa-check-square-o"></i> 
+                            <br>
+                            <br>
+                            Đặt hàng thành công
+                        </div>
+                        <div class="modal-action-product">
+                            <!-- Nội dung sản phẩm nếu cần -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--== End Noti Succesfullt Modal ==-->
 
     <!--== Start Product Quick Add Cart Modal ==-->
     <aside class="product-action-modal modal fade" id="action-CartAddModal" tabindex="-1" aria-hidden="true">
@@ -874,6 +902,14 @@
 
     <!-- Custom Main JS -->
     <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        function showOrderModal() {
+            // Hiển thị modal thông báo đặt hàng sử dụng Bootstrap
+            $('#action-OrderModal').modal('show');
+        }
+    </script>
 
 </body>
 
