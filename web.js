@@ -10,7 +10,7 @@ require('dotenv/config');
 
 
 // Middleware
-// web.use(express.json());
+web.use(express.json());
 web.use(bodyParser.json());
 web.use(morgan('tiny'));
 
@@ -23,17 +23,14 @@ const usersRouter = require('./routers/users');
 
 const api = process.env.API_URL;
 
+
 web.use(`${api}/products`, productsRouter);
 web.use(`${api}/categories`, categoriesRouter);
 web.use(`${api}/orders`, ordersRouter);
 web.use(`${api}/users`, usersRouter);
 
 // Database
-mongoose.connect(process.env.CONNECTION_STRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // dbName: 
-})
+mongoose.connect(process.env.CONNECTION_STRING)
 .then(()=>{
     console.log('Database Connection is ready...')
 })
@@ -42,9 +39,5 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 })
 
 web.listen(3000, ()=>{
-    console.log('server is running http://localhost');
+    console.log('server is running http://localhost:3000');
 })
-
-// web.listen(3000, ()=>{
-//     console.log('server is running http://localhost:3000');
-// })

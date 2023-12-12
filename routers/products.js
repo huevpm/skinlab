@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get(`/`, async (req, res) => {
+router.get('/', async (req, res) => {
     const productList = await Product.find();
 
     if(!productList) {
