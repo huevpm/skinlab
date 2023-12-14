@@ -4,6 +4,7 @@ const {Order} = require('../models/order');
 const express = require('express');
 const { OrderItem } = require('../models/order-item');
 const { Category } = require('../models/category');
+const { default: mongoose } = require('mongoose');
 const router = express.Router();
 
 
@@ -50,7 +51,7 @@ router.post('/', async (req, res) => {
     }))
 
     const totalPrice = totalPrices.reduce((a,b) => a +b, 0)
-    
+
     console.log(totalPrice)
 
     let order = new Order({
@@ -118,4 +119,27 @@ router.post('/', async (req, res) => {
         })
     })
     
+    router.get('/get/totalsales', async (req, res) => {
+        const totalSales = await Order.aggregate([
+            { $group: { _id: null , totalSales : { $sum : '$totalPrice '}}}
+            
+        ])
+        if(!totalSales){
+            return res.status(400).send ('The order sales cannot be genrated ')
+        }
+        res.send({totalSales:totalSales.pop().totalSales})
+
+    })
+
+    router.get('/get/count', async (req, res) => {
+        const orderCount = await Order.countDocuments((count) => count);
+    
+        if(!orderCount) {
+            res.status(500).json({success: false})
+        }
+        res.send({
+            orderCount: orderCount
+            
+        });
+    })
 module.exports = router;
