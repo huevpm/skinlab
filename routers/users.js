@@ -43,6 +43,36 @@ router.post('/', async (req, res) => {
 
     res.send(user);
 })
+
+router.put('/:id', async (req, res) => {
+    const userExist = await User.findById(req.params.id);
+    let newPassword
+    if(req.body.password) {
+        newPassword = bcrypt.hashSync(req.body.password, 10)
+    } else {
+        newPassword = userExist.passwordHash;
+    }
+    const user = await User.findByIdAndUpdate(
+        req.params.id,
+        {
+            name: req.body.name,
+            email: req.body.email,
+            passwordHash: newPassword,
+            phone: req.body.phone,
+            city: req.body.city,
+            district: req.body.district,
+            address: req.body.address,
+            isAdmin: req.body.isAdmin,
+        },
+        {new: true}
+    )
+
+    if(!user)
+    return res.status(404).send('Không thể tạo được tài khoản')
+
+    res.send(user);
+})
+
 /*--Login email--*/
 router.post('/login', async (req, res) => {
     const user = await User.findOne({email: req.body.email})
@@ -55,17 +85,88 @@ router.post('/login', async (req, res) => {
     if(user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
         const token = jwt.sign(
             {
-                userId: user.user_id
+                userId: user.user_id,
+                isAdmin: user.isAdmin
             },
             secret,
             {expiresIn: '1y'}
         )
         res.status(200).send({user: user.email, token: token})
     } else {
-        return res.status(400).send('Mật khẩu không đúng!');
+        res.status(400).send('Mật khẩu không đúng!');
+    }
+})
+
+router.post('/register', async (req,res)=> {
+    let user = new User({
+        name: req.body.name,
+        email: req.body.email,
+        passwordHash: bcrypt.hashSync(req.body.password,10),
+        phone: req.body.phone,
+        city: req.body.city,
+        district: req.body.district,
+        address: req.body.address,
+        isAdmin: req.body.isAdmin,
+    })
+    user = await user.save();
+
+    if(!user)
+    return res.status(400).send('Tạo tài khoản không thành công')
+
+    res.send(user);
+})
+
+
+router.delete('/:id', (req, res) =>{
+    User.findByAndRemove(req.params.id).then(user =>{
+        if(user) {
+            return res.status(200).json({success: true, message: 'Tài khoản được tạo thành công'})
+        } else {
+            return res.status(404).json({success: false, message: 'Tạo tài khoản không thành công'})
+        }
+    }).catch(err =>{
+        return res.status(500).json({success: false, error: err})
+    })
+})
+
+router.get('/get/count', async (req, res) =>{
+    const userCount = await User.countDocuments((count) => count)
+
+    if(!userCount) {
+        res.status(500).json({success: false})
+    }
+    res.send({
+        userCount: userCount
+    });
+})
+
+router.put('/:id', async (req, res)=> {
+    const userExist = await User.findById(req.params.id);
+    let newPassword
+    if(req.body.password) {
+        newPassword = bcrypt.hashSync(req.body.password, 10)
+    } else {
+        newPassword = userExist.passwordHash;
     }
 
+    const user = await User.findByIdAndUpdate(
+        req.params.id,
+        {
+            name: req.body.name,
+            email: req.body.email,
+            passwordHash: newPassword,
+            phone: req.body.phone,
+            city: req.body.city,
+            district: req.body.district,
+            address: req.body.address,
+            isAdmin: req.body.isAdmin,
+        },
+        { new: true}
+    )
+    if(!user)
+    return res.status(400).send('Tạo tài khoản không thành công')
     
+    res.send(user);
 })
 
 module.exports = router;
