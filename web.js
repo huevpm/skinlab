@@ -6,20 +6,23 @@ const mongoose = require('mongoose');
 
 
 require('dotenv/config');
-
+const authJwt = require('./helpers/jwt');
+const errorHandler = require('./helpers/error-handler');
 
 
 // Middleware
 web.use(express.json());
 web.use(bodyParser.json());
 web.use(morgan('tiny'));
-
+web.use(authJwt());
+web.use(errorHandler)
 
 // Routers
 const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 const ordersRouter = require('./routers/orders');
 const usersRouter = require('./routers/users');
+const authJwt = require('./helpers/jwt');
 
 const api = process.env.API_URL;
 
