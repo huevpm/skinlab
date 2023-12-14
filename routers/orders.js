@@ -3,6 +3,7 @@
 const {Order} = require('../models/order');
 const express = require('express');
 const { OrderItem } = require('../models/order-item');
+const { Category } = require('../models/category');
 const router = express.Router();
 
 
@@ -82,4 +83,30 @@ router.post('/', async (req, res) => {
 //     })
 // })
 
+    router.put('/:id', async(req, res)=> {
+        const order = await Order.findByAndUpdate(
+            req.params.id,
+            {
+                status: req.body.status
+            },
+            {new:true}
+        )
+        if(!order)
+        return res.status(400).send('the category cannot be created')
+
+        res.send(order)
+    })
+
+    router.delete('/:id', (req, res)=>{
+        Order.findByIdAndRemove(req.params.id).then(order =>{
+            if(order) {
+                return res.status(200).json({success: true, message: 'The order is deleted'})
+            } else {
+                return res.status(404).json({success: false, message: 'the order is not deleted'})
+            }
+        }).catch(err => {
+            return res.status(400).json({success: false, error: err})
+        })
+    })
+    
 module.exports = router;
