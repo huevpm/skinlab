@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 
 require('dotenv/config');
-const authJwt = require('./helpers/jwt');
+// const authJwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
 
 
