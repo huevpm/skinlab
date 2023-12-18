@@ -1,19 +1,19 @@
 const mongoose = require( 'mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: {
+    user_name: {
         type: String,
         required: true,
     },
-    email: {
+    user_email: {
         type: String,
         required: true,
     },
-    passwordHash: {
+    password: {
         type: String,
         required: true,
     },
-    phone: {
+    user_phone: {
         type: Number,
         required: true,
     },
@@ -32,6 +32,10 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false,
+    },
+    review: {
+        type: String,
+        default: '',
     },
 });
 userSchema.virtual('user_id').get(function () {
