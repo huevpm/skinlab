@@ -12,99 +12,20 @@
     "nodemon": "^3.0.1",
     "router": "^1.3.8",
     "@nrwl/nx-cloud": "^16.5.2",
-    "nx": "v17.2.5"
+    "nx": "v17.2.5",
+    "workspace-projects": "^3.2.0"
   },
   "pathMappings": {},
   "nxJsonPlugins": [],
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".git/objects/bb/666d01115396a5fca05622b0a44fa072cec5d4",
-        "hash": "7144143073485684099"
-      },
-      {
-        "file": ".git/objects/54/b07c29ef4abf1c2043df6d063927afaf1e1b8b",
-        "hash": "17397070449959302739"
-      },
-      {
-        "file": ".git/objects/19/c227a464ca3205b28ad14fcd281c190cf597c1",
-        "hash": "15043547217668062809"
-      },
-      {
-        "file": ".git/objects/72/b0fdbeb32f74da398fb6dead969158ce718950",
-        "hash": "11561121695749093145"
-      },
-      {
-        "file": ".git/objects/88/84bee7a306ca840a1cdf9226e0053b4133918f",
-        "hash": "4919433869531110138"
-      },
-      {
-        "file": ".git/objects/73/42af7f6b8a8c0c93219cb6d4b1c72d6439794b",
-        "hash": "3015180722216346941"
-      },
-      {
-        "file": ".git/objects/b8/782143ba502c6e214774cdd9e5393b74ea49c3",
-        "hash": "5949266127089557944"
-      },
-      {
-        "file": ".git/objects/ae/6faacc5b887d920788d5914383f47b63fc7fd8",
-        "hash": "5944338556363132835"
+        "file": ".nx/cache/file-map.json",
+        "hash": "16153397630381384634"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "12024140665732071886"
-      },
-      {
-        "file": ".git/index.lock",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".git/objects/f4/7c3b28db18868cab027561cd151b088a300b81",
-        "hash": "488201180274141956"
-      },
-      {
-        "file": ".git/objects/f7/430d3b9cd532b30b4bddab82847813ddbe3db1",
-        "hash": "11093661975870929667"
-      },
-      {
-        "file": ".nx/cache/file-map.json",
-        "hash": "6646404470593196348"
-      },
-      {
-        "file": ".git/objects/57/10faf84f478db218fe28af39824a5015e999ec",
-        "hash": "14632408727846284814"
-      },
-      {
-        "file": ".git/objects/60/033d02ca191ebf293f448d15c7d1b6794350f9",
-        "hash": "13803934102702775448"
-      },
-      {
-        "file": ".git/objects/28/ba26e56e6b1078a03ea65281695b5714770257",
-        "hash": "18076031460989854043"
-      },
-      {
-        "file": ".git/objects/9a/e4d163e6bdb5e665333fb40aa750cc196684c3",
-        "hash": "10564218561144937705"
-      },
-      {
-        "file": ".git/objects/a0/22a1f84c8ada5a3f8371654c649da091057304",
-        "hash": "4644117080697429837"
-      },
-      {
-        "file": ".git/objects/21/e7878b7cc8f38b54ef69788932d641292724d6",
-        "hash": "4443798246475697223"
-      },
-      {
-        "file": ".git/objects/9f/5d8a858e20dca91a6b1260428076fd8a5f1e90",
-        "hash": "5540734301503356229"
-      },
-      {
-        "file": ".git/objects/38/8fc1a41a7ab2a10112da9f883e6d1e44499861",
-        "hash": "17917704517923292184"
-      },
-      {
-        "file": ".git/FETCH_HEAD",
-        "hash": "6579985319668828047"
+        "hash": "5963549719018641311"
       }
     ],
     "projectFileMap": {
@@ -1435,15 +1356,15 @@
         },
         {
           "file": "nx.json",
-          "hash": "13229448937603499238"
+          "hash": "10224100932809438213"
         },
         {
           "file": "package-lock.json",
-          "hash": "3829828277336489211"
+          "hash": "15562780474282071029"
         },
         {
           "file": "package.json",
-          "hash": "11678876365218879848",
+          "hash": "6322857982863338158",
           "deps": [
             "npm:bcryptjs",
             "npm:dotenv",
@@ -1455,7 +1376,8 @@
             "npm:nodemon",
             "npm:router",
             "npm:@nrwl/nx-cloud",
-            "npm:nx"
+            "npm:nx",
+            "npm:workspace-projects"
           ]
         },
         {

@@ -18,6 +18,105 @@
         "hash": "sha512-t7c5K033joZZMspnHg/gWPE4kandgc2OxE74aYOtGKfgB9VPuVJPix0H6fhmm2erj5PBJ21mqcx34lpIGtUCsQ=="
       }
     },
+    "npm:@node-kit/extra.fs": {
+      "type": "npm",
+      "name": "npm:@node-kit/extra.fs",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/extra.fs",
+        "hash": "sha512-BtGZcB4ffMneAyKd2qy0umOURc7kMjgNOQlEQNqgkQwcwoGejqiJLQpzKVhAr2waBx7OLZx+/3sNzGgngSzx7w=="
+      }
+    },
+    "npm:@node-kit/extra.path": {
+      "type": "npm",
+      "name": "npm:@node-kit/extra.path",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/extra.path",
+        "hash": "sha512-j2o9nSrKWQCKX8LWAQtv1pQzzWS62Oi8ykmuOg2doJQ2/Kl8UT9q/s7hbrUf4D5ytvh5D4pHKRu7rWWAL5Znkg=="
+      }
+    },
+    "npm:@node-kit/lerna-workspace-info": {
+      "type": "npm",
+      "name": "npm:@node-kit/lerna-workspace-info",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/lerna-workspace-info",
+        "hash": "sha512-QLW5bbRb6I+QK3gbrSWXkPeNSDSTeW1W2pHTH2wK7IhbQEqvPGBEWiILGS9LhkCOonXJvPoW2iG6mUGSMjzheg=="
+      }
+    },
+    "npm:@node-kit/lerna-workspace-root": {
+      "type": "npm",
+      "name": "npm:@node-kit/lerna-workspace-root",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/lerna-workspace-root",
+        "hash": "sha512-z9yfrFJzFuib4Pz1fU6tn6YmKhrISpopbKJsh8BfMXYmKRF4/8Td2JPfNIubAN2rlG3F3hSO4VPCDRwHNaKOhg=="
+      }
+    },
+    "npm:@node-kit/pnpm-workspace-info": {
+      "type": "npm",
+      "name": "npm:@node-kit/pnpm-workspace-info",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/pnpm-workspace-info",
+        "hash": "sha512-LCQKXECwGYHKIny/lrW8DpXzI119w75reuXQ8hzhH5J74ViVbFqHgmO/6OjZxQ1Lj3NjNnAZ6Rs9mPxKs/Kz7w=="
+      }
+    },
+    "npm:@node-kit/pnpm-workspace-root": {
+      "type": "npm",
+      "name": "npm:@node-kit/pnpm-workspace-root",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/pnpm-workspace-root",
+        "hash": "sha512-+6/4wT34/iipIaFc9P2dYxRNdfrcUULDERnWd+xdLjP4K2VyPRpx/E83BQ1eXhuuNtvevKI5yOxIR03+gb97ZA=="
+      }
+    },
+    "npm:@node-kit/yarn-workspace-info": {
+      "type": "npm",
+      "name": "npm:@node-kit/yarn-workspace-info",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/yarn-workspace-info",
+        "hash": "sha512-ql+YTetu4QWNkTR6fmftXXlD/eNQbkOFyNOEih4yCwCffzzzU/DGxYh5IRaGLy4nYlYiw4qRl/vwNH3TWgc6UA=="
+      }
+    },
+    "npm:@node-kit/yarn-workspace-root": {
+      "type": "npm",
+      "name": "npm:@node-kit/yarn-workspace-root",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "@node-kit/yarn-workspace-root",
+        "hash": "sha512-CJmCTaM0Goi9bRL4gfFxx1INxU9ETyqcnPGFoOMIHCyxJYRpB5C+C3x4BNWsBsBErdZ+BoyvgLsPj6jukCnFFQ=="
+      }
+    },
+    "npm:@nodelib/fs.scandir": {
+      "type": "npm",
+      "name": "npm:@nodelib/fs.scandir",
+      "data": {
+        "version": "2.1.5",
+        "packageName": "@nodelib/fs.scandir",
+        "hash": "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
+      }
+    },
+    "npm:@nodelib/fs.stat": {
+      "type": "npm",
+      "name": "npm:@nodelib/fs.stat",
+      "data": {
+        "version": "2.0.5",
+        "packageName": "@nodelib/fs.stat",
+        "hash": "sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A=="
+      }
+    },
+    "npm:@nodelib/fs.walk": {
+      "type": "npm",
+      "name": "npm:@nodelib/fs.walk",
+      "data": {
+        "version": "1.2.8",
+        "packageName": "@nodelib/fs.walk",
+        "hash": "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg=="
+      }
+    },
     "npm:@nrwl/nx-cloud": {
       "type": "npm",
       "name": "npm:@nrwl/nx-cloud",
@@ -126,6 +225,24 @@
         "hash": "sha512-I/LWvNasB+iUEzIeejbuaeeezMCfMjpDBsiPdnS5nfHMVnTOrIbfzQOWLWUr+/7R0fYl1BXTp352iaD+M10Agw=="
       }
     },
+    "npm:@pnpm/constants": {
+      "type": "npm",
+      "name": "npm:@pnpm/constants",
+      "data": {
+        "version": "7.1.1",
+        "packageName": "@pnpm/constants",
+        "hash": "sha512-31pZqMtjwV+Vaq7MaPrT1EoDFSYwye3dp6BiHIGRJmVThCQwySRKM7hCvqqI94epNkqFAAYoWrNynWoRYosGdw=="
+      }
+    },
+    "npm:@pnpm/error": {
+      "type": "npm",
+      "name": "npm:@pnpm/error",
+      "data": {
+        "version": "5.0.2",
+        "packageName": "@pnpm/error",
+        "hash": "sha512-0TEm+tWNYm+9uh6DSKyRbv8pv/6b4NL0PastLvMxIoqZbBZ5Zj1cYi332R9xsSUi31ZOsu2wpgn/bC7DA9hrjg=="
+      }
+    },
     "npm:@sinclair/typebox": {
       "type": "npm",
       "name": "npm:@sinclair/typebox",
@@ -133,6 +250,15 @@
         "version": "0.27.8",
         "packageName": "@sinclair/typebox",
         "hash": "sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA=="
+      }
+    },
+    "npm:@types/js-yaml": {
+      "type": "npm",
+      "name": "npm:@types/js-yaml",
+      "data": {
+        "version": "4.0.9",
+        "packageName": "@types/js-yaml",
+        "hash": "sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg=="
       }
     },
     "npm:@types/jsonwebtoken": {
@@ -918,6 +1044,24 @@
         "hash": "sha512-wj4tLMyCVYuIIKHGt0FhCtIViBcwzWejX0EjNxveAa6dG+0XBCQhMbx+PnkLkFCxLC69qoFrxds4pIyL88inaQ=="
       }
     },
+    "npm:fast-glob": {
+      "type": "npm",
+      "name": "npm:fast-glob",
+      "data": {
+        "version": "3.3.2",
+        "packageName": "fast-glob",
+        "hash": "sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow=="
+      }
+    },
+    "npm:fastq": {
+      "type": "npm",
+      "name": "npm:fastq",
+      "data": {
+        "version": "1.15.0",
+        "packageName": "fastq",
+        "hash": "sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw=="
+      }
+    },
     "npm:figures": {
       "type": "npm",
       "name": "npm:figures",
@@ -943,6 +1087,15 @@
         "version": "1.2.0",
         "packageName": "finalhandler",
         "hash": "sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg=="
+      }
+    },
+    "npm:find-up": {
+      "type": "npm",
+      "name": "npm:find-up",
+      "data": {
+        "version": "5.0.0",
+        "packageName": "find-up",
+        "hash": "sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng=="
       }
     },
     "npm:flat": {
@@ -1359,6 +1512,24 @@
         "hash": "sha512-wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A=="
       }
     },
+    "npm:load-yml": {
+      "type": "npm",
+      "name": "npm:load-yml",
+      "data": {
+        "version": "1.4.0",
+        "packageName": "load-yml",
+        "hash": "sha512-L0O2nUOOZ2bNMvFudewMPDhdJqtNoxEHUUhy0Z22aEZXSzmvR1UK5utu67uTpmwmFo+UrdycWceGuifcsgJi5w=="
+      }
+    },
+    "npm:locate-path": {
+      "type": "npm",
+      "name": "npm:locate-path",
+      "data": {
+        "version": "6.0.0",
+        "packageName": "locate-path",
+        "hash": "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw=="
+      }
+    },
     "npm:lodash.includes": {
       "type": "npm",
       "name": "npm:lodash.includes",
@@ -1458,6 +1629,15 @@
         "hash": "sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w=="
       }
     },
+    "npm:merge2": {
+      "type": "npm",
+      "name": "npm:merge2",
+      "data": {
+        "version": "1.4.1",
+        "packageName": "merge2",
+        "hash": "sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg=="
+      }
+    },
     "npm:methods": {
       "type": "npm",
       "name": "npm:methods",
@@ -1465,6 +1645,15 @@
         "version": "1.1.2",
         "packageName": "methods",
         "hash": "sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w=="
+      }
+    },
+    "npm:micromatch": {
+      "type": "npm",
+      "name": "npm:micromatch",
+      "data": {
+        "version": "4.0.5",
+        "packageName": "micromatch",
+        "hash": "sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA=="
       }
     },
     "npm:mime": {
@@ -1764,6 +1953,24 @@
         "hash": "sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ=="
       }
     },
+    "npm:p-limit": {
+      "type": "npm",
+      "name": "npm:p-limit",
+      "data": {
+        "version": "3.1.0",
+        "packageName": "p-limit",
+        "hash": "sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ=="
+      }
+    },
+    "npm:p-locate": {
+      "type": "npm",
+      "name": "npm:p-locate",
+      "data": {
+        "version": "5.0.0",
+        "packageName": "p-locate",
+        "hash": "sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw=="
+      }
+    },
     "npm:parseurl": {
       "type": "npm",
       "name": "npm:parseurl",
@@ -1771,6 +1978,15 @@
         "version": "1.3.3",
         "packageName": "parseurl",
         "hash": "sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ=="
+      }
+    },
+    "npm:path-exists": {
+      "type": "npm",
+      "name": "npm:path-exists",
+      "data": {
+        "version": "4.0.0",
+        "packageName": "path-exists",
+        "hash": "sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w=="
       }
     },
     "npm:path-is-absolute": {
@@ -1863,6 +2079,15 @@
         "hash": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q=="
       }
     },
+    "npm:queue-microtask": {
+      "type": "npm",
+      "name": "npm:queue-microtask",
+      "data": {
+        "version": "1.2.3",
+        "packageName": "queue-microtask",
+        "hash": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
+      }
+    },
     "npm:range-parser": {
       "type": "npm",
       "name": "npm:range-parser",
@@ -1926,6 +2151,15 @@
         "hash": "sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA=="
       }
     },
+    "npm:reusify": {
+      "type": "npm",
+      "name": "npm:reusify",
+      "data": {
+        "version": "1.0.4",
+        "packageName": "reusify",
+        "hash": "sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw=="
+      }
+    },
     "npm:rimraf": {
       "type": "npm",
       "name": "npm:rimraf",
@@ -1942,6 +2176,15 @@
         "version": "1.3.8",
         "packageName": "router",
         "hash": "sha512-461UFH44NtSfIlS83PUg2N7OZo86BC/kB3dY77gJdsODsBhhw7+2uE0tzTINxrY9CahCUVk1VhpWCA5i1yoIEg=="
+      }
+    },
+    "npm:run-parallel": {
+      "type": "npm",
+      "name": "npm:run-parallel",
+      "data": {
+        "version": "1.2.0",
+        "packageName": "run-parallel",
+        "hash": "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA=="
       }
     },
     "npm:safer-buffer": {
@@ -2286,6 +2529,15 @@
         "hash": "sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ=="
       }
     },
+    "npm:workspace-projects": {
+      "type": "npm",
+      "name": "npm:workspace-projects",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "workspace-projects",
+        "hash": "sha512-HtZL8v5WTYx10BdfWjc0UDg+slEC+Ir255ZQ+G39ie770EdhIxs1f92caZi+udcCD4o+O5t1h9H8F6k+OROGGw=="
+      }
+    },
     "npm:wrap-ansi": {
       "type": "npm",
       "name": "npm:wrap-ansi",
@@ -2339,6 +2591,15 @@
         "packageName": "yargs-parser",
         "hash": "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw=="
       }
+    },
+    "npm:yocto-queue": {
+      "type": "npm",
+      "name": "npm:yocto-queue",
+      "data": {
+        "version": "0.1.0",
+        "packageName": "yocto-queue",
+        "hash": "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
+      }
     }
   },
   "dependencies": [
@@ -2350,6 +2611,126 @@
     {
       "source": "npm:@mongodb-js/saslprep",
       "target": "npm:sparse-bitfield",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-info",
+      "target": "npm:@node-kit/extra.fs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-info",
+      "target": "npm:@node-kit/extra.path",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-info",
+      "target": "npm:@node-kit/lerna-workspace-root",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-info",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-root",
+      "target": "npm:@node-kit/extra.fs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/lerna-workspace-root",
+      "target": "npm:find-up",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-info",
+      "target": "npm:@node-kit/extra.path",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-info",
+      "target": "npm:@node-kit/pnpm-workspace-root",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-info",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-info",
+      "target": "npm:load-yml",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-root",
+      "target": "npm:@node-kit/extra.fs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-root",
+      "target": "npm:@pnpm/error",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/pnpm-workspace-root",
+      "target": "npm:find-up",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-info",
+      "target": "npm:@node-kit/extra.fs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-info",
+      "target": "npm:@node-kit/extra.path",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-info",
+      "target": "npm:@node-kit/yarn-workspace-root",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-info",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-root",
+      "target": "npm:@node-kit/extra.fs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-root",
+      "target": "npm:find-up",
+      "type": "static"
+    },
+    {
+      "source": "npm:@node-kit/yarn-workspace-root",
+      "target": "npm:micromatch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nodelib/fs.scandir",
+      "target": "npm:@nodelib/fs.stat",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nodelib/fs.scandir",
+      "target": "npm:run-parallel",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nodelib/fs.walk",
+      "target": "npm:@nodelib/fs.scandir",
+      "type": "static"
+    },
+    {
+      "source": "npm:@nodelib/fs.walk",
+      "target": "npm:fastq",
       "type": "static"
     },
     {
@@ -2365,6 +2746,11 @@
     {
       "source": "npm:@nrwl/tao",
       "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@pnpm/error",
+      "target": "npm:@pnpm/constants",
       "type": "static"
     },
     {
@@ -2883,6 +3269,36 @@
       "type": "static"
     },
     {
+      "source": "npm:fast-glob",
+      "target": "npm:@nodelib/fs.stat",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:@nodelib/fs.walk",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:glob-parent",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:merge2",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob",
+      "target": "npm:micromatch",
+      "type": "static"
+    },
+    {
+      "source": "npm:fastq",
+      "target": "npm:reusify",
+      "type": "static"
+    },
+    {
       "source": "npm:figures",
       "target": "npm:escape-string-regexp",
       "type": "static"
@@ -2930,6 +3346,16 @@
     {
       "source": "npm:debug@2.6.9",
       "target": "npm:ms@2.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:find-up",
+      "target": "npm:locate-path",
+      "type": "static"
+    },
+    {
+      "source": "npm:find-up",
+      "target": "npm:path-exists",
       "type": "static"
     },
     {
@@ -3203,8 +3629,38 @@
       "type": "static"
     },
     {
+      "source": "npm:load-yml",
+      "target": "npm:@types/js-yaml",
+      "type": "static"
+    },
+    {
+      "source": "npm:load-yml",
+      "target": "npm:js-yaml",
+      "type": "static"
+    },
+    {
+      "source": "npm:load-yml",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:locate-path",
+      "target": "npm:p-locate",
+      "type": "static"
+    },
+    {
       "source": "npm:lru-cache",
       "target": "npm:yallist",
+      "type": "static"
+    },
+    {
+      "source": "npm:micromatch",
+      "target": "npm:braces",
+      "type": "static"
+    },
+    {
+      "source": "npm:micromatch",
+      "target": "npm:picomatch",
       "type": "static"
     },
     {
@@ -3723,6 +4179,16 @@
       "type": "static"
     },
     {
+      "source": "npm:p-limit",
+      "target": "npm:yocto-queue",
+      "type": "static"
+    },
+    {
+      "source": "npm:p-locate",
+      "target": "npm:p-limit",
+      "type": "static"
+    },
+    {
       "source": "npm:pretty-format",
       "target": "npm:@jest/schemas",
       "type": "static"
@@ -3845,6 +4311,11 @@
     {
       "source": "npm:debug@2.6.9",
       "target": "npm:ms@2.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:run-parallel",
+      "target": "npm:queue-microtask",
       "type": "static"
     },
     {
@@ -4140,6 +4611,21 @@
     {
       "source": "npm:whatwg-url",
       "target": "npm:webidl-conversions",
+      "type": "static"
+    },
+    {
+      "source": "npm:workspace-projects",
+      "target": "npm:@node-kit/lerna-workspace-info",
+      "type": "static"
+    },
+    {
+      "source": "npm:workspace-projects",
+      "target": "npm:@node-kit/pnpm-workspace-info",
+      "type": "static"
+    },
+    {
+      "source": "npm:workspace-projects",
+      "target": "npm:@node-kit/yarn-workspace-info",
       "type": "static"
     },
     {

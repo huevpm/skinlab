@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "@nrwl/nx-cloud": "^16.5.2",
-    "nx": "v17.2.5"
+    "nx": "v17.2.5",
+    "workspace-projects": "^3.2.0"
   },
   "nx": {
     "targets": {}
