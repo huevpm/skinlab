@@ -1,0 +1,16 @@
+.admin-container {
+    display: flex; /* This will align the sidebar and content area side by side */
+  }
+  
+  .admin-sidebar {
+    /* Your existing styles for the sidebar */
+    width: 200px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height */
+    /* other styles */
+  }
+  
+  .admin-content {
+    flex-grow: 1; /* This will make the content area take up the remaining space */
+    /* Your existing styles for the content area */
+  }
+  
