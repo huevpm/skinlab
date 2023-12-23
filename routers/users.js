@@ -27,14 +27,15 @@ router.get('/:id', async(req, res)=>{
 
 router.post('/', async (req, res) => {
     let user = new User({
-        name: req.body.name,
-        email: req.body.email,
-        passwordHash: bcrypt.hashSync(req.body.password, 10),
-        phone: req.body.phone,
-        city: req.body.city,
+        user_name: req.body. user_name,
+        user_email: req.body. user_email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        user_phone: req.body. user_phone,
+        province: req.body.province,
         district: req.body.district,
         address: req.body.address,
         isAdmin: req.body.isAdmin,
+        review: req.body.review,
     })
     user = await user.save();
 
@@ -50,19 +51,20 @@ router.put('/:id', async (req, res) => {
     if(req.body.password) {
         newPassword = bcrypt.hashSync(req.body.password, 10)
     } else {
-        newPassword = userExist.passwordHash;
+        newPassword = userExist.password;
     }
     const user = await User.findByIdAndUpdate(
         req.params.id,
         {
-            name: req.body.name,
-            email: req.body.email,
-            passwordHash: newPassword,
-            phone: req.body.phone,
-            city: req.body.city,
+            user_name: req.body.name,
+            user_email: req.body.email,
+            password: newPassword,
+            user_phone: req.body.phone,
+            province: req.body.province,
             district: req.body.district,
             address: req.body.address,
             isAdmin: req.body.isAdmin,
+            review: req.body.review,
         },
         {new: true}
     )
@@ -75,14 +77,14 @@ router.put('/:id', async (req, res) => {
 
 /*--Login email--*/
 router.post('/login', async (req, res) => {
-    const user = await User.findOne({email: req.body.email})
+    const user = await User.findOne({ user_email: req.body. user_email})
     const secret = process.env.secret;
 
     if(!user) {
         return res.status(400).send('Không tìm thấy tài khoản');
     }
 
-    if(user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+    if(user && bcrypt.compareSync(req.body.password, user.password)) {
         const token = jwt.sign(
             {
                 userId: user.user_id,
@@ -91,7 +93,7 @@ router.post('/login', async (req, res) => {
             secret,
             {expiresIn: '1y'}
         )
-        res.status(200).send({user: user.email, token: token})
+        res.status(200).send({user: user. user_email, token: token})
     } else {
         res.status(400).send('Mật khẩu không đúng!');
     }
@@ -99,14 +101,15 @@ router.post('/login', async (req, res) => {
 
 router.post('/register', async (req,res)=> {
     let user = new User({
-        name: req.body.name,
-        email: req.body.email,
-        passwordHash: bcrypt.hashSync(req.body.password,10),
-        phone: req.body.phone,
-        city: req.body.city,
+        user_name: req.body.name,
+        user_email: req.body.email,
+        password: bcrypt.hashSync(req.body.password,10),
+        user_phone: req.body.phone,
+        province: req.body.province,
         district: req.body.district,
         address: req.body.address,
         isAdmin: req.body.isAdmin,
+        review: req.body.review,
     })
     user = await user.save();
 
@@ -146,20 +149,21 @@ router.put('/:id', async (req, res)=> {
     if(req.body.password) {
         newPassword = bcrypt.hashSync(req.body.password, 10)
     } else {
-        newPassword = userExist.passwordHash;
+        newPassword = userExist.password;
     }
 
     const user = await User.findByIdAndUpdate(
         req.params.id,
         {
-            name: req.body.name,
-            email: req.body.email,
-            passwordHash: newPassword,
-            phone: req.body.phone,
-            city: req.body.city,
+            user_name: req.body.name,
+            user_email: req.body.email,
+            password: newPassword,
+            user_phone: req.body.phone,
+            province: req.body.province,
             district: req.body.district,
             address: req.body.address,
             isAdmin: req.body.isAdmin,
+            review: req.body.review,
         },
         { new: true}
     )
