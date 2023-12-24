@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-jwt": "^8.4.1",
@@ -18,11 +19,13 @@
     "mongoose": "^8.0.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
+    "primeicons": "^6.0.1",
+    "primeng": "^17.2.0",
     "router": "^1.3.8"
   },
   "devDependencies": {
     "@nrwl/nx-cloud": "^16.5.2",
-    "nx": "v17.2.5",
+    "nx": "17.2.6",
     "workspace-projects": "^3.2.0"
   },
   "nx": {

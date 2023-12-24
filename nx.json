@@ -9,10 +9,18 @@
     "defaultBase": "main"
   },
   "nxCloudAccessToken": "ZDBmYjE5ZjktZTg0NS00M2QwLWE3NWItZjhiMjgwNGEyZDkwfHJlYWQtd3JpdGU=",
-  "projects": ["skinlab"],
-  "apps": ["skinlab"],
-  "libs": ["skinlab"],
-  "plugins": ["@nrwl/workspace-generators"],
+  "projects": [
+    "skinlab"
+  ],
+  "apps": [
+    "skinlab"
+  ],
+  "libs": [
+    "skinlab"
+  ],
+  "plugins": [
+    "@nrwl/workspace-generators"
+  ],
   "tasks": {
     "skinlab:version": {
       "description": "Prints the version of the skinlab project",

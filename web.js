@@ -3,10 +3,12 @@ const web = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+// const jwt = require('jsonwebtoken');
+
 
 
 require('dotenv/config');
-// const authJwt = require('./helpers/jwt');
+const authJwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
 
 
@@ -22,7 +24,6 @@ const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 const ordersRouter = require('./routers/orders');
 const usersRouter = require('./routers/users');
-const authJwt = require('./helpers/jwt');
 
 const api = process.env.API_URL;
 
