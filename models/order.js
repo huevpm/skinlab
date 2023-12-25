@@ -34,7 +34,7 @@ const orderSchema = mongoose.Schema({
     status: {
         type: String,
         required: true,
-        default: 'Pending'
+        default: 'Đang xử lý'
     },
     totalPrice: {
         type: String,

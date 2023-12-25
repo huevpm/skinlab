@@ -3,21 +3,20 @@ const web = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-// const jwt = require('jsonwebtoken');
 
 
 
 require('dotenv/config');
-const authJwt = require('./helpers/jwt');
-const errorHandler = require('./helpers/error-handler');
+// const authJwt = require('./helpers/jwt');
+// const errorHandler = require('./helpers/error-handler');
 
 
 // Middleware
 web.use(express.json());
 web.use(bodyParser.json());
 web.use(morgan('tiny'));
-web.use(authJwt());
-web.use(errorHandler)
+// web.use(authJwt());
+// web.use(errorHandler)
 
 // Routers
 const productsRouter = require('./routers/products');

@@ -7,7 +7,7 @@ const express = require('express');
 const router = express.Router();
 
 // filter display by category
-router.get('/:', async (req, res) => {
+router.get('/', async (req, res) => {
     //local... / products?categories=238,94
     let filter = {}
     if(req.query.categories)
