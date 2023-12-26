@@ -15,6 +15,7 @@ import { CategoryComponent } from './categories/category/category.component';
 import { CategoriesService } from './categories/category/categories.service';
 import { ProductsListComponent } from './product/products-list/products-list.component';
 import { ProductsFormComponent } from './product/products-form/products-form.component';
+import { UsersModule} from '@bluebits/users';
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -32,6 +33,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { DropdownModule } from 'primeng/dropdown';
 import { EditorModule } from 'primeng/editor';
+import { Router } from 'express';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +63,9 @@ import { EditorModule } from 'primeng/editor';
     InputTextareaModule,
     InputSwitchModule,
     DropdownModule,
-    EditorModule
+    EditorModule,
+    RouterModule.forRoot(routes, {initialNavigation: 'enabled'}),
+    UsersModule,
   ],
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]
