@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 // Import only the components and services that are required
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
 import { CategoryComponent } from './categories/category/category.component';
 import { CategoriesService } from './categories/category/categories.service';
+import { ProductsListComponent } from './product/products-list/products-list.component';
+import { ProductsFormComponent } from './product/products-form/products-form.component';
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -51,4 +54,27 @@ import { MessageService } from 'primeng/api';
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]
 })
+
+const routes: Routes = [
+  {
+    path: ' ',
+    component: ShellComponent,
+    children: [
+      {
+        path: 'products',
+        component: ProductsListComponent
+      },
+      {
+        path: 'products/form',
+        component: ProductsFormComponent
+      },
+      {
+        path: 'products/form/:id',
+        component: ProductsListComponent
+      },
+    ]
+  }
+
+
+],
 export class AppModule { }
