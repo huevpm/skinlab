@@ -14,6 +14,7 @@ function authJwt() {
     })
     .unless({
         path: [
+            {url: /\/downloadable-files\/brancy-html\/assets\/images\/shop(.*)/, methods: ['GET', 'OPTION']},
             {url: /\/skinlab\/downloadable-files\/brancy-html\/products(.*)/, methods: ['GET', 'OPTION']},
             {url: /\/skinlab\/downloadable-files\/brancy-html\/categories(.*)/, methods: ['GET', 'OPTION']},
             `${api}/skinlab/downloadable-files/brancy-html`, //ex, co the thay doi

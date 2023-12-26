@@ -15,6 +15,7 @@ require('dotenv/config');
 web.use(express.json());
 web.use(bodyParser.json());
 web.use(morgan('tiny'));
+web.use('downloadable-files/brancy-html/assets/images/shop', express.static(__dirname + 'downloadable-files/brancy-html/assets/images/shop'));
 // web.use(authJwt());
 // web.use(errorHandler)
 
