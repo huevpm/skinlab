@@ -17,9 +17,9 @@
                         ></p-button>
                         <p-button 
                             styleClass="p-button-secondary" 
-                            label="Cancel" 
+                            label="Cancle" 
                             icon="pi pi-arrow-circle-left" 
-                            (click)="onCancel()"
+                            (click)="onCancle()"
                         ></p-button>
                     </div>
                 </p-toolbar> 
@@ -82,6 +82,10 @@
                                 <small *ngIf="productForm.description.invalid && isSubmitted" class="p-error">
                                     Description is required
                                 </small>
+                            </div>
+                            <div class="p-field p-col-12"> 
+                                <label for="richDescription">Product Details</label>
+                                <p-editor formControlName="richDescription" [style]="{ height: '320px' }"></p-editor>
                             </div>
                         </div>
                     </div>

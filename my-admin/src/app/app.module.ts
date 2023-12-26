@@ -31,6 +31,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { DropdownModule } from 'primeng/dropdown';
+import { EditorModule } from 'primeng/editor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputNumberModule,
     InputTextareaModule,
     InputSwitchModule,
-    DropdownModule
+    DropdownModule,
+    EditorModule
   ],
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]

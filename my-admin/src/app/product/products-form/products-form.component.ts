@@ -41,6 +41,9 @@ export class ProductsFormComponent implements OnInit {
             this.catagories = categories;
         })
     }
+    onSubmit() {}
+    onCancle() {}
+
     get productForm() {
         return this.form.controls;
     }
