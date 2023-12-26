@@ -6,7 +6,7 @@ import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
 import { Location } from '@angular/common';
 @Component({
-  selector: 'app-category-form',
+  selector: 'admin-category-form',
   templateUrl: './category-form.component.html',
   styleUrls: ['./category-form.component.css']
 })
@@ -15,7 +15,7 @@ export class CategoryFormComponent implements OnInit {
     name: ['', Validators.required], // Assuming 'name' is a required field
     icon: ['',Validators.required], // Assuming 'icon' is a required field
   });
-  isSubmitted: boolean = false;
+  isSubmitted = false;
 
   constructor(private formBuilder: FormBuilder, 
   private categoriesService: CategoriesService,
@@ -25,7 +25,10 @@ export class CategoryFormComponent implements OnInit {
      ) {}
 
   ngOnInit(): void {
-    // Initialization logic if needed
+    this.form = this.formBuilder.group({
+      name: ['', Validators.required],
+      icon: ['', Validators.required],
+    });
   }
   onSubmit(): void {
     this.isSubmitted = true;
@@ -33,19 +36,25 @@ export class CategoryFormComponent implements OnInit {
       return;
     }
     const category: Category = {
+      id: this.currentCategoryID,
       name: this.categoryForm['name'].value,
       icon: this.categoryForm['icon'].value,
     };
-    this.categoriesService.createCategory(category).subscribe((category) => {
+    if (this.editmode) {
+      this._updateCategory(category);
+    } else {
+      this._addCategory(category);
+    }
+    this.categoriesService.createCategory(category).subscribe((category: Category) => {
       this.messageService.add({severity:'success',
       summary:'Success', 
-      detail:'Đã tạo danh mục thành công'});
-      timer(1000).toPromise().then (done => {
+      detail:'Đã tạo danh mục ${category.name}thành công'});
+      timer(1000).toPromise().then (() => {
         this.location.back()
         })
     },
 
-    (error) => {
+    () => {
       this.messageService.add({severity:'error', 
       summary:'Error',
       detail:'Đã xảy ra lỗi'});

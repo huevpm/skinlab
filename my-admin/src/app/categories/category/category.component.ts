@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from './categories.service';
 import { Category } from '../../models/category';
 @Component({
-  selector: 'app-category',
+  selector: 'admin-category',
   templateUrl: './category.component.html',
   styleUrl: './category.component.css'
 })
