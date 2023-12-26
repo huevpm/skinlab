@@ -62,6 +62,12 @@
                         <div class="p-fluid p-formgrid p-grid">
                             <div class="p-field p-col-4"> 
                                 <label for="category">Category</label>
+                                <p-dropdown 
+                                [options]="catagories" 
+                                formControlName="category" 
+                                optionLabel="name" 
+                                [filter] = "true" filterBy ="Name"
+                                [showClear]="true" placeholder="Select a Category"></p-dropdown>
                                 <small *ngIf="productForm.category.invalid && isSubmitted" class="p-error">
                                     Category is required
                                 </small>

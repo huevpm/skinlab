@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { CategoriesService } from "../../categories/category/categories.service";
 
 @Component ({
     selector: 'bluebits-products-form',
@@ -12,10 +13,14 @@ export class ProductsFormComponent implements OnInit {
     editmode = false;
     form: FormGroup
     isSubmitted = false;
-    constructor(private formBuilder: FormBuilder) {}
+    catagories = [];
+
+    constructor(private formBuilder: FormBuilder. private categoriesService : CategoriesService) {}
 
     ngOnInit(): void {
         this._initForm();
+        this._getCategories();
+
     }
 
     private_initForm() {
@@ -30,6 +35,11 @@ export class ProductsFormComponent implements OnInit {
             image: [''],
             isFeatured: [''],
         });
+    }
+    private _getCategories(){
+        this.categoriesService.getCategories().subscribe(categories => {
+            this.catagories = categories;
+        })
     }
     get productForm() {
         return this.form.controls;

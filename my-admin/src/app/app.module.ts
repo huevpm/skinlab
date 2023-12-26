@@ -30,6 +30,7 @@ import { MessageService } from 'primeng/api';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
     ToastModule,
     InputNumberModule,
     InputTextareaModule,
-    InputSwitchModule
+    InputSwitchModule,
+    DropdownModule
   ],
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]
