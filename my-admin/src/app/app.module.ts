@@ -27,6 +27,9 @@ import { CategoryFormComponent } from './categories/category-form/category-form.
 import { InputTextModule } from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputSwitchModule } from 'primeng/inputswitch';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +52,10 @@ import { MessageService } from 'primeng/api';
     ToolbarModule,
     InputTextModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    InputNumberModule,
+    InputTextareaModule,
+    InputSwitchModule
   ],
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]
