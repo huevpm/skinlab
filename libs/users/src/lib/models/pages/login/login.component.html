@@ -35,6 +35,9 @@
                     <div class="p-col-12">
                         <p-button label="Đăng nhập" styleClass = "full-btn" (onClick)="onSubmit()"></p-button>
                     </div>
+                    <div class="p-col-12" * ngIf="isSubmitted && authError">
+                        <small class="p-error"> {{authMessage}}</small>
+                    </div>
 
                 </div>
             </form>
