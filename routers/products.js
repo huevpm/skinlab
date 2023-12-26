@@ -5,9 +5,36 @@ const { Category } = require('../models/category');
 const {Product} = require('../models/product');
 const express = require('express');
 const router = express.Router();
+const multer = require ('multer');
+
+
+const FILE_TYPE_MAP = {
+    'image/png': 'png',
+    'image/jpeg': 'jpeg',
+    'image/jpg': 'jpg'
+}
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const isValid = FILE_TYPE_MAP [file.mimetype];
+        let uploadError = new Error ('Invalid image type');
+
+        if (isValid) {
+            uploadError = null
+        }
+      cb(uploadError, 'downloadable-files/brancy-html/assets/images/shop')
+    },
+
+    filename: function (req, file, cb) {
+      const fileNam = file.originalname.split(' ').json('-');
+      const extension = FILE_TYPE_MAP [file.mimetype];
+      cb(null, fileName + '-' + Date.now())
+    }
+  })
+  
+  const uploadOptions = multer({ storage: storage })
 
 // filter display by category
-router.get('/:', async (req, res) => {
+router.get('/', async (req, res) => {
     //local... / products?categories=238,94
     let filter = {}
     if(req.query.categories)
@@ -32,17 +59,23 @@ router.get('/:id', async (req, res) => {
     res.send(product);
 })
 
-router.post(`/`, async (req, res) =>{
+router.post(`/`, uploadOptions.single('image'), async (req, res) =>{
 // check category
 const category = await Category.findById(req.body.category);
 if(!category) return res.status(400).send('Invalid Category')
+
+const file = req.file;
+    if (!file) return res.status(400).send('No image in the request') // file image
+
+    const fileName = req.file.filename
+    const basePath = `${req.protocol}://${req.get('host')}/downloadable-files/brancy-html/assets/images/shop`; // gọi ảnh
 
     const product = new Product({
         product_id: req.body.product_id,
         name: req.body.name,
         description: req.body.description,
         richDescription: req.body.richDescription,
-        image: req.body.image,
+        image: `${basePath}${fileName}`, // "https://localhost:3000/downloadable-files/brancy-html/assets/images/shop/1.png"
         // images:req.body.images,
         brand: req.body.brand,
         price: req.body.price,
@@ -130,6 +163,36 @@ router.get('/get/featured:count', async (req, res) => {
     res.send(products);
 })
 
+router.put(
+    '/gallery-images/:id',
+    uploadOptions.array('images', 10),
+    async (req, res) => {
+        if (!mongoose.isValidObjected(req.params.id)){
+            return res.status(400).send('Invalid Product ID')
+        }
+        const files = req.files
+let imagesPaths = [];
+const basePath = `${req.protocol}://${req.get('host')}/downloadable-files/brancy-html/assets/images/shop`; // gọi ảnh
+
+        if(files){
+files.map(file => {
+    imagesPaths.push(`${basePath}${file.fileName}`);
+
+  })
+
+    const product = await Product.findByIdAndUpdate(
+    req.params.id,
+    {
+        images: imagesPaths
+    }, 
+    {new:true}
+    )
+    } 
+    if (!product)
+    return res.status(500).send('the product cannot be updated')
+    res.send(product);
+}   
+)
 
 
 module.exports = router;

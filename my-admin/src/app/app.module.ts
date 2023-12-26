@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 // Import only the components and services that are required
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
 import { CategoryComponent } from './categories/category/category.component';
 import { CategoriesService } from './categories/category/categories.service';
+import { ProductsListComponent } from './product/products-list/products-list.component';
+import { ProductsFormComponent } from './product/products-form/products-form.component';
+import { UsersModule} from '@bluebits/users';
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -24,6 +28,14 @@ import { CategoryFormComponent } from './categories/category-form/category-form.
 import { InputTextModule } from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { DropdownModule } from 'primeng/dropdown';
+import { EditorModule } from 'primeng/editor';
+import { Router } from 'express';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +58,39 @@ import { MessageService } from 'primeng/api';
     ToolbarModule,
     InputTextModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    InputNumberModule,
+    InputTextareaModule,
+    InputSwitchModule,
+    DropdownModule,
+    EditorModule,
+    RouterModule.forRoot(routes, {initialNavigation: 'enabled'}),
+    UsersModule,
   ],
   providers: [CategoriesService, MessageService],
   bootstrap: [AppComponent]
 })
+
+const routes: Routes = [
+  {
+    path: ' ',
+    component: ShellComponent,
+    children: [
+      {
+        path: 'products',
+        component: ProductsListComponent
+      },
+      {
+        path: 'products/form',
+        component: ProductsFormComponent
+      },
+      {
+        path: 'products/form/:id',
+        component: ProductsListComponent
+      },
+    ]
+  }
+
+
+],
 export class AppModule { }

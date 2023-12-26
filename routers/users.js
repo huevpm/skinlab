@@ -29,8 +29,8 @@ router.post('/', async (req, res) => {
     let user = new User({
         user_name: req.body. user_name,
         user_email: req.body. user_email,
-        password: bcrypt.hashSync(req.body.password, 10),
         user_phone: req.body. user_phone,
+        password: bcrypt.hashSync(req.body.password, 10),
         province: req.body.province,
         district: req.body.district,
         address: req.body.address,
