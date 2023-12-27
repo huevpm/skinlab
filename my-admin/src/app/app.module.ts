@@ -15,7 +15,7 @@ import { CategoryComponent } from './categories/category/category.component';
 import { CategoriesService } from './categories/category/categories.service';
 import { ProductsListComponent } from './product/products-list/products-list.component';
 import { ProductsFormComponent } from './product/products-form/products-form.component';
-import { UsersModule} from '@bluebits/users';
+import { AuthGuard, UsersModule} from '@bluebits/users';
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -75,6 +75,7 @@ const routes: Routes = [
   {
     path: ' ',
     component: ShellComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'products',
