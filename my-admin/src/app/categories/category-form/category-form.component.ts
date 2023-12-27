@@ -16,11 +16,13 @@ export class CategoryFormComponent implements OnInit {
     icon: ['',Validators.required], // Assuming 'icon' is a required field
   });
   isSubmitted = false;
+  editmode = false;
 
   constructor(private formBuilder: FormBuilder, 
   private categoriesService: CategoriesService,
   private messageService: MessageService,
-  private location: Location
+  private location: Location,
+  private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +30,8 @@ export class CategoryFormComponent implements OnInit {
       name: ['', Validators.required],
       icon: ['', Validators.required],
     });
+    
+    this._checkEditMode();
   }
   onSubmit(): void {
     this.isSubmitted = true;
@@ -35,16 +39,23 @@ export class CategoryFormComponent implements OnInit {
       return;
     }
     const category: Category = {
-      id: this.currentCategoryID,
       name: this.categoryForm['name'].value,
       icon: this.categoryForm['icon'].value,
     };
+    if(this.editmode) {
+      this._updateCategory(category)
+    } else {
+      this._addCategory(category)
+    }
     this.categoriesService.createCategory(category).subscribe((response: Category) => {
-      this.messageService.add({severity:'success',
-      summary:'Success', 
-      detail:'Đã tạo danh mục ${category.name}thành công'});
-      timer(1000).toPromise().then ((done) => {
-        this.location.back();
+      this.messageService.add({
+        severity:'success',
+        summary:'Success', 
+        detail:'Đã tạo danh mục ${category.name}thành công'});
+      timer(1000)
+        .toPromise()
+        .then ((done) => {
+          this.location.back();
         })
     },
 
@@ -55,6 +66,43 @@ export class CategoryFormComponent implements OnInit {
     }
     );
 
+  }
+
+  private _addCategory(category: Category) {
+    this.categoriesService.createCategory(category).subscribe((response: Category) => {
+      this.messageService.add({
+        severity:'success',
+        summary:'Success', 
+        detail:'Đã tạo danh mục ${category.name}thành công'});
+      timer(1000)
+        .toPromise()
+        .then ((done) => {
+          this.location.back();
+        })
+    },
+
+    (error: Category) => {
+      this.messageService.add({severity:'error', 
+      summary:'Error',
+      detail:'Không tạo được danh mục'});
+    }
+    );
+  }
+
+  private _updateCategory(category: Category) {
+
+  }
+
+  private _checkEditMode() {
+    this.route.params.subscribe(params => {
+      if(params.id) {
+        this.editmode = true;
+        this.categoriesService.getCategory(params.id).subscribe(category => {
+          this.categoryForm.name.setValue(category.name);
+          this.categoryForm.icon.setValue(category.icon);
+        })
+      }
+    })
   }
 
   get categoryForm() {

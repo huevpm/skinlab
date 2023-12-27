@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from '../../../../../libs/products/src/services/categories.service';
 import { Category } from '../../models/category';
-import { ConfirmEventType, ConfirmationService } from 'primeng/api';
+import { ConfirmEventType, ConfirmationService, MessageService } from 'primeng/api';
 @Component({
   selector: 'admin-category',
   templateUrl: './category-list.component.html',
@@ -12,7 +12,7 @@ export class CategoryListComponent implements OnInit {
     
 
   constructor(private categoriesService: CategoriesService, private messageService: MessageService,
-    private confirmationService: ConfirmationService) {}
+    private confirmationService: ConfirmationService, private router: Router) {}
   ngOnInit(): void {
     this._getCategories()
   }
@@ -26,7 +26,10 @@ export class CategoryListComponent implements OnInit {
       },
       reject: (type) => {}
       }
-    });
+    )};
+  }
+  updateCategory(categoryid: string) {
+    this.router.navigateByUrl('categories/form/${categoriesid}')
   }
   private _getCategories() {
     this.categoriesService.getCategories().subscribe((cats) => {
