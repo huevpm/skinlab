@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { CategoriesService } from "../../categories/category/categories.service";
+import { CategoriesService } from "../../../../../libs/products/src/services/categories.service1";
 
 @Component ({
     selector: 'bluebits-products-form',

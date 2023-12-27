@@ -1,7 +1,8 @@
+
 <p-toast></p-toast>
 <div class="admin-page">
-    <p-card header="Add Category" subheader="List of all categories">
-        <div class="p-grid p-mb-5">
+    <p-card header="Add Category" subheader="You can add or edit categories here">
+        <div class="p-grid">
             <div class="p-col-12">
                 <p-toolbar>
                     <div class="p-toolbar-group-left"></div>
@@ -10,7 +11,6 @@
                             styleClass="p-button-primary p-mr-2"
                             label="Create"
                             icon="pi pi-plus"
-                            (click)="onsubmit()"
                         </p-button>
                         <p-button
                             styleClass="p-button-secondary"
@@ -24,25 +24,13 @@
         </div>
         <div class="p-grid">
             <div class="p-col-12"> 
-                <form [formGroup]="form">
-                    <div class = "p-fluid p-formgrid p-grid">
-                        <div class = "p-field p-col">
-                            <label for="name"> Tên </label>
-                            <input formControlName="name" id ="name" type="text" pInputText/>
-                            <small *ngIf="categoryForm.name.invalid && isSubmitted" class="p-error">Cột tên là bắt buộc</small>
-                        </div>
-                        <div class = "p-field p-col">
-                            <label for="icon"> Icon </label>
-                            <input formControlName="icon" id ="icon" type="text" pInputText/>
-                            <small *ngIf="categoryForm.icon.invalid && isSubmitted" class="p-error">Cột icon là bắt buộc</small>
-                        </div>
-                </form>
                 <p-table [value]="categories" styleclass="p-datable-gridlines">
                     <ng-template pTemplate="header">
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
                             <th>Icon</th>
+                            <th></th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-product>
@@ -51,6 +39,10 @@
                             <td>{{ category.image }}</td>
                             <td>{{ category.icon }}</td>
                             <td>
+                                <p-button
+                                (click)="deleteCategory(category.id)" styleClass="p-button-danger p-mr-2" icon="pi pi-trash"
+                                styleClass="p-button-success" icon="pi pi-pencil"
+                                ></p-button>
                                 <p-button
                                 (click)="deleteCategory(category.id)"
                                 styleClass="p-button-danger p-mr-2"

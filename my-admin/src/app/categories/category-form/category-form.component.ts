@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CategoriesService } from '../category/categories.service';
+import { CategoriesService } from '../../../../../libs/products/src/services/categories.service1';
 import { Category } from '../../models/category';
 import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
@@ -21,8 +21,7 @@ export class CategoryFormComponent implements OnInit {
   private categoriesService: CategoriesService,
   private messageService: MessageService,
   private location: Location
-     
-     ) {}
+  ) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -40,24 +39,19 @@ export class CategoryFormComponent implements OnInit {
       name: this.categoryForm['name'].value,
       icon: this.categoryForm['icon'].value,
     };
-    if (this.editmode) {
-      this._updateCategory(category);
-    } else {
-      this._addCategory(category);
-    }
-    this.categoriesService.createCategory(category).subscribe((category: Category) => {
+    this.categoriesService.createCategory(category).subscribe((response: Category) => {
       this.messageService.add({severity:'success',
       summary:'Success', 
       detail:'Đã tạo danh mục ${category.name}thành công'});
-      timer(1000).toPromise().then (() => {
-        this.location.back()
+      timer(1000).toPromise().then ((done) => {
+        this.location.back();
         })
     },
 
-    () => {
+    (error: Category) => {
       this.messageService.add({severity:'error', 
       summary:'Error',
-      detail:'Đã xảy ra lỗi'});
+      detail:'Không tạo được danh mục'});
     }
     );
 
