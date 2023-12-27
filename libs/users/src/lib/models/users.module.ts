@@ -13,7 +13,11 @@ const routes : Routes = [
 ]
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes), InputTextModule,ButtonModule,FormsModule,ReactiveFormsModule],
+    imports: [CommonModule, 
+        RouterModule.forChild(routes), 
+        InputTextModule,ButtonModule,
+        FormsModule,
+        ReactiveFormsModule],
     declarations: [LoginComponent],
 })
 export class UsersModule {}

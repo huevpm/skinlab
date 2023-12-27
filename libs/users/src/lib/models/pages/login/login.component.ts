@@ -12,7 +12,12 @@ export class LoginComponent implements OnInit {
     isSubmitted = false;
     authError = false;
     authMessage = 'Email hoặc mật khẩu đã sai'
-    constructor(private formBuilder: FormBuilder, private auth: AuthService, private localstorageService: LocalstorageService) {}
+    constructor(
+        private formBuilder: FormBuilder, 
+        private auth: AuthService, 
+        private localstorageService: LocalstorageService,
+        private router : Router 
+        ) {}
 
     ngOnInit(): void {
         this._initLoginForm();
@@ -32,6 +37,7 @@ export class LoginComponent implements OnInit {
         (user) => {
             this.authError = false;
             this.localstorageService.setToken(user.token);
+            this.router.navigate(['/']);
         },
         (error: HttpErrorResponse)=>{
             console.log(error);
