@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
-import { CategoryComponent } from './categories/categorylist/category.component-list';
+import { CategoryComponent } from './categories/categorylist/category-list.component';
 import { CategoriesService } from '../../../libs/products/src/services/categories.service';
 import { ProductsListComponent } from './product/products-list/products-list.component';
 import { ProductsFormComponent } from './product/products-form/products-form.component';
@@ -25,6 +25,7 @@ import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { ToolbarModule } from 'primeng/toolbar';
 import { CategoryFormComponent } from './categories/category-form/category-form.component';
+import { CategoryListComponent } from './categories/categorylist/category-list.component';
 import { InputTextModule } from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
@@ -88,6 +89,14 @@ const routes: Routes = [
       {
         path: 'products/form/:id',
         component: ProductsListComponent
+      },
+      {
+        path: 'categories',
+        component: CategoriesListComponent
+      },
+      {
+        path: 'categories/form',
+        component: CategoryFormComponent
       },
     ]
   }

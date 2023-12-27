@@ -1,14 +1,20 @@
 
 <div class="admin-page">
-    <p-card header="Category" subheader="List of all categories">
+    <p-card header="Add Category" subheader="You can add or edit categories here">
         <div class="p-grid">
             <div class="p-col-12">
                 <p-toolbar>
-                    <div class="p-toolbar-group-left">
+                    <div class="p-toolbar-group-left"></div>
+                    <div class="p-toolbar-group-right">
                         <p-button
-                            styleClass="p-button-success"
-                            label="New"
+                            styleClass="p-button-primary p-mr-2"
+                            label="Create"
                             icon="pi pi-plus"
+                        </p-button>
+                        <p-button
+                            styleClass="p-button-secondary"
+                            label="Cancle"
+                            icon="pi pi-arrow-circle-left"
                             routerLink="form">
                         </p-button>
                     </div>
@@ -20,31 +26,24 @@
                 <p-table [value]="categories" styleclass="p-datable-gridlines">
                     <ng-template pTemplate="header">
                         <tr>
-                            <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
-                            <th><img [scr]="product.image" style="width: 100%;"></th>
-                            <th pSortableColumn="price">Price<p-sortIcon field="price"></p-sortIcon></th>
-                            <th pSortableColumn="stock">Stock<p-sortIcon field="stock"></p-sortIcon></th>
-                            <th pSortableColumn="Category">Category<p-sortIcon field="Category"></p-sortIcon></th>
-                            <th pSortableColumn="Created">Created at<p-sortIcon field="Created"></p-sortIcon></th>
-                            <th></th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Icon</th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-product>
                         <tr>
-                            <td>{{ product.name }}</td>
-                            <td>{{ product.image }}</td>
-                            <td>{{ product.price }}</td>
-                            <td>{{ product.countInStock }}</td>
-                            <td>{{ product.category.name }}</td>
-                            <td>{{ product.dateCreated | date: 'short' }}</td>
+                            <td>{{ category.name }}</td>
+                            <td>{{ category.image }}</td>
+                            <td>{{ category.icon }}</td>
                             <td>
                                 <p-button
-                                (click)="deleteProduct(product.id)"
+                                (click)="deleteCategory(category.id)"
                                 styleClass="p-button-danger p-mr-2"
                                 icon="pi pi-trash"
                                 ></p-button>
                                 <p-button
-                                (click)="updateProduct(product.id)"
+                                (click)="updateCategory(category.id)"
                                 styleClass="p-button-success"
                                 icon="pi pi-pencil"
                                 ></p-button>

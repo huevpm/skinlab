@@ -1,52 +1,76 @@
 <p-toast></p-toast>
-<div class="admin-page"> 
-    <p-card header="Add Categories" subheader="List of all categories">
-        <div class="p-grid p-mb-5"> 
+<div class="admin-page">
+    <p-card header="Add Category" subheader="List of all categories">
+        <div class="p-grid p-mb-5">
             <div class="p-col-12">
                 <p-toolbar>
-                    <div class="p-toolbar-group-left"> 
-                        <!-- Left side content if needed -->
-                    </div>
+                    <div class="p-toolbar-group-left"></div>
                     <div class="p-toolbar-group-right">
-                        <button pButton
-                            type="button"
-                            styleClass="p-button-primary p-mr-4"
+                        <p-button
+                            styleClass="p-button-primary p-mr-2"
                             label="Create"
                             icon="pi pi-plus"
-                            (click)="onSubmit()"
-                        ></button>
-                        <button pButton
-                            type="button"
-                            styleClass="p-button-secondary" 
-                            label="Cancel" 
-                            icon="pi pi-arrow-circle-left" 
-                            routerLink="/"
-                        ></button>
+                            (click)="onsubmit()"
+                        </p-button>
+                        <p-button
+                            styleClass="p-button-secondary"
+                            label="Cancle"
+                            icon="pi pi-arrow-circle-left"
+                            routerLink="form">
+                        </p-button>
                     </div>
-                </p-toolbar> 
+                </p-toolbar>
             </div>
-        </div> 
+        </div>
         <div class="p-grid">
             <div class="p-col-12"> 
-                <form [formGroup]="form"> 
-                    <div class="p-fluid p-formgrid p-grid">
-                        <div class="p-field p-col"> 
-                            <label for="name">Name</label>
-                            <input formControlName="name" id="name" type="text" pInputText placeholder="Name" />
-                            <small *ngIf="categoryForm['name'].invalid && isSubmitted" class="p-error">
-                                Name is required
-                            </small>
+                <form [formGroup]="form">
+                    <div class = "p-fluid p-formgrid p-grid">
+                        <div class = "p-field p-col">
+                            <label for="name"> Tên </label>
+                            <input formControlName="name" id ="name" type="text" pInputText/>
+                            <small *ngIf="categoryForm.name.invalid && isSubmitted" class="p-error">Cột tên là bắt buộc</small>
                         </div>
-                        <div class="p-field p-col"> 
-                            <label for="icon">Icon</label>
-                            <input formControlName="icon" id="icon" type="text" pInputText placeholder="Icon" />
-                            <small *ngIf="categoryForm['icon'].invalid && isSubmitted" class="p-error">
-                                Icon is required
-                            </small>
+                        <div class = "p-field p-col">
+                            <label for="icon"> Icon </label>
+                            <input formControlName="icon" id ="icon" type="text" pInputText/>
+                            <small *ngIf="categoryForm.icon.invalid && isSubmitted" class="p-error">Cột icon là bắt buộc</small>
                         </div>
-                    </div>
                 </form>
+                <p-table [value]="categories" styleclass="p-datable-gridlines">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Icon</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{ category.name }}</td>
+                            <td>{{ category.image }}</td>
+                            <td>{{ category.icon }}</td>
+                            <td>
+                                <p-button
+                                (click)="deleteCategory(category.id)"
+                                styleClass="p-button-danger p-mr-2"
+                                icon="pi pi-trash"
+                                ></p-button>
+                                <p-button
+                                (click)="updateCategory(category.id)"
+                                styleClass="p-button-success"
+                                icon="pi pi-pencil"
+                                ></p-button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
             </div>
         </div>
     </p-card>
 </div>
+<p-confirmDialog
+    [style]="{width:'50VW'}"
+    [baseZIndex]="10000"
+    rejectButtonStyleClass="p-button-text"
+></p-confirmDialog>
