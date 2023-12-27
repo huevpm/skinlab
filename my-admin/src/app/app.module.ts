@@ -11,10 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
-import { CategoryComponent } from './categories/categorylist/category-list.component';
 import { CategoriesService } from '../../../libs/products/src/services/categories.service';
 import { ProductsListComponent } from './product/products-list/products-list.component';
 import { ProductsFormComponent } from './product/products-form/products-form.component';
+import { CategoryFormComponent } from './categories/category-form/category-form.component';
+import { CategoryListComponent } from './categories/categorylist/category-list.component';
 import { AuthGuard, UsersModule} from '@bluebits/users';
 
 // Import PrimeNG modules
@@ -24,8 +25,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { ToolbarModule } from 'primeng/toolbar';
-import { CategoryFormComponent } from './categories/category-form/category-form.component';
-import { CategoryListComponent } from './categories/categorylist/category-list.component';
 import { InputTextModule } from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
@@ -36,6 +35,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { EditorModule } from 'primeng/editor';
 import { Router } from 'express';
 import { RouterModule } from '@angular/router';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [
@@ -67,8 +67,9 @@ import { RouterModule } from '@angular/router';
     EditorModule,
     RouterModule.forRoot(routes, {initialNavigation: 'enabled'}),
     UsersModule,
+    ConfirmDialogModule,
   ],
-  providers: [CategoriesService, MessageService],
+  providers: [CategoriesService, MessageService, ConfirmationService],
   bootstrap: [AppComponent]
 })
 

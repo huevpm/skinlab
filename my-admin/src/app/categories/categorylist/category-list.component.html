@@ -1,4 +1,5 @@
 
+<p-toast></p-toast>
 <div class="admin-page">
     <p-card header="Add Category" subheader="You can add or edit categories here">
         <div class="p-grid">
@@ -29,6 +30,7 @@
                             <th>Id</th>
                             <th>Name</th>
                             <th>Icon</th>
+                            <th></th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-product>
@@ -37,6 +39,10 @@
                             <td>{{ category.image }}</td>
                             <td>{{ category.icon }}</td>
                             <td>
+                                <p-button
+                                (click)="deleteCategory(category.id)" styleClass="p-button-danger p-mr-2" icon="pi pi-trash"
+                                styleClass="p-button-success" icon="pi pi-pencil"
+                                ></p-button>
                                 <p-button
                                 (click)="deleteCategory(category.id)"
                                 styleClass="p-button-danger p-mr-2"
