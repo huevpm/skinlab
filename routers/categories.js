@@ -18,7 +18,7 @@ router.get('/:id', async(req, res)=>{
     if(!category) {
         res.status(500).json({message: 'The category with the given ID was not found'})
     }
-    res.status(200).send(categoryList);
+    res.status(200).send(category);
     
 })
 
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
     let category = new Category({
         name: req.body.name,
     })
-    category = await category.save();
+    category = await Category.save();
 
     if(!category)
     return res.status(404).send('the category cannot be created')

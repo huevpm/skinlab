@@ -9,7 +9,8 @@ const router = express.Router();
 
 
 router.get(`/`, async (req, res) => {
-    const orderList = await Order.find().populate('user', 'name').sort({'dateOrdered': -1});
+    const orderList = await Order.find()
+    .populate('user', 'user_name').sort({'dateOrdered': -1});
 
     if(!orderList) {
         res.status(500).json({success: false})
@@ -19,11 +20,16 @@ router.get(`/`, async (req, res) => {
 
 router.get(`/:id`, async (req, res) => {
     const order = await Order.findById(req.params.id)
-    .populate('user', 'name')
-    .populate({
-        path: 'OrderItems', populate: {
-            path: 'product', populate: 'category'}
-        });
+    .populate('user', 'user_name')
+    .populate(
+        {
+            path: 'orderItems',
+            populate: {
+                path: 'product',
+                    populate: 'category'
+                }
+        }
+        );
 
     if(!order) {
         res.status(500).json({success: false})
@@ -32,27 +38,25 @@ router.get(`/:id`, async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const orderItemsIds = Promise.all(req.body.orderItems.map( async orderItems =>{
+    const orderItemsIds = Promise.all(req.body.orderItems.map( async orderItem =>{
         let newOrderItem = new OrderItem({
-            quantity: orderItems.quantity,
-            product: orderItems.product
+            product: orderItem.product,
+            quantity: orderItem.quantity,
         })
 
         newOrderItem = await newOrderItem.save();
 
         return newOrderItem._id;
-    }))
-    const orderItemsIdsResolved = await orderItemsIds
+    }));
+    const orderItemsIdsResolved = await orderItemsIds;
 
-    const totalPrices = await Promise.all(orderItemsIdsResolved.map(async (orderItemsIds)=>{
-        const orderItems = await OrderItem.findById(orderItemsIds).populate('product','price')
-        const totalPrice = orderItems.product.price * orderItems.quantity;
+    const totalPrices = await Promise.all(orderItemsIdsResolved.map(async (orderItemId)=>{
+        const orderItem = await OrderItem.findById(orderItemId).populate('product','price')
+        const totalPrice = orderItem.product.price * orderItem.quantity;
         return totalPrice
     }))
 
     const totalPrice = totalPrices.reduce((a,b) => a +b, 0)
-
-    console.log(totalPrice)
 
     let order = new Order({
         orderItems: orderItemsIdsResolved,
@@ -94,7 +98,7 @@ router.post('/', async (req, res) => {
 // })
 
     router.put('/:id', async(req, res)=> {
-        const order = await Order.findByAndUpdate(
+        const order = await Order.findByIdAndUpdate(
             req.params.id,
             {
                 status: req.body.status
@@ -145,7 +149,7 @@ router.post('/', async (req, res) => {
 
     router.get(`/get/userorders/:userid`, async (req, res) => {
         const userorderList = await Order.find({user: req.params.userid}).populate({
-            path: 'OrderItems', populate: {
+            path: 'orderItems', populate: {
                 path: 'product', populate: 'category'}
             }).sort({'dateOrdered': -1});
     

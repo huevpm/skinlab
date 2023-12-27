@@ -13,7 +13,6 @@ const orderSchema = mongoose.Schema({
     },
     shippingAddress2: {
         type: String,
-        required: true,
     },
     city: {
         type: String,
@@ -49,12 +48,12 @@ const orderSchema = mongoose.Schema({
         default: Date.now,
     },
 
-    name: String,
-    image: String,
-    countInStock: {
-        type: Number,
-        required: true
-    }
+    // name: String,
+    // image: String,
+    // countInStock: {
+    //     type: Number,
+    //     required: true
+    // }
 })
 
 
