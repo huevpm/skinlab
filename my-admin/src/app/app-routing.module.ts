@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ShellComponent } from './shared/shell/shell.component';
-import { CategoryComponent } from './categories/category/category.component';
+import { CategoryComponent } from './categories/categorylist/category.component-list';
 import { CategoryFormComponent } from './categories/category-form/category-form.component';
 const routes: Routes = [
   { 
