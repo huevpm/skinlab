@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
     isSubmitted = false;
     authError = false;
     authMessage = 'Email hoặc mật khẩu đã sai'
-    constructor(private formBuilder: FormBuilder, private auth: AuthService) {}
+    constructor(private formBuilder: FormBuilder, private auth: AuthService, private localstorageService: LocalstorageService) {}
 
     ngOnInit(): void {
         this._initLoginForm();
@@ -28,9 +28,10 @@ export class LoginComponent implements OnInit {
         this.isSubmitted =true;
 
         if(this.loginFormGroup.invalid) return;
-        this.auth.login(this.loginForm.email.value, this.loginForm.password.value) .subscribe
-        (user => {
+        this.auth.login(this.loginForm.email.value, this.loginForm.password.value) .subscribe(
+        (user) => {
             this.authError = false;
+            this.localstorageService.setToken(user.token);
         },
         (error: HttpErrorResponse)=>{
             console.log(error);
