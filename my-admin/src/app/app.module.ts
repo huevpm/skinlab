@@ -36,6 +36,7 @@ import { EditorModule } from 'primeng/editor';
 import { Router } from 'express';
 import { RouterModule } from '@angular/router';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { ColorPickerModule } from 'primeng/colorpicker';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     RouterModule.forRoot(routes, {initialNavigation: 'enabled'}),
     UsersModule,
     ConfirmDialogModule,
+    ColorPickerModule,
   ],
   providers: [CategoriesService, MessageService, ConfirmationService],
   bootstrap: [AppComponent]

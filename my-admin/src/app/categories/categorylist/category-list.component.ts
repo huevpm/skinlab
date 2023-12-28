@@ -24,7 +24,6 @@ export class CategoryListComponent implements OnInit {
       accept: () => {
         this.messageService.add({severity: 'info', summary: 'Confirmed', detail: 'You have accepted'});
       },
-      reject: (type) => {}
       }
     )};
   }

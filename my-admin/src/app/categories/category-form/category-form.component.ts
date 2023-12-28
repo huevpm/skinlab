@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CategoriesService } from '../../../../../libs/products/src/services/categories.service1';
+import { CategoriesService } from '../../../../../libs/products/src/services/categories.service';
 import { Category } from '../../models/category';
 import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
 import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'admin-category-form',
   templateUrl: './category-form.component.html',
@@ -17,6 +18,7 @@ export class CategoryFormComponent implements OnInit {
   });
   isSubmitted = false;
   editmode = false;
+  currentCategoryId: string;
 
   constructor(private formBuilder: FormBuilder, 
   private categoriesService: CategoriesService,
@@ -29,6 +31,7 @@ export class CategoryFormComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
       icon: ['', Validators.required],
+      color: ['#fff'],
     });
     
     this._checkEditMode();
@@ -39,27 +42,29 @@ export class CategoryFormComponent implements OnInit {
       return;
     }
     const category: Category = {
+      id: this.currentCategoryId,
       name: this.categoryForm['name'].value,
       icon: this.categoryForm['icon'].value,
+      color: this.categoryForm['color'].value,
     };
     if(this.editmode) {
       this._updateCategory(category)
     } else {
       this._addCategory(category)
     }
-    this.categoriesService.createCategory(category).subscribe((response: Category) => {
+    this.categoriesService.createCategory(category).subscribe((category: Category) => {
       this.messageService.add({
         severity:'success',
         summary:'Success', 
         detail:'Đã tạo danh mục ${category.name}thành công'});
       timer(1000)
         .toPromise()
-        .then ((done) => {
+        .then (() => {
           this.location.back();
         })
     },
 
-    (error: Category) => {
+    () => {
       this.messageService.add({severity:'error', 
       summary:'Error',
       detail:'Không tạo được danh mục'});
@@ -69,19 +74,19 @@ export class CategoryFormComponent implements OnInit {
   }
 
   private _addCategory(category: Category) {
-    this.categoriesService.createCategory(category).subscribe((response: Category) => {
+    this.categoriesService.createCategory(category).subscribe(() => {
       this.messageService.add({
         severity:'success',
         summary:'Success', 
         detail:'Đã tạo danh mục ${category.name}thành công'});
       timer(1000)
         .toPromise()
-        .then ((done) => {
+        .then (() => {
           this.location.back();
         })
     },
 
-    (error: Category) => {
+    () => {
       this.messageService.add({severity:'error', 
       summary:'Error',
       detail:'Không tạo được danh mục'});
@@ -90,16 +95,35 @@ export class CategoryFormComponent implements OnInit {
   }
 
   private _updateCategory(category: Category) {
+    this.categoriesService.updateCategory(category).subscribe(() => {
+      this.messageService.add({
+        severity:'success',
+        summary:'Success', 
+        detail:'Đã chỉnh sửa danh mục ${category.name}thành công'});
+      timer(1000)
+        .toPromise()
+        .then (() => {
+          this.location.back();
+        })
+    },
 
+    () => {
+      this.messageService.add({severity:'error', 
+      summary:'Error',
+      detail:'Chỉnh sửa danh mục không thành công'});
+    }
+    );
   }
 
   private _checkEditMode() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       if(params.id) {
         this.editmode = true;
+        this.currentCategoryId = params.id
         this.categoriesService.getCategory(params.id).subscribe(category => {
           this.categoryForm.name.setValue(category.name);
           this.categoryForm.icon.setValue(category.icon);
+          this.categoryForm.color.setValue(category.color);
         })
       }
     })

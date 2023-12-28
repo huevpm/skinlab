@@ -21,7 +21,11 @@ export class CategoriesService {
     return this.http.post<Category>('http://localhost:3000/api/v1/categories/', category);
   }
 
-  deleteCategory(categoryId: Category): Observable<Object> {
-    return this.http.delete<Category>('http://localhost:3000/api/v1/categories/', category);
+  updateCategory(category: Category): Observable<Category> {
+    return this.http.put<Category>('http://localhost:3000/api/v1/categories/' + category.id, category);
+  }
+
+  deleteCategory(categoryId: Category): Observable<any> {
+    return this.http.delete<any>('http://localhost:3000/api/v1/categories/', category);
   }
 }
