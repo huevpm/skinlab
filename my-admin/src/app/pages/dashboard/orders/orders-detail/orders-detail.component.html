@@ -26,6 +26,29 @@
         </div>
     </div>
     <p-fieldset legend="Order Items" [toggleable]="true" styleClass ="p-mb-4">Nội Dung </p-fieldset>
+    <div class="p-grid p-mb-5">
+    <div class="p-col-2 p-text-bold">Tên</div>
+    <div class="p-col-2 p-text-bold">Thương hiệu    </div>
+    <div class="p-col-2 p-text-bold">Loại     </div>
+    <div class="p-col-2 p-text-bold">Giá   </div>
+    <div class="p-col-2 p-text-bold">Số lượng</div>
+    <div class="p-col-2 p-text-bold">Tổng</div>
+</div>
+
+<div class="p-grid p-mb-5" *ngFor="let orderItem of order.orderItems">
+    <div class="p-col-2">{{ orderItem.product.name }}</div>
+    <div class="p-col-2">{{ orderItem.product.brand }} </div>
+    <div class="p-col-2">{{ orderItem.product.category.name }}</div>
+    <div class="p-col-2">{{ orderItem.product.price }} </div>
+    <div class="p-col-2">{{ orderItem.quantity }}</div>
+    <div class="p-col-2">{{ orderItem.product.price * orderItem.quantity | currency }}</div>
+</div>
+
+<div class = "p-grid" style="color: blue">
+    <div class="p-col-2 p-offset-8 p-text-bold">Tổng đơn</div>
+    <div class="p-col-2 p-text-bold">{{ order.totalPrice}}</div>
+</div>
+
     <p-fieldset legend="Order Address" [toggleable]="true" styleClass ="p-mb-4">Nội Dung </p-fieldset>
     </p-card>
 </div>

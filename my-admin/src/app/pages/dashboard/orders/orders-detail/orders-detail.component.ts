@@ -21,6 +21,7 @@ export class OrdersDetailComponent implements OnInit {
             if(params.id) {
                 this.orderService.getOrder(params.id).subscribe((order) => {
                     this.order = order;
+                    console.log(this.order);
                 });
             }
         })
