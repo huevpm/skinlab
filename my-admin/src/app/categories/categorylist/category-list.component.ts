@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from '../../../../../libs/products/src/services/categories.service';
+import { CategoriesService } from '../../../../../libs/products/src/services/orders.service';
 import { Category } from '../../models/category';
 import { ConfirmEventType, ConfirmationService, MessageService } from 'primeng/api';
 @Component({

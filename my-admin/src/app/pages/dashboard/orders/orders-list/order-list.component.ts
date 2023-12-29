@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/gli';
+import {Component, OnInit } from '@angular/core';
 import {Order} from '@bluebits/orders';
 
 @Component ({

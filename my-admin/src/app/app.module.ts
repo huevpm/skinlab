@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
-import { CategoriesService } from '../../../libs/products/src/services/categories.service';
+import { CategoriesService } from '../../../libs/products/src/services/orders.service';
 import { ProductsListComponent } from './product/products-list/products-list.component';
 import { ProductsFormComponent } from './product/products-form/products-form.component';
 import { CategoryFormComponent } from './categories/category-form/category-form.component';

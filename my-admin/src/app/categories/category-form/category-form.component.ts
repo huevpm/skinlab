@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CategoriesService } from '../../../../../libs/products/src/services/categories.service';
+import { CategoriesService } from '../../../../../libs/products/src/services/orders.service';
 import { Category } from '../../models/category';
 import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
