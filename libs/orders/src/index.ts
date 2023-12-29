@@ -4,3 +4,4 @@ export * from './lib/models/cart'// dòng 6 của MThanh
 
 export * from './lib/models/order'
 export * from './lib/models/order-item'
+export * from './lib/services/orders.service'
