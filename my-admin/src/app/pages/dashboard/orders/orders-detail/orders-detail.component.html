@@ -1,0 +1,31 @@
+<p-toast></p-toast>
+<div class="admin-page" *ngIf="order">
+    <p-card 
+        [header]=" 'Xem đơn hàng' " 
+        subheader="Bạn có thể chỉnh sửa tại đây">
+    <p-fieldset legend="Order Detail" [toggleable]="true" styleClass ="p-mb-4">Nội Dung </p-fieldset>
+    <div class ="p-grid">
+        <div class="p-col-4">
+            <h5>Mã đơn hàng</h5>
+            <p>{{ order.id }}</p>
+        </div>
+
+        <div class="p-col-4">
+            <h5>Ngày đặt hàng</h5>
+            <p>{{ order.dateOrdered | date: 'short'}}</p>
+        </div>
+
+        <div class="p-col-4">
+            <h5>Trạng thái</h5>
+            <p-dropdown></p-dropdown>
+        </div>
+
+        <div class="p-col-4">
+            <h5>Tổng tiền</h5>
+            <p>{{ order.totalPrice | currency }}</p>
+        </div>
+    </div>
+    <p-fieldset legend="Order Items" [toggleable]="true" styleClass ="p-mb-4">Nội Dung </p-fieldset>
+    <p-fieldset legend="Order Address" [toggleable]="true" styleClass ="p-mb-4">Nội Dung </p-fieldset>
+    </p-card>
+</div>

@@ -1,5 +1,6 @@
 import {Component, OnInit } from '@angular/core';
 import {Order} from '@bluebits/orders';
+import { Router } from 'express';
 
 const ORDER_STATUS =  {
     0 : {
@@ -37,7 +38,7 @@ export class OrdersListComponent implements OnInit {
     orders: Order[] =[];
     orderStatus = ORDER_STATUS;
 
-    constructor() { }
+    constructor(private ordersService: OrdersService, private router: Router) { }
 
     ngOnInit(): void {
         this._getOrders();
@@ -47,5 +48,14 @@ export class OrdersListComponent implements OnInit {
         this.ordersService.getOrders().subscribe((orders) => {
             this.orders = orders;
         });
+    }
+
+    showOrder(orderId){
+        this.router.navigateByUrl(`orders/${orderId}`)
+
+    }
+
+    deleteOrder(orderId){
+        
     }
 }

@@ -37,6 +37,9 @@ import { Router } from 'express';
 import { RouterModule } from '@angular/router';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import { ColorPickerModule } from 'primeng/colorpicker';
+import {OrdersListComponent} from './pages/dashboard/orders/orders-list/orders-list.component'
+import {OrdersDetailComponent} from './pages/dashboard/orders/orders-detail/orders-detail.component'
+import {FieldsetModule} from 'primeng/fieldset'
 
 @NgModule({
   declarations: [
@@ -70,6 +73,7 @@ import { ColorPickerModule } from 'primeng/colorpicker';
     UsersModule,
     ConfirmDialogModule,
     ColorPickerModule,
+    FieldsetModule
   ],
   providers: [CategoriesService, MessageService, ConfirmationService],
   bootstrap: [AppComponent]
