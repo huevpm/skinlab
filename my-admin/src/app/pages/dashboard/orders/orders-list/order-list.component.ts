@@ -3,23 +3,23 @@ import {Order} from '@bluebits/orders';
 
 const ORDER_STATUS =  {
     0 : {
-        label: 'Pending',
+        label: 'Chưa xử lý',
         color: 'primary'
     },
     1: {
-        label: 'Processed',
+        label: 'Đang xử lý',
         color: 'warning'
     },
     2: {
-        label: 'Shipped',
+        label: 'Đã giao cho đơn vị vận chuyển',
         color: 'warning'
     },
     3: {
-        label: 'Delivered',
+        label: 'Đã giao hàng thanh công',
         color: 'success'
     },
     4: {
-        label: 'Failed',
+        label: 'Đơn hàng chưa thành công',
         color: 'danger'
     }
 }
