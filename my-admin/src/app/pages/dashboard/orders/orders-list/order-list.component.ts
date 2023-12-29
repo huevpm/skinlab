@@ -16,6 +16,12 @@ export class OrdersListComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
+        this._getOrders();
+    }
 
+    _getOrders() {
+        this.ordersService.getOrders().subscribe((orders) => {
+            this.orders = orders;
+        });
     }
 }
