@@ -1,7 +1,7 @@
 import {Component, OnInit } from '@angular/core';
 import {Order} from '@bluebits/orders';
 import { Router } from 'express';
-
+import {ORDER_STATUS} from '../order.constants';
 const ORDER_STATUS =  {
     0 : {
         label: 'Chưa xử lý',
@@ -23,7 +23,7 @@ const ORDER_STATUS =  {
         label: 'Đơn hàng chưa thành công',
         color: 'danger'
     }
-}
+};
 
 @Component ({
     selector: 'admin-orders-list',
@@ -56,6 +56,6 @@ export class OrdersListComponent implements OnInit {
     }
 
     deleteOrder(orderId){
-        
+
     }
 }

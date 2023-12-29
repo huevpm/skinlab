@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {OrdersService} from '@bluebits/orders';
+import {ORDER_STATUS} from '../order.constants';
 
 @Component({
     selector: 'admin-orders-detail',
@@ -10,20 +11,49 @@ import {OrdersService} from '@bluebits/orders';
 })
 
 export class OrdersDetailComponent implements OnInit {
-    constructor(private orderService: OrdersService, private route: ActivatedRoute) {} 
+    order: Order;
+    orderStatuses =[];
+    selectedStatus: any;
+
+    constructor(private orderService: OrdersService, private messageService:MessageService, private route: ActivatedRoute) {} 
 
     ngOnInit(): void {
+        this._mapOrderStatus();
         this._getOrder();
     }
+
+    private _mapOrderStatus(){
+        this.orderStatuses = Object.keys(ORDER_STATUS).map((key) => {
+           return {
+            id: key,
+            name: ORDER_STATUS[key].label
+           };
+        } );
+    }
+
 
     private _getOrder() {
         this.route.params.subscribe(params => {
             if(params.id) {
                 this.orderService.getOrder(params.id).subscribe((order) => {
                     this.order = order;
-                    console.log(this.order);
-                });
+                    this.selectedStatus = order.status;                });
             }
         })
+    }
+
+    onStatusChange (event) {
+        this.orderService.updateOrder({status: event.value}, this.order.id).subscribe(
+            () => {
+            this.messageService.add({
+                severity:'success',
+                summary:'Success', 
+                detail:'Đã cập nhật đơn hàng thành công'});
+        }, () => {
+            this.messageService.add({
+                severity:'error',
+                summary:'Error', 
+                detail:'Chưa cập nhật đơn hàng thành công'});
+        });
     }
 }
