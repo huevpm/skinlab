@@ -4,8 +4,21 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {
-  constructor() { }
-  ngOnInit() {
-    console.log("DashboardComponent initialized ewqe");
+  statistics = [];
+  constructor(
+    private userService: UsersService,
+    private productService: ProductService,
+    private ordersService: OrdersService,
+  ) {}
+
+  ngOnInit() : void {
+    combineLatest([
+      this.ordersService.getOrdersCount(),
+      this.productService.getProductsCount(),
+      this.userService.getUsersCount(),
+      this.ordersService.getTotalSales()
+    ]).subscribe((values) => {
+      this.statistics = values;
+    });
   }
 }
