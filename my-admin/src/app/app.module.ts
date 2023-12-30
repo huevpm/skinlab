@@ -16,7 +16,9 @@ import { ProductsListComponent } from './product/products-list/products-list.com
 import { ProductsFormComponent } from './product/products-form/products-form.component';
 import { CategoryFormComponent } from './categories/category-form/category-form.component';
 import { CategoryListComponent } from './categories/categorylist/category-list.component';
-import { AuthGuard, UsersModule} from '@bluebits/users';
+import { UsersListComponent } from './users/user-list/user-list.component';
+import { UsersFormComponent } from '.pages/users/users-form/users-form.component';
+import { AuthGuard, JwtInterceptor, UsersModule} from '@bluebits/users';
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -75,7 +77,9 @@ import {FieldsetModule} from 'primeng/fieldset'
     ColorPickerModule,
     FieldsetModule
   ],
-  providers: [CategoriesService, MessageService, ConfirmationService],
+  providers: [CategoriesService, MessageService, ConfirmationService,
+  { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+],
   bootstrap: [AppComponent]
 })
 
