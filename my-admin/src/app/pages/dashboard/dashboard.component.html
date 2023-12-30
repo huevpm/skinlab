@@ -7,6 +7,55 @@
 
 <div class ="admin-page">
     <p-card header="Dashboard" subheader="Latest Updates">
-        
+        <div class = "p-grid">
+
+            <div class ="p-col-3">
+                <p-card styleClass="d-orders">
+                    <div class="d-item">
+                        <div>
+                            <i class="pi pi-shopping-cart"><br> </i>
+                            <span class="name">Đơn hàng</span>
+                        </div> 
+                            <span class="number">25</span>
+                    </div>
+                </p-card>
+               </div> 
+
+           <div class ="p-col-3">
+            <p-card styleClass="d-products">
+                <div class="d-item">
+                    <div>
+                        <i class="pi pi-briefcase"><br> </i>
+                        <span class="name">Sản phẩm</span>
+                    </div> 
+                        <span class="number">25</span>
+                </div>
+            </p-card>
+           </div> 
+
+           <div class ="p-col-3">
+            <p-card styleClass="d-users">
+                <div class="d-item">
+                    <div>
+                        <i class="pi pi-users"><br> </i>
+                        <span class="name">Người dùng</span>
+                    </div> 
+                        <span class="number">25</span>
+                </div>
+            </p-card>
+           </div> 
+
+           <div class ="p-col-3">
+            <p-card styleClass="d-totalsales">
+                <div class="d-item">
+                    <div>
+                        <i class="pi pi-dollar"><br> </i>
+                        <span class="name">Tổng tiền</span>
+                    </div> 
+                        <span class="number">{{ '120'  |curency }}</span>
+                </div>
+            </p-card>
+           </div> 
+        </div>
     </p-card>
 </div>
