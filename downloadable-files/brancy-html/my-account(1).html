@@ -33,8 +33,6 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <style>
-        
-
         .popup {
             display: none;
             position: absolute;
@@ -331,7 +329,8 @@
                                                     </div>
                                                 </fieldset>
                                                 <div class="single-input-item">
-                                                    <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
+                                                    <button class="check-btn sqr-btn" data-bs-toggle="modal"
+                                                        data-bs-target="#action-SaveModal">LƯU THAY ĐỔI</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -371,7 +370,9 @@
                                                                     <input type="text" id="sotaikhoan" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <button class="check-btn sqr-btn" onclick="closePopup('popup1')">LƯU THAY ĐỔI</button>
+                                                                    <button class="check-btn sqr-btn"
+                                                                        onclick="closePopup('popup1')">LƯU THAY
+                                                                        ĐỔI</button>
                                                                 </div>
                                                             </form>
                                                         </div>
@@ -397,7 +398,9 @@
                                                                     <input type="text" id="sotaikhoan" />
                                                                 </div>
                                                                 <div class="single-input-item">
-                                                                    <button class="check-btn sqr-btn" onclick="closePopup('popup3')">LƯU THAY ĐỔI</button>
+                                                                    <button class="check-btn sqr-btn"
+                                                                        onclick="closePopup('popup3')">LƯU THAY
+                                                                        ĐỔI</button>
                                                                 </div>
                                                             </form>
                                                         </div>
@@ -442,7 +445,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
                                     <div class="myaccount-content">
                                         <h3>Địa chỉ giao hàng</h3>
@@ -483,7 +486,9 @@
                                                         <input type="sodienthoai" id="sodienthoai" />
                                                     </div>
                                                     <div class="single-input-item">
-                                                        <center><button class="check-btn sqr-btn" onclick="closePopup('popup5')">LƯU</button></center>
+                                                        <center><button class="check-btn sqr-btn"
+                                                                onclick="closePopup('popup5')">LƯU THAY ĐỔI</button>
+                                                        </center>
                                                     </div>
                                                 </form>
                                             </div>
@@ -520,7 +525,8 @@
                                                         <input type="sodienthoai" id="sodienthoai" />
                                                     </div>
                                                     <div class="single-input-item">
-                                                        <button class="check-btn sqr-btn" onclick="closePopup('popup2')">LƯU</button>
+                                                        <button class="check-btn sqr-btn"
+                                                            onclick="closePopup('popup2')">LƯU THAY ĐỔI</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -707,7 +713,7 @@
                                         </div>
                                         <br>
                                         <div class="single-input-item" style="text-align: center;">
-                                            <button class="check-btn sqr-btn" >LƯU</button>
+                                            <button class="check-btn sqr-btn">LƯU THAY ĐỔI</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1004,14 +1010,10 @@
                             <div class="widget-item">
                                 <h4 class="widget-title">Các kênh khác:</h4>
                                 <div class="widget-social">
-                                    <!-- <a href="https://twitter.com/" target="_blank" rel="noopener"><i
-                                                    class="fa fa-twitter"></i></a> -->
-                                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i
+                                    <a href="https://www.facebook.com/Skinlab.doan" target="_blank" rel="noopener"><i
                                             class="fa fa-facebook"></i></a>
-                                    <!-- <a href="https://www.tiktok.com/" target="_blank" rel="noopener"><i
-                                                    class="fa fa-tiktok"></i></a> -->
-                                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i
-                                            class="fa fa-pinterest-p"></i></a>
+                                    <a href="https://www.pinterest.com.mx/search/pins/?q=skincare&rs=typed"
+                                        target="_blank" rel="noopener"><i class="fa fa-pinterest-p"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1025,8 +1027,6 @@
                 <div class="container pt-0 pb-0">
                     <div class="footer-bottom-content">
                         <p class="copyright">© 2023 Skinlab <i class="fa fa-heart"></i>
-                            <!-- by <a target="_blank"
-                                        href="https://themeforest.net/user/codecarnival">Codecarnival.</a> -->
                         </p>
                     </div>
                 </div>
@@ -1038,58 +1038,6 @@
 
         <!--== Scroll Top Button ==-->
         <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
-
-        <!--== Start Product Quick Wishlist Modal ==-->
-        <aside class="product-action-modal modal fade" id="action-WishlistModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="product-action-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                                <i class="fa fa-times"></i>
-                            </button>
-                            <div class="modal-action-messages">
-                                <i class="fa fa-check-square-o"></i> Added to wishlist successfully!
-                            </div>
-                            <div class="modal-action-product">
-                                <div class="thumb">
-                                    <img src="assets/images/shop/modal1.webp" alt="Organic Food Juice" width="466"
-                                        height="320">
-                                </div>
-                                <h4 class="product-name"><a href="product-details.html">Readable content DX22</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <!--== End Product Quick Wishlist Modal ==-->
-
-        <!--== Start Product Quick Add Cart Modal ==-->
-        <aside class="product-action-modal modal fade" id="action-CartAddModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="product-action-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                                <i class="fa fa-times"></i>
-                            </button>
-                            <div class="modal-action-messages">
-                                <i class="fa fa-check-square-o"></i> Added to cart successfully!
-                            </div>
-                            <div class="modal-action-product">
-                                <div class="thumb">
-                                    <img src="assets/images/shop/modal1.webp" alt="Organic Food Juice" width="466"
-                                        height="320">
-                                </div>
-                                <h4 class="product-name"><a href="product-details.html">Readable content DX22</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <!--== End Product Quick Add Cart Modal ==-->
 
         <!--== Start Confirm Modal ==-->
         <aside class="product-action-modal modal fade" id="action-ConfirmModal" tabindex="-1" aria-hidden="true">
@@ -1129,6 +1077,22 @@
         </aside>
         <!--== End Delete Modal ==-->
 
+        <!--== Start Save Modal ==-->
+        <aside class="product-action-modal modal fade" id="action-SaveModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="product-action-view-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-action-messages">Lưu dữ liệu thành công!</div>
+                        </div>
+                    </div>
+                </div>
+        </aside>
+        <!--== End Save Modal ==-->
+
         <!--== Start Aside Search Form ==-->
         <aside class="aside-search-box-wrapper offcanvas offcanvas-top" tabindex="-1" id="AsideOffcanvasSearch"
             aria-labelledby="offcanvasTopLabel">
@@ -1147,9 +1111,8 @@
                             <div class="aside-search-form position-relative">
                                 <label for="SearchInput" class="visually-hidden">Tìm kiếm</label>
                                 <input id="SearchInput" type="search" class="form-control"
-                                    placeholder="Search entire store…">
+                                    placeholder="Nhập tên sản phẩm…">
                                 <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
-
                             </div>
                         </form>
                     </div>
@@ -1158,74 +1121,12 @@
         </aside>
         <!--== End Aside Search Form ==-->
 
-        <!--== Start Product Quick View Modal ==-->
-        <aside class="product-cart-view-modal modal fade" id="action-QuickViewModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="product-quick-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                                <span class="fa fa-close"></span>
-                            </button>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <!--== Start Product Thumbnail Area ==-->
-                                        <div class="product-single-thumb">
-                                            <img src="assets/images/shop/quick-view1.webp" width="544" height="560"
-                                                alt="Image-HasTech">
-                                        </div>
-                                        <!--== End Product Thumbnail Area ==-->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <!--== Start Product Info Area ==-->
-                                        <div class="product-details-content">
-                                            <h5 class="product-details-collection">Premioum collection</h5>
-                                            <h3 class="product-details-title">Offbline Instant Age Rewind Eraser.</h3>
-                                            <div class="product-details-review mb-5">
-                                                <div class="product-review-icon">
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div>
-                                                <button type="button" class="product-review-show">150 reviews</button>
-                                            </div>
-                                            <p class="mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident
-                                                alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut
-                                                veniam sequi amet consectetur.</p>
-                                            <div class="product-details-pro-qty">
-                                                <div class="pro-qty">
-                                                    <input type="text" title="Quantity" value="01">
-                                                </div>
-                                            </div>
-                                            <div class="product-details-action">
-                                                <h4 class="price">$254.22</h4>
-                                                <div class="product-details-cart-wishlist">
-                                                    <button type="button" class="btn" data-bs-toggle="modal"
-                                                        data-bs-target="#action-CartAddModal">Add to cart</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--== End Product Info Area ==-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <!--== End Product Quick View Modal ==-->
-
         <!--== Start Aside Cart ==-->
         <aside class="aside-cart-wrapper offcanvas offcanvas-end" tabindex="-1" id="AsideOffcanvasCart"
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
-                <h1 class="d-none" id="offcanvasRightLabel">Shopping Cart</h1>
-                <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Shopping Cart <i
+                <h1 class="d-none" id="offcanvasRightLabel">Giỏ hàng</h1>
+                <button class="btn-aside-cart-close" data-bs-dismiss="offcanvas" aria-label="Close">Giỏ hàng <i
                         class="fa fa-chevron-right"></i></button>
             </div>
             <div class="offcanvas-body">
@@ -1233,21 +1134,21 @@
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
                         <a href="product-details.html">
-                            <img src="assets/images/shop/cart1.webp" width="68" height="84" alt="Image">
-                            <span class="product-title">Leather Mens Slipper</span>
+                            <img src="assets/images/shop/cart1.png" width="68" height="84" alt="Image">
+                            <span class="product-title">Sữa dưỡng Innisfree</span>
                         </a>
-                        <span class="product-price">1 × £69.99</span>
+                        <span class="product-price">1 × 350.000 VND</span>
                     </li>
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
                         <a href="product-details.html">
-                            <img src="assets/images/shop/cart2.webp" width="68" height="84" alt="Image">
-                            <span class="product-title">Quickiin Mens shoes</span>
+                            <img src="assets/images/shop/cart2.png" width="68" height="84" alt="Image">
+                            <span class="product-title">Kem dưỡng Innisfree</span>
                         </a>
-                        <span class="product-price">1 × £20.00</span>
+                        <span class="product-price">1 × 150.000 VND</span>
                     </li>
                 </ul>
-                <p class="cart-total"><span>Subtotal:</span><span class="amount">£89.99</span></p>
+                <p class="cart-total"><span>Tổng cộng: </span><span class="amount">500.000 VND</span></p>
                 <a class="btn-total" href="product-cart.html">Xem giỏ hàng</a>
                 <a class="btn-total" href="product-checkout.html">Thanh toán</a>
             </div>
