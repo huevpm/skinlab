@@ -34,6 +34,53 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
 
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Adjust the opacity to your liking */
+            display: none;
+            /* Initially hide the overlay */
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            
+            /* Đặt kích thước chiều rộng */
+            border: 50px;
+        }
+
+
+
+        /* CSS nút tắt modal */
+        .closemodal button {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            padding: 0px;
+            border-radius: 100%;
+            background: #333;
+            color: #fff;
+            border: none;
+            float: right;
+        }
+
+        .nenmodal.active .nenmodal2 {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -220,11 +267,18 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group mb-0">
-                                            <button class="btn btn-sm" type="submit">GỬI</button>
+                                            <button class="btn btn-sm" type="submit"><a href="#" class="check-btn sqr-btn"
+                                                onclick="openPopup('popup7')">GỬI</a></button>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div>  
                             </form>
+                            <div id="overlay" class="overlay"></div>
+<div id="popup7" class="popup" style="width: 400px; height:150px; float: left; z-index: 20;" >
+    <div class="closemodal"><button onclick="closePopup('popup7')">×</button></div>
+    <h3></h3>
+    <h3></h3>
+    <h3 style="text-align: center;">Cảm ơn phản hồi của bạn!</h3>
+</div>
                         </div>
                         <!--== End Contact Form ==-->
 
@@ -233,7 +287,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-left-img" data-bg-img="assets/images/photos/contact.png"></div>
+            <div class="contact-left-img" data-bg-img="assets/images/photos/contact.png" style="z-index: 10;"></div>
         </section>
         <!--== End Contact Area Wrapper ==-->
 
@@ -253,7 +307,7 @@
                     </div>
                     <div class="contact-info-item mb-0">
                         <img class="icon" src="assets/images/icons/3.webp" width="30" height="30" alt="Icon">
-                        <p>Phường Linh Xuân, Thủ Đức</p>
+                        <p>Phường Linh Xuân, <br>Thủ Đức, TP.HCM</p>
                     </div>
                 </div>
             </div>
@@ -262,7 +316,10 @@
 
         <div class="map-area">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802879.9165497769!2d144.83475730949783!3d-38.180874157285366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sbd!4v1636803638401!5m2!1sen!2sbd"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16198.22718496623!2d106.82233531578046!3d10.81245249720619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a8761b3c85b%3A0x85175904686d8f02!2s669+QL1A+Khu+phố+3%2C+Thủ+Đức%2C+Thành+phố+Hồ+Chí+Minh!5e0!3m2!1sen!2sbd!4v1641532704110!5m2!1sen!2sbd"
+                width="600"
+                height="450"
+            ></iframe>
         </div>
 
     </main>
@@ -474,6 +531,17 @@
     <!-- Custom Main JS -->
     <script src="./assets/js/main.js"></script>
 
+    <script>
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = 'block';
+}
+
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = 'none';
+}
+</script>
 </body>
 
 </html>
