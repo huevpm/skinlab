@@ -74,7 +74,6 @@ router.post(`/`, async (req, res) =>{
             name: req.body.name,
             description: req.body.description,
             richDescription: req.body.richDescription,
-            // image: `${basePath}${fileName}`, // "https://localhost:3000/downloadable-files/brancy-html/assets/images/shop/1.png"
             image: req.body.image,
             images: req.body.image,
             brand: req.body.brand,
@@ -164,37 +163,6 @@ router.get('/get/featured:count', async (req, res) => {
     }
     res.send(products);
 })
-
-// router.put(
-//     '/gallery-images/:id',
-//     uploadOptions.array('images', 10),
-//     async (req, res) => {
-//         if (!mongoose.isValidObjected(req.params.id)){
-//             return res.status(400).send('Invalid Product ID')
-//         }
-//         const files = req.files
-// let imagesPaths = [];
-// const basePath = `${req.protocol}://${req.get('host')}/downloadable-files/brancy-html/assets/images/shop/`; // gọi ảnh
-
-//         if(files){
-// files.map(file => {
-//     imagesPaths.push(`${basePath}${file.fileName}`);
-
-//   })
-
-//     const product = await Product.findByIdAndUpdate(
-//     req.params.id,
-//     {
-//         images: imagesPaths
-//     }, 
-//     {new:true}
-//     )
-//     } 
-//     if (!product)
-//     return res.status(500).send('the product cannot be updated')
-//     res.send(product);
-// }   
-// )
 
 
 module.exports = router;

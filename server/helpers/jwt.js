@@ -17,17 +17,12 @@ function authJwt() {
     })
     .unless({
         path: [
-            // {url: /\/downloadable-files\/brancy-html\/assets\/images\/shop(.*)/, methods: ['GET', 'OPTION']},
-            // {url: /\/skinlab\/downloadable-files\/brancy-html\/products(.*)/, methods: ['GET', 'OPTION']},
-            // {url: /\/skinlab\/downloadable-files\/brancy-html\/categories(.*)/, methods: ['GET', 'OPTION']},
-            // `${api}/skinlab/downloadable-files/brancy-html`, //ex, co the thay doi
-            // `${api}/skinlab/downloadable-files/brancy-html`,
             { url: /(.*)/},
             { url: /\/public\/upload(.*)/},
-            { url: /\/skinlab\/downloadable-files\/brancy-html\/products(.*)/},
-            { url: /\/skinlab\/downloadable-files\/brancy-html\/categories(.*)/},
-            { url: /\/skinlab\/downloadable-files\/brancy-html\/users(.*)/},
-            { url: /\/skinlab\/downloadable-files\/brancy-html\/orders(.*)/},
+            { url: /\/skinlab\/skinlab-html\/products(.*)/},
+            { url: /\/skinlab\/skinlab-html\/categories(.*)/},
+            { url: /\/skinlab\/skinlab-html\/users(.*)/},
+            { url: /\/skinlab\/skinlab-html\/orders(.*)/},
             `${api}/orders/get/userorders/`,
             `${api}/orders/get/`,
             `${api}/orders/get/count`,
