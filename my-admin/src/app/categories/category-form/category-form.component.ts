@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CategoriesService } from '../../../../../libs/products/src/services/orders.service';
+import { CategoriesService } from '../categorylist/categories.service';
 import { Category } from '../../models/category';
 import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
@@ -14,11 +14,10 @@ import { ActivatedRoute } from '@angular/router';
 export class CategoryFormComponent implements OnInit {
   form: FormGroup = this.formBuilder.group({
     name: ['', Validators.required], // Assuming 'name' is a required field
-    icon: ['',Validators.required], // Assuming 'icon' is a required field
   });
-  isSubmitted = false;
-  editmode = false;
-  currentCategoryId: string;
+  isSubmitted: boolean= false;
+  editmode: boolean = false;
+  currentCategoryId: string = '';
 
   constructor(private formBuilder: FormBuilder, 
   private categoriesService: CategoriesService,
@@ -30,8 +29,6 @@ export class CategoryFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
-      icon: ['', Validators.required],
-      color: ['#fff'],
     });
     
     this._checkEditMode();
@@ -44,41 +41,41 @@ export class CategoryFormComponent implements OnInit {
     const category: Category = {
       id: this.currentCategoryId,
       name: this.categoryForm['name'].value,
-      icon: this.categoryForm['icon'].value,
-      color: this.categoryForm['color'].value,
     };
     if(this.editmode) {
       this._updateCategory(category)
     } else {
       this._addCategory(category)
     }
-    this.categoriesService.createCategory(category).subscribe((category: Category) => {
-      this.messageService.add({
-        severity:'success',
-        summary:'Success', 
-        detail:'Đã tạo danh mục ${category.name}thành công'});
-      timer(1000)
-        .toPromise()
-        .then (() => {
-          this.location.back();
-        })
-    },
 
-    () => {
-      this.messageService.add({severity:'error', 
-      summary:'Error',
-      detail:'Không tạo được danh mục'});
-    }
-    );
+
+  //   this.categoriesService.createCategory(category).subscribe((category: Category) => {
+  //     this.messageService.add({
+  //       severity:'success',
+  //       summary:'Success', 
+  //       detail:'Đã tạo danh mục ${category.name}thành công'});
+  //     timer(1000)
+  //       .toPromise()
+  //       .then (() => {
+  //         this.location.back();
+  //       })
+  //   },
+
+  //   () => {
+  //     this.messageService.add({severity:'error', 
+  //     summary:'Error',
+  //     detail:'Không tạo được danh mục'});
+  //   }
+  //   );
 
   }
 
-  private _addCategory(category: Category) {
+  private _addCategory(category: Category):void {
     this.categoriesService.createCategory(category).subscribe(() => {
       this.messageService.add({
         severity:'success',
         summary:'Success', 
-        detail:'Đã tạo danh mục ${category.name}thành công'});
+        detail:`Đã tạo danh mục ${category.name}thành công`});
       timer(1000)
         .toPromise()
         .then (() => {
@@ -86,7 +83,7 @@ export class CategoryFormComponent implements OnInit {
         })
     },
 
-    () => {
+    (error) => {
       this.messageService.add({severity:'error', 
       summary:'Error',
       detail:'Không tạo được danh mục'});
@@ -99,7 +96,7 @@ export class CategoryFormComponent implements OnInit {
       this.messageService.add({
         severity:'success',
         summary:'Success', 
-        detail:'Đã chỉnh sửa danh mục ${category.name}thành công'});
+        detail:`Đã chỉnh sửa danh mục ${category.name}thành công`});
       timer(1000)
         .toPromise()
         .then (() => {
@@ -107,7 +104,7 @@ export class CategoryFormComponent implements OnInit {
         })
     },
 
-    () => {
+    (error) => {
       this.messageService.add({severity:'error', 
       summary:'Error',
       detail:'Chỉnh sửa danh mục không thành công'});
@@ -115,18 +112,17 @@ export class CategoryFormComponent implements OnInit {
     );
   }
 
+
   private _checkEditMode() {
     this.route.params.subscribe((params) => {
-      if(params.id) {
+      if(params['id']) {
         this.editmode = true;
-        this.currentCategoryId = params.id
-        this.categoriesService.getCategory(params.id).subscribe(category => {
-          this.categoryForm.name.setValue(category.name);
-          this.categoryForm.icon.setValue(category.icon);
-          this.categoryForm.color.setValue(category.color);
-        })
-      }
-    })
+        this.currentCategoryId = params['id']
+        this.categoriesService.getCategory(params['id']).subscribe(category => {
+          this.categoryForm['name'].setValue(category.name);
+      })
+    }
+  })
   }
 
   get categoryForm() {

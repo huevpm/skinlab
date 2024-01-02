@@ -11,14 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ShellComponent } from './shared/shell/shell.component';
-import { CategoriesService } from '../../../libs/products/src/services/orders.service';
-import { ProductsListComponent } from './product/products-list/products-list.component';
-import { ProductsFormComponent } from './product/products-form/products-form.component';
+import { CategoryComponent } from './categories/categorylist/category-list.component';
+import { CategoriesService } from './categories/categorylist/categories.service';
+import { ProductsListComponent } from './products/products-list/products-list.component';
+import { ProductsFormComponent } from './products/products-form/products-form.component';
+import { ProductsService } from './products/products-list/products.service';
 import { CategoryFormComponent } from './categories/category-form/category-form.component';
-import { CategoryListComponent } from './categories/categorylist/category-list.component';
-import { UsersListComponent } from './users/user-list/user-list.component';
-import { UsersFormComponent } from '.pages/users/users-form/users-form.component';
-import { AuthGuard, JwtInterceptor, UsersModule} from '@bluebits/users';
+import { UsersListComponent } from './users/users-list/users-list.component';
+import { UsersFormComponent } from './users/users-form/users-form.component';
+import { LoginComponent } from './login/login.component';
+import { UsersService } from './users/users-list/users.service';
+
 
 // Import PrimeNG modules
 import { CardModule } from 'primeng/card';
@@ -27,6 +30,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { ToolbarModule } from 'primeng/toolbar';
+import { ConfirmationService } from 'primeng/api';
+import { Location } from '@angular/common';
+
 import { InputTextModule } from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
@@ -35,26 +41,34 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { DropdownModule } from 'primeng/dropdown';
 import { EditorModule } from 'primeng/editor';
-import { Router } from 'express';
 import { RouterModule } from '@angular/router';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import { ColorPickerModule } from 'primeng/colorpicker';
-import {OrdersListComponent} from './pages/dashboard/orders/orders-list/orders-list.component'
-import {OrdersDetailComponent} from './pages/dashboard/orders/orders-detail/orders-detail.component'
+import {OrdersListComponent} from './orders/orders-list/orders-list.component'
+import {OrdersDetailComponent} from './orders/orders-detail/orders-detail.component'
 import {FieldsetModule} from 'primeng/fieldset'
+import {TagModule} from 'primeng/tag';
+import { InputMaskModule } from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     SidebarComponent,
     ShellComponent,
     CategoryComponent,
     CategoryFormComponent,
+    ProductsListComponent,
+    ProductsFormComponent,
+    UsersListComponent,
+    UsersFormComponent,
+    OrdersListComponent,
+    OrdersDetailComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, // This should include your RouterModule configuration
+    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -71,76 +85,74 @@ import {FieldsetModule} from 'primeng/fieldset'
     InputSwitchModule,
     DropdownModule,
     EditorModule,
-    RouterModule.forRoot(routes, {initialNavigation: 'enabled'}),
-    UsersModule,
     ConfirmDialogModule,
     ColorPickerModule,
-    FieldsetModule
+    FieldsetModule,
+    RouterModule,
+    TagModule,
+    InputMaskModule
   ],
-  providers: [CategoriesService, MessageService, ConfirmationService,
-  { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
-],
+  providers: [CategoriesService, MessageService, ConfirmationService, ProductsService,
+    Location,UsersService],
   bootstrap: [AppComponent]
 })
 
-const routes: Routes = [
-  {
-    path: ' ',
-    component: ShellComponent,
-    canActivate: [AuthGuard],
-    children: [
-      {
-        path: 'products',
-        component: ProductsListComponent
-      },
-      {
-        path: 'products/form',
-        component: ProductsFormComponent
-      },
-      {
-        path: 'products/form/:id',
-        component: ProductsListComponent
-      },
-      {
-        path: 'categories',
-        component: CategoriesListComponent
-      },
-      {
-        path: 'categories/form',
-        component: CategoryFormComponent
-      },
-      {
-        path: 'categories/form/:id',
-        component: CategoryFormComponent
-      },
+// const routes: Routes = [
+//   {
+//     path: ' ',
+//     component: ShellComponent,
+//     canActivate: [AuthGuard],
+//     children: [
+//       {
+//         path: 'products',
+//         component: ProductsListComponent
+//       },
+//       {
+//         path: 'products/form',
+//         component: ProductsFormComponent
+//       },
+//       {
+//         path: 'products/form/:id',
+//         component: ProductsListComponent
+//       },
+//       {
+//         path: 'categories',
+//         component: CategoryComponent
+//       },
+//       {
+//         path: 'categories/form',
+//         component: CategoryFormComponent
+//       },
+//       {
+//         path: 'categories/form/:id',
+//         component: CategoryFormComponent
+//       },
 
-      { 
-      path: 'users',
-      component: UsersListComponent
-      },
+//       { 
+//       path: 'users',
+//       component: UsersListComponent
+//       },
 
-      {
-        path: 'users/form',
-        component: UsersFormComponent
-      },
+//       {
+//         path: 'users/form',
+//         component: UsersFormComponent
+//       },
 
-      {
-        path: 'users/form/:id',
-        component: UsersFormComponent
-      },
+//       {
+//         path: 'users/form/:id',
+//         component: UsersFormComponent
+//       },
 
-      {
-        path: 'orders',
-        component: OrdersListComponent
-      },
+//       {
+//         path: 'orders',
+//         component: OrdersListComponent
+//       },
 
-      {
-        path: 'orders/:id',
-        component: OrdersDetailComponent
-      }
-    ]
-  }
-
-
-],
+//       {
+//         path: 'orders/:id',
+//         component: OrdersDetailComponent
+//       }
+//     ]
+//   }
+// ],
 export class AppModule { }

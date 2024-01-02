@@ -1,0 +1,11 @@
+.d-item {
+    display:flex;
+    text-align: center;
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+
+}
+.d-orders {
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}

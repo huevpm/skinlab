@@ -1,38 +1,59 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from '../../../../../libs/products/src/services/orders.service';
+import { CategoriesService } from './categories.service';
 import { Category } from '../../models/category';
-import { ConfirmEventType, ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
 @Component({
   selector: 'admin-category',
   templateUrl: './category-list.component.html',
   styles: [],
 })
-export class CategoryListComponent implements OnInit {
-  categories = Category[] = [];
+
+export class CategoryComponent implements OnInit {
+  categories: Category[] = [];
     
 
-  constructor(private categoriesService: CategoriesService, private messageService: MessageService,
-    private confirmationService: ConfirmationService, private router: Router) {}
+  constructor(private categoriesService: CategoriesService,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService,
+    private router: Router) {}
+  
   ngOnInit(): void {
-    this._getCategories()
+    this._getCategories();
   }
-  deleteCategory(categoryId: string) {
+  deleteCategory(categoryId: string):void {
     this.confirmationService.confirm({
       message: 'Bạn có muốn xóa danh mục này?',
       header: 'Xóa danh mục',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.messageService.add({severity: 'info', summary: 'Confirmed', detail: 'You have accepted'});
-      },
-      }
-    )};
+        this.categoriesService.deleteCategory(categoryId).subscribe(() => {
+          this._getCategories();
+          this.messageService.add({severity:'success', 
+          summary:'Success',
+          detail:'Đã xóa danh mục thành công'
+        });
+  },
+  (error) => {
+    this.messageService.add({severity:'error', 
+    summary:'Error',
+    detail:'Đã xảy ra lỗi'
+  });
   }
-  updateCategory(categoryid: string) {
-    this.router.navigateByUrl('categories/form/${categoriesid}')
+  );
+},
+reject: () => 
+{}
+});
+}
+
+  updateCategory(categoryid: string): void {
+    this.router.navigateByUrl(`categories/form/${categoryid}`)
   }
+
   private _getCategories() {
-    this.categoriesService.getCategories().subscribe((cats) => {
-      this.categories = cats
+    this.categoriesService.getCategories().subscribe((categories) => {
+      this.categories = categories
     })
   }
 }
