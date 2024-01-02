@@ -7,11 +7,6 @@
                 <p-toolbar>
                     <div class="p-toolbar-group-left"></div>
                     <div class="p-toolbar-group-right">
-                        <!-- <p-button
-                            styleClass="p-button-primary p-mr-2"
-                            label="Create"
-                            icon="pi pi-plus">
-                        </p-button> -->
                         <p-button
                             styleClass="p-button-secondary"
                             label="Hủy"
@@ -32,7 +27,8 @@
                             <th></th>
                         </tr>
                     </ng-template>
-                    <ng-template pTemplate="body" let-product>
+
+                    <ng-template pTemplate="body" let-category>
                         <tr>
                             <td>{{ category.id }}</td>
                             <td>{{ category.name }}</td>

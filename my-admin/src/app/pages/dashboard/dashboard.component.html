@@ -5,8 +5,8 @@
 <script src="https://kit.fontawesome.com/335ca08eb0.js" crossorigin="anonymous"></script>
 <i class="fa-solid fa-ring"></i>
 
-<div class ="admin-page" *ngIf="statistic.length">
-    <p-card header="Dashboard" subheader="Latest Updates">
+<div class ="admin-page">
+    <p-card header="Dashboard" subheader="Tình trạng của hàng">
         <div class = "p-grid">
 
             <div class ="p-col-3">
@@ -14,7 +14,7 @@
                     <div class="d-item">
                         <div>
                             <i class="pi pi-shopping-cart"><br> </i>
-                            <span class="name">Đơn hàng</span>
+                            <span class="name">Số đơn hàng</span>
                         </div> 
                             <span class="number">{{ statistics[0] }}</span>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-briefcase"><br> </i>
-                        <span class="name">Sản phẩm</span>
+                        <span class="name">Số sản phẩm</span>
                     </div> 
                         <span class="number">{{ statistics[1] }}</span>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-users"><br> </i>
-                        <span class="name">Người dùng</span>
+                        <span class="name">Số khách hàng</span>
                     </div> 
                         <span class="number">{{ statistics[2] }}</span>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-dollar"><br> </i>
-                        <span class="name">Tổng tiền</span>
+                        <span class="name">Tổng doanh thu</span>
                     </div> 
                         <span class="number">{{ statistics[3] | currency }}</span>
                 </div>

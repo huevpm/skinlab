@@ -1,16 +1,14 @@
 
 <p-toast></p-toast>
 <div class="admin-page">
-    <p-card header="Orders" subheader="List of all orders">
-
-        </div>
+    <p-card header="Đơn hàng" subheader="Danh sách đơn hàng">
         <div class="p-grid">
             <div class="p-col-12"> 
                 <p-table [value]="orders" styleclass="p-datable-gridlines">
                     <ng-template pTemplate="header">
                         <tr>
-                            <th pSortableColumn="name">Người dùng<p-sortIcon field="user"></p-sortIcon></th>
-                            <th pSortableColumn="totalPrice">Tổng tiền<p-sortIcon field="totalPrice "></p-sortIcon></th>
+                            <th pSortableColumn="name">Khách hàng<p-sortIcon field="user"></p-sortIcon></th>
+                            <th pSortableColumn="totalPrice">Tổng đơn hàng<p-sortIcon field="totalPrice "></p-sortIcon></th>
                             <th pSortableColumn="dateOrdered">Ngày đặt hàng<p-sortIcon field="dateOrdered"></p-sortIcon></th>
                             <th pSortableColumn="status">Trạng thái<p-sortIcon field="status"></p-sortIcon></th>
                             <th></th>
@@ -21,7 +19,12 @@
                             <td>{{ order.user.name }}</td>
                             <td>{{ order.totalPrice }}</td>
                             <td>{{ order.dateOrdered | date: 'short' }}</td>
-                            <td><p-tag [value]="orderStatus[order.status].label" [severity]="orderStatus[order.status].color"></p-tag></td>
+                            <td>
+                                <p-tag
+                                  [value]="order.status"
+                                  [style]="{ 'background-color': order.status === 'Đã giao' ? '#00b894' : '#ff7675' }"
+                              ></p-tag>
+                              </td>
                             <td>
                                 <p-button
                                 (click)="deleteOrder(order.id)" styleClass="p-button-danger p-mr-2" icon="pi pi-trash"

@@ -1,7 +1,7 @@
 <p-toast></p-toast>
 <div class="admin-page">
     <p-card 
-        [header]="editmode ? 'Edit Category: 'Add Category' " 
+        [header]="editmode ? 'Sửa danh mục': 'Thêm danh mục' " 
         subheader="Bạn có thể thêm hoặc chỉnh sửa tại đây">
         <div class="p-grid p-mb-5">
             <div class="p-col-12">
@@ -9,15 +9,18 @@
                     <div class="p-toolbar-group-left"></div>
                     <div class="p-toolbar-group-right">
                         <p-button
+                            type="button"
                             styleClass="p-button-primary p-mr-2"
-                            [label]="editmode ? 'Update' : 'Create'"
+                            [label]="editmode ? 'Cập nhật' : 'Thêm mới'"
                             icon="pi pi-plus"
-                            (click)="onsubmit()">
+                            (click)="onSubmit()">
                         </p-button>
                         <p-button
+                            type="button"
                             styleClass="p-button-secondary"
-                            label="Cancle"
+                            label="Hủy"
                             icon="pi pi-arrow-circle-left"
+                            (click)="onCancel()"
                             
                             routerLink="form">
                         </p-button>
@@ -32,24 +35,15 @@
                         <div class = "p-field p-col">
                             <label for="name"> Tên </label>
                             <input formControlName="name" id ="name" type="text" pInputText/>
-                            <small *ngIf="categoryForm.name.invalid && isSubmitted" class="p-error">Cột tên là bắt buộc</small>
+                            <small *ngIf="categoryForm['name'].invalid && isSubmitted" class="p-error">Cột tên là bắt buộc</small>
                         </div>
-                        <div class = "p-field p-col">
-                            <label for="icon"> Icon </label>
-                            <input formControlName="icon" id ="icon" type="text" pInputText/>
-                            <small *ngIf="categoryForm.icon.invalid && isSubmitted" class="p-error">Cột icon là bắt buộc</small>
-                        </div>
-                        <div class="p-field p-col"> 
-                            <label for="color">Color</label> <br />
-                            <p-colorPicker formControlName = "color"></p-colorPicker>
-                        </div>
+                    </div>
                 </form>
-                <p-table [value]="categories" styleclass="p-datable-gridlines">
+                <!-- <p-table [value]="categories" styleclass="p-datable-gridlines">
                     <ng-template pTemplate="header">
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>Icon</th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-product>
@@ -71,7 +65,7 @@
                             </td>
                         </tr>
                     </ng-template>
-                </p-table>
+                </p-table> -->
             </div>
         </div>
     </p-card>

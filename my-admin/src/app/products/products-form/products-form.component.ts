@@ -56,7 +56,6 @@ export class ProductsFormComponent implements OnInit {
             description: ['',Validators.required],
             richDescription: [''],
             image: [''],
-            isFeatured: [''],
         });
     }
 

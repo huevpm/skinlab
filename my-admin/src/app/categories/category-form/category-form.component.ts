@@ -48,27 +48,8 @@ export class CategoryFormComponent implements OnInit {
       this._addCategory(category)
     }
 
-
-  //   this.categoriesService.createCategory(category).subscribe((category: Category) => {
-  //     this.messageService.add({
-  //       severity:'success',
-  //       summary:'Success', 
-  //       detail:'Đã tạo danh mục ${category.name}thành công'});
-  //     timer(1000)
-  //       .toPromise()
-  //       .then (() => {
-  //         this.location.back();
-  //       })
-  //   },
-
-  //   () => {
-  //     this.messageService.add({severity:'error', 
-  //     summary:'Error',
-  //     detail:'Không tạo được danh mục'});
-  //   }
-  //   );
-
   }
+
 
   private _addCategory(category: Category):void {
     this.categoriesService.createCategory(category).subscribe(() => {
@@ -112,6 +93,9 @@ export class CategoryFormComponent implements OnInit {
     );
   }
 
+  onCancel() {
+    this.location.back();
+  }
 
   private _checkEditMode() {
     this.route.params.subscribe((params) => {
@@ -124,6 +108,7 @@ export class CategoryFormComponent implements OnInit {
     }
   })
   }
+
 
   get categoryForm() {
     return this.form.controls;

@@ -50,7 +50,7 @@ export class UsersFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Success',
-          detail: `User ${user.name} is created!`
+          detail: `User ${user.user_name} is created!`
         });
         timer(2000)
           .toPromise()
@@ -98,13 +98,14 @@ export class UsersFormComponent implements OnInit {
         this.editmode = true;
         this.currentUserId = params['id'];
         this.usersService.getUser(params['id']).subscribe((user) => {
-          this.userForm['name'].setValue(user.name);
-          this.userForm['email'].setValue(user.email);
-          this.userForm['phone'].setValue(user.phone);
+          this.userForm['name'].setValue(user.user_name);
+          this.userForm['email'].setValue(user.user_email);
+          this.userForm['phone'].setValue(user.user_phone);
           this.userForm['isAdmin'].setValue(user.isAdmin);
-          this.userForm['street'].setValue(user.street);
-          this.userForm['city'].setValue(user.city);
-          this.userForm['country'].setValue(user.country);
+          this.userForm['province'].setValue(user.province);
+          this.userForm['district'].setValue(user.district);
+          this.userForm['address'].setValue(user.address);
+          this.userForm['review'].setValue(user.review);
 
           this.userForm['password'].setValidators([]);
           this.userForm['password'].updateValueAndValidity();
@@ -120,14 +121,15 @@ export class UsersFormComponent implements OnInit {
     }
     const user: User = {
       id: this.currentUserId,
-      name: this.userForm['name'].value,
-      email: this.userForm['email'].value,
+      user_name: this.userForm['name'].value,
+      user_email: this.userForm['email'].value,
       password: this.userForm['password'].value,
-      phone: this.userForm['phone'].value,
+      user_phone: this.userForm['phone'].value,
       isAdmin: this.userForm['isAdmin'].value,
-      street: this.userForm['street'].value,
-      city: this.userForm['city'].value,
-      country: this.userForm['country'].value
+      province: this.userForm['province'].value,
+      district: this.userForm['district'].value,
+      address: this.userForm['address'].value,
+      review: this.userForm['review'].value
     };
     if (this.editmode) {
       this._updateUser(user);
