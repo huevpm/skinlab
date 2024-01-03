@@ -68,7 +68,7 @@ router.put('/:id', async (req, res) => {
     )
 
     if(!user)
-    return res.status(404).send('Không thể tìm thyas tài khoản')
+    return res.status(404).send('Không thể tìm thấy tài khoản')
 
     res.send(user);
 })
