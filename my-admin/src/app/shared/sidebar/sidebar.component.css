@@ -1,8 +1,8 @@
 /* Base styles for admin wrapper */
 .admin-wrapper {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font */
-    color: #231942;
-    background-color: #fcebed; /* Adjust the color to match your theme */
+    color: #ffffff;
+    background-color: #ff6565; /* Adjust the color to match your theme */
     width: 230px; /* Adjust the width to your preference */
     height: 100vh;
     padding: 20px;
@@ -29,7 +29,7 @@
 
 .links a {
     text-decoration: none;
-    color: #231942;
+    color: #ffffff;
     padding: 10px 15px;
     display: flex;
     align-items: center;
@@ -38,7 +38,8 @@
 }
 
 .links a:hover {
-    background-color: #ff6565; /* Adjust hover color as needed */
+    background-color: #fcebed; /* Adjust hover color as needed */
+    color: #231942;
 }
 
 /* Icon styles */
@@ -62,7 +63,7 @@
 /* Optional: Add a hover effect for the links */
 .links a:hover {
     text-decoration: none;
-    background-color: #ff6565; /* Adjust to a lighter or darker blue based on your theme */
+    background-color: #FFF3D9; /* Adjust to a lighter or darker blue based on your theme */
 }
 /* Container styles */
 .admin-container {
