@@ -22,9 +22,11 @@ export class CategoriesService {
     return this.http.post<Category>(this.apiURLCategories, category);
   }
 
+
   updateCategory(category: Category): Observable<Category> {
-    return this.http.put<Category>(this.apiURLCategories+category.id, category);
+    return this.http.put<Category>('http://localhost:3000/api/v1/categories/'+category.id, category);
   }
+  
 
 
   deleteCategory(categoryId: string): Observable<any> {

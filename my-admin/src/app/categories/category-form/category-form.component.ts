@@ -52,7 +52,7 @@ export class CategoryFormComponent implements OnInit {
 
 
   private _addCategory(category: Category):void {
-    this.categoriesService.createCategory(category).subscribe(() => {
+    this.categoriesService.createCategory(category).subscribe((category) => {
       this.messageService.add({
         severity:'success',
         summary:'Success', 
@@ -72,26 +72,30 @@ export class CategoryFormComponent implements OnInit {
     );
   }
 
-  private _updateCategory(category: Category) {
-    this.categoriesService.updateCategory(category).subscribe(() => {
-      this.messageService.add({
-        severity:'success',
-        summary:'Success', 
-        detail:`Đã chỉnh sửa danh mục ${category.name}thành công`});
-      timer(1000)
-        .toPromise()
-        .then (() => {
-          this.location.back();
-        })
-    },
-
-    (error) => {
-      this.messageService.add({severity:'error', 
-      summary:'Error',
-      detail:'Chỉnh sửa danh mục không thành công'});
-    }
+  private _updateCategory(category: Category):void {
+    this.categoriesService.updateCategory(category).subscribe(
+      () => {
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Success',
+          detail: `Đã chỉnh sửa danh mục ${category.name} thành công`
+        });
+        timer(1000)
+          .toPromise()
+          .then(() => {
+            this.location.back();
+          });
+      },
+      (error) => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'Chỉnh sửa danh mục không thành công'
+        });
+      }
     );
   }
+  
 
   onCancel() {
     this.location.back();

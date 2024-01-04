@@ -47,8 +47,8 @@ reject: () =>
 });
 }
 
-  updateCategory(categoryid: string): void {
-    this.router.navigateByUrl(`categories/form/${categoryid}`)
+  updateCategory(categoryId: string): void {
+    this.router.navigateByUrl(`categories/form/${categoryId}`)
   }
 
   private _getCategories() {
