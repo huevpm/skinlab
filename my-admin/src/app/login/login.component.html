@@ -5,13 +5,13 @@
         <div>
           <input type="text" name="username" placeholder="Tên đăng nhập *" [(ngModel)]="username" required #usernameField="ngModel" />
           <div *ngIf="usernameField.invalid && (usernameField.dirty || usernameField.touched)">
-            <p *ngIf="usernameField.errors?.['required']">Tên đăng nhập là bắt buộc.</p>
+            <p *ngIf="usernameField.errors?.['required']">Vui lòng nhập Tên đăng nhập</p>
           </div>
         </div>
         <div>
           <input type="password" name="password" placeholder="Mật khẩu *" [(ngModel)]="password" required #passwordField="ngModel" />
           <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)">
-            <p *ngIf="passwordField.errors?.['required']">Mật khẩu là bắt buộc.</p>
+            <p *ngIf="passwordField.errors?.['required']">Vui lòng nhập Mật khẩu</p>
           </div>
         </div>
         <button type="submit" [disabled]="!loginForm.valid">ĐĂNG NHẬP</button>

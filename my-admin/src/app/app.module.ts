@@ -21,6 +21,7 @@ import { UsersListComponent } from './users/users-list/users-list.component';
 import { UsersFormComponent } from './users/users-form/users-form.component';
 import { LoginComponent } from './login/login.component';
 import { UsersService } from './users/users-list/users.service';
+// import { UsersModule } from './login/users.module';
 
 
 // Import PrimeNG modules
@@ -90,69 +91,11 @@ import { InputMaskModule } from 'primeng/inputmask';
     FieldsetModule,
     RouterModule,
     TagModule,
-    InputMaskModule
+    InputMaskModule,
   ],
   providers: [CategoriesService, MessageService, ConfirmationService, ProductsService,
     Location,UsersService],
   bootstrap: [AppComponent]
 })
 
-// const routes: Routes = [
-//   {
-//     path: ' ',
-//     component: ShellComponent,
-//     canActivate: [AuthGuard],
-//     children: [
-//       {
-//         path: 'products',
-//         component: ProductsListComponent
-//       },
-//       {
-//         path: 'products/form',
-//         component: ProductsFormComponent
-//       },
-//       {
-//         path: 'products/form/:id',
-//         component: ProductsListComponent
-//       },
-//       {
-//         path: 'categories',
-//         component: CategoryComponent
-//       },
-//       {
-//         path: 'categories/form',
-//         component: CategoryFormComponent
-//       },
-//       {
-//         path: 'categories/form/:id',
-//         component: CategoryFormComponent
-//       },
-
-//       { 
-//       path: 'users',
-//       component: UsersListComponent
-//       },
-
-//       {
-//         path: 'users/form',
-//         component: UsersFormComponent
-//       },
-
-//       {
-//         path: 'users/form/:id',
-//         component: UsersFormComponent
-//       },
-
-//       {
-//         path: 'orders',
-//         component: OrdersListComponent
-//       },
-
-//       {
-//         path: 'orders/:id',
-//         component: OrdersDetailComponent
-//       }
-//     ]
-//   }
-// ],
 export class AppModule { }

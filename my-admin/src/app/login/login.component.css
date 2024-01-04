@@ -1,5 +1,5 @@
 .login-page {
-    background-color: #e2a78c;
+    background-color: #fcebed;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -36,8 +36,8 @@
   }
   
   button {
-    background-color: #e2a78c;
-    color: #ffffff;
+    background-color:  #ff6565;
+    color: #231942    ;
     border: none;
     border-radius: 5px;
     padding: 10px;

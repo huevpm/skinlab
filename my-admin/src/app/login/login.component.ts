@@ -14,7 +14,7 @@ export class LoginComponent {
 
   onSubmit(): void {
     // Kiểm tra tài khoản và mật khẩu nhập vào có đúng hay không
-    if (this.username === 'baotam' && this.password === '123') {
+    if (this.username === 'huevpm' && this.password === '123') {
       // Nếu đúng, chuyển hướng đến trang quản trị
       this.router.navigate(['/dashboard']);
     } else {
