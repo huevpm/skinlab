@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
         shippingAddress1: req.body.shippingAddress1,
         shippingAddress2: req.body.shippingAddress2,
         city: req.body.city,
-        district: req.body.city,
+        district: req.body.district,
         address: req.body.address,
         phone: req.body.phone,
         status: req.body.status,
@@ -108,18 +108,18 @@ router.post('/', async (req, res) => {
     
     router.get('/get/totalsales', async (req, res) => {
         const totalSales = await Order.aggregate([
-            { $group: { _id: null , totalSales : { $sum : '$totalPrice '}}}
+            { $group: { _id: null , totalSales : { $sum : '$totalPrice'}}}
             
         ])
         if(!totalSales){
             return res.status(400).send ('The order sales cannot be genrated ')
         }
-        res.send({totalSales:totalSales.pop().totalSales})
+        res.send({totalSales:totalSales})
 
     })
 // Get count Order
     router.get('/get/count', async (req, res) => {
-        const orderCount = await Order.countDocuments((count) => count);
+        const orderCount = await Order.countDocuments();
     
         if(!orderCount) {
             res.status(500).json({success: false})

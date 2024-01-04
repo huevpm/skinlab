@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     ])
       .pipe(takeUntil(this.endsubs$))
       .subscribe(([ordersCount, productsCount, usersCount, totalsales]) => {
-        this.statistics = [ordersCount.orderCount, productsCount.productCount, usersCount, totalsales];
+        this.statistics = [ordersCount.orderCount, productsCount.productCount, usersCount.userCount, totalsales.totalSales];
       });
   }
 

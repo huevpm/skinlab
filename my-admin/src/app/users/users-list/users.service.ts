@@ -12,8 +12,8 @@ export class UsersService {
   apiURLUsers = environment.apiUrl + 'users';
   constructor(private http: HttpClient) { }
 
-  getUsersCount(): Observable<number> {
-    return this.http.get<number>(`${this.apiURLUsers}/get/count`).pipe();
+  getUsersCount(): Observable<{userCount: number}> {
+    return this.http.get<{userCount: number}> (`${this.apiURLUsers}/get/count`).pipe();
     
   }
 
@@ -33,7 +33,6 @@ export class UsersService {
     return this.http.put<User>(`${this.apiURLUsers}/${user.id}`, user);
   }
 
-  
   
  deleteUser(userId: string): Observable<any> {
    return this.http.delete<any>(`${this.apiURLUsers}/${userId}`);

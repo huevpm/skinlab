@@ -36,10 +36,9 @@ export class UsersFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       isAdmin: [false],
-      street: [''],
-      apartment: [''],
-      city: [''],
-      country: ['']
+      province: [''],
+      district: [''],
+      address: [''],
     });
   }
 
@@ -105,7 +104,6 @@ export class UsersFormComponent implements OnInit {
           this.userForm['province'].setValue(user.province);
           this.userForm['district'].setValue(user.district);
           this.userForm['address'].setValue(user.address);
-          this.userForm['review'].setValue(user.review);
 
           this.userForm['password'].setValidators([]);
           this.userForm['password'].updateValueAndValidity();
@@ -128,8 +126,7 @@ export class UsersFormComponent implements OnInit {
       isAdmin: this.userForm['isAdmin'].value,
       province: this.userForm['province'].value,
       district: this.userForm['district'].value,
-      address: this.userForm['address'].value,
-      review: this.userForm['review'].value
+      address: this.userForm['address'].value
     };
     if (this.editmode) {
       this._updateUser(user);

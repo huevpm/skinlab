@@ -1,99 +1,78 @@
-
 <p-toast></p-toast>
-<div class="admin-page"> 
-    <p-card [header]="editmode ? 'Sửa tài khoản': 'Thêm người dùng' " subheader="Danh sách người dùng">
-        <div class="p-grid p-mb-5"> 
-            <div class="p-col-12">
-                <p-toolbar>
-                    <div class="p-toolbar-group-left"> 
-                        <!-- Left side content if needed -->
-                    </div>
-                    <div class="p-toolbar-group-right">
-                        <p-button 
-                    
-                            styleClass="p-button-primary p-mr-4"
-                            [label]="editmode ? 'Cập Nhật' : 'Thêm Mới'"
-                            icon="pi pi-plus"
-                           (click)="onSubmit()"
-                           
-                        ></p-button>
-                        <p-button 
-                          
-                            styleClass="p-button-secondary" 
-                            label="Cancel" 
-                            icon="pi pi-arrow-circle-left" 
-                            (click)="onCancle()"
-                        ></p-button>
-                    </div>
-                </p-toolbar> 
+<div class="admin-page">
+  <p-card [header]="editmode ? 'Sửa tài khoản': 'Thêm người dùng' " subheader="Danh sách người dùng">
+    <div class="p-grid p-mb-5">
+      <div class="p-col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-left">
+            <!-- Left side content if needed -->
+          </div>
+          <div class="p-toolbar-group-right">
+            <p-button styleClass="p-button-primary p-mr-4" [label]="editmode ? 'Cập Nhật' : 'Thêm Mới'"
+              icon="pi pi-plus" (click)="onSubmit()"></p-button>
+            <p-button styleClass="p-button-secondary" label="Cancel" icon="pi pi-arrow-circle-left"
+              (click)="onCancle()"></p-button>
+          </div>
+        </p-toolbar>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-12">
+        <form [formGroup]="form">
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col">
+              <label for="name">Tên người dùng</label>
+              <input formControlName="name" id="name" type="text" pInputText placeholder="Tên" />
+              <small *ngIf="userForm['name'].invalid && isSubmitted" class="p-error">
+                Vui lòng nhập tên người dùng
+              </small>
             </div>
-        </div> 
-        <div class="p-grid">
-            <div class="p-col-12"> 
-                <form [formGroup]="form"> 
-                    <div class="p-fluid p-formgrid p-grid">
-                        <div class="p-field p-col-4"> 
-                            <label for="name">Tên người dùng</label>
-                            <input formControlName="name" id="name" type="text" pInputText placeholder="Name" />
-                            <small *ngIf="userForm['name'].invalid && isSubmitted" class="p-error">
-                                Bắt buộc nhập tên người dùng
-                            </small>
-                        </div>
-                        
-                        <div class="p-field p-col-4">
-                            <label for="email">Địa chỉ Email</label>
-                            <input formControlName="email" id="email" type="text" pInputText />
-                            <small *ngIf="userForm['email'].invalid && isSubmitted" class="p-error">
-                              <span *ngIf="userForm['email'].hasError('required')">Bắt buộc nhập email</span>
-                              <span *ngIf="userForm['email'].hasError('email')">Không đúng định dạng email</span>
-                            </small>
-                          </div>
-                          
-                          <div class="p-field p-col-4">
-                            <label for="password">Mật Khẩu</label>
-                            <input formControlName="password" id="password" type="password" pInputText />
-                            <small *ngIf="userForm['password'].invalid && isSubmitted" class="p-error"
-                              >Mật khẩu là bắt buộc</small>
-                          </div>
-                          
-                          <div class="p-field p-col-4">
-                            <label for="color">Số điện thoại</label><br />
-                            <p-inputMask
-                              mask="(999) 999-9999"
-                              formControlName="phone"
-                              placeholder="(999) 999-9999"
-                            ></p-inputMask>
-                            <small *ngIf="userForm['phone'].invalid && isSubmitted" class="p-error"
-                              >Số điện thoại là bắt buộc</small
-                            >
-                          </div>
-                          <div class="p-field p-col-4">
-                            <label for="isAdmin">Is Admin</label><br />
-                            <p-inputSwitch formControlName="isAdmin"></p-inputSwitch>
-                          </div>
-                          
-                        </div>
-                        <div class="p-fluid p-formgrid p-grid">
-                          <div class="p-field p-col-4">
-                            <label for="street">Địa chỉ</label>
-                            <input formControlName="street" id="street" type="text" pInputText />
-                          </div>
-                          <div class="p-field p-col-4">
-                            <label for="street">Thành Phố</label>
-                            <input formControlName="city" id="city" type="text" pInputText />
-                          </div>
 
-                          <div class="p-field p-col-4">
-                            <label for="country">Đất Nước</label>
-                            <input formControlName="country" id="country" type="text" pInputText />
-                          </div>
-                          
-                          
-                        
-                    </div>
-                </form>
+            <div class="p-field p-col">
+              <label for="email">Địa chỉ Email</label>
+              <input formControlName="email" id="email" type="text" pInputText placeholder="Email" />
+              <small *ngIf="userForm['email'].invalid && isSubmitted" class="p-error">
+                <span *ngIf="userForm['email'].hasError('required')">Vui lòng nhập email</span>
+                <span *ngIf="userForm['email'].hasError('email')">Không đúng định dạng email</span>
+              </small>
             </div>
-        </div>
-    </p-card>
+
+            <div class="p-field p-col">
+              <label for="password">Mật Khẩu</label>
+              <input formControlName="password" id="password" type="password" pInputText placeholder="Mật khẩu" />
+              <small *ngIf="userForm['password'].invalid && isSubmitted" class="p-error">Vui lòng nhập Mật khẩu</small>
+            </div>
+
+            <div class="p-field p-col-4">
+              <label for="color">Số điện thoại</label><br />
+              <p-inputMask mask="(999) 999-9999" formControlName="phone" placeholder="(999) 999-9999"></p-inputMask>
+              <small *ngIf="userForm['phone'].invalid && isSubmitted" class="p-error">Vui lòng nhập Số điện
+                thoại</small>
+            </div>
+            <div class="p-field p-col-4">
+              <label for="isAdmin">Phân quyền</label><br />
+              <p-inputSwitch formControlName="isAdmin"></p-inputSwitch>
+            </div>
+
+          </div>
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-4">
+              <label for="province">Tỉnh/Thành</label>
+              <input formControlName="province" id="province" type="text" pInputText />
+            </div>
+            <div class="p-field p-col-4">
+              <label for="district">Quận/ Huyện</label>
+              <input formControlName="district" id="district" type="text" pInputText />
+            </div>
+            <div class="p-field p-col-4">
+              <label for="address">Địa chỉ</label>
+              <input formControlName="address" id="address" type="text" pInputText />
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
 </div>
-

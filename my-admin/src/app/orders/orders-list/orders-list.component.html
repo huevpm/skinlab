@@ -9,14 +9,14 @@
                         <tr>
                             <th pSortableColumn="name">Khách hàng<p-sortIcon field="user"></p-sortIcon></th>
                             <th pSortableColumn="totalPrice">Tổng đơn hàng<p-sortIcon field="totalPrice "></p-sortIcon></th>
-                            <th pSortableColumn="dateOrdered">Ngày đặt hàng<p-sortIcon field="dateOrdered"></p-sortIcon></th>
+                            <th pSortableColumn="dateCreated">Ngày đặt hàng<p-sortIcon field="dateOrdered"></p-sortIcon></th>
                             <th pSortableColumn="status">Trạng thái<p-sortIcon field="status"></p-sortIcon></th>
                             <th></th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-order>
                         <tr>
-                            <td>{{ order.user.name }}</td>
+                            <td>{{ order.user.user_name }}</td>
                             <td>{{ order.totalPrice }}</td>
                             <td>{{ order.dateOrdered | date: 'short' }}</td>
                             <td>

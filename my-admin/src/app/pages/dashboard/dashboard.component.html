@@ -1,5 +1,4 @@
 <h1>
-     dashboard
      <i class="fa-solid fa-ring"></i>
     </h1>
 <script src="https://kit.fontawesome.com/335ca08eb0.js" crossorigin="anonymous"></script>
@@ -14,7 +13,7 @@
                     <div class="d-item">
                         <div>
                             <i class="pi pi-shopping-cart"><br> </i>
-                            <span class="name">Số đơn hàng</span>
+                            <span class="name"> Số đơn hàng</span>
                         </div> 
                             <span class="number">{{ statistics[0] }}</span>
                     </div>
@@ -26,7 +25,7 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-briefcase"><br> </i>
-                        <span class="name">Số sản phẩm</span>
+                        <span class="name"> Số sản phẩm</span>
                     </div> 
                         <span class="number">{{ statistics[1] }}</span>
                 </div>
@@ -38,7 +37,7 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-users"><br> </i>
-                        <span class="name">Số khách hàng</span>
+                        <span class="name"> Số khách hàng</span>
                     </div> 
                         <span class="number">{{ statistics[2] }}</span>
                 </div>
@@ -50,9 +49,9 @@
                 <div class="d-item">
                     <div>
                         <i class="pi pi-dollar"><br> </i>
-                        <span class="name">Tổng doanh thu</span>
+                        <span class="name"> Tổng doanh thu</span>
                     </div> 
-                        <span class="number">{{ statistics[3] | currency }}</span>
+                        <span class="number">{{ statistics[3] | currency: 'VNĐ' }}</span>
                 </div>
             </p-card>
            </div> 

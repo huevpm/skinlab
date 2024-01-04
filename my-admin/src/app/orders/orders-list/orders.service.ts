@@ -36,7 +36,7 @@ export class OrdersService {
     return this.http.get<{ orderCount: number}> (`${this.apiURLOrders}/get/count`).pipe();
   }
   
-  getTotalSales(): Observable<number> {
-    return this.http.get<number>(`${this.apiURLOrders}/get/totalsales`).pipe();
+  getTotalSales(): Observable<{ totalSales: number}> {
+    return this.http.get<{ totalSales: number}>(`${this.apiURLOrders}/get/totalsales`).pipe();
   }
 }
