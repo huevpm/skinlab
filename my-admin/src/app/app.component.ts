@@ -6,16 +6,17 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'my-admin';
+// export class AppComponent {
+//   
 // }
 
-// export class AppComponent implements OnInit {
-//   constructor(private router: Router) {}
+export class AppComponent implements OnInit {
+  title = 'my-admin';
+  constructor(private router: Router) {}
 
-//   ngOnInit(): void {
-//     // Check if the user is not logged in and navigate to the login page
+  ngOnInit(): void {
+    // Check if the user is not logged in and navigate to the login page
 
-//       this.router.navigate(['/login']);
-//   }
+      this.router.navigate(['/login']);
+  }
 }
