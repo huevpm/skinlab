@@ -118,17 +118,26 @@ router.post('/register', async (req,res)=> {
 })
 
 //Delete User
-router.delete('/:id', (req, res) =>{
-    User.findByAndRemove(req.params.id).then(user =>{
-        if(user) {
-            return res.status(200).json({success: true, message: 'Tài khoản được tạo thành công'})
-        } else {
-            return res.status(404).json({success: false, message: 'Tạo tài khoản không thành công'})
+router.delete('/:id', async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.params.id);
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: 'User not found'
+            });
         }
-    }).catch(err =>{
-        return res.status(500).json({success: false, error: err})
-    })
-})
+        res.status(200).json({
+            success: true,
+            message: 'User deleted successfully'
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            error: error.message
+        });
+    }
+});
 
 // Count user
 router.get('/get/count', async (req, res) =>{
@@ -151,26 +160,33 @@ router.put('/:id', async (req, res)=> {
     } else {
         newPassword = userExist.password;
     }
-
-    const user = await User.findByIdAndUpdate(
-        req.params.id,
-        {
-            user_name: req.body.name,
-            user_email: req.body.email,
-            password: newPassword,
-            user_phone: req.body.phone,
-            province: req.body.province,
-            district: req.body.district,
-            address: req.body.address,
-            isAdmin: req.body.isAdmin,
-            review: req.body.review,
-        },
-        { new: true}
-    )
-    if(!user)
-    return res.status(400).send('Tạo tài khoản không thành công')
+    try {
+        const user = await User.findByIdAndUpdate(
+            req.params.id,
+            {
+                user_name: req.body.name,
+                user_email: req.body.email,
+                password: newPassword,
+                user_phone: req.body.phone,
+                province: req.body.province,
+                district: req.body.district,
+                address: req.body.address,
+                isAdmin: req.body.isAdmin,
+                review: req.body.review,
+            },
+            { new: true}
+        )
+        if(!user)
+        return res.status(400).send('Chỉnh sửa tài khoản không thành công')
+        
+        res.send(user);
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            error: error.message
+        });
+    }
     
-    res.send(user);
 })
 
 module.exports = router;

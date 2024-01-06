@@ -31,3 +31,18 @@
         </li>
     </ul>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var adminWrapper = document.querySelector('.admin-wrapper');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            adminWrapper.classList.add('scrolled');
+        } else {
+            adminWrapper.classList.remove('scrolled');
+        }
+    });
+});
+
+</script>
