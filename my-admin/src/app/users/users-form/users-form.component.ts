@@ -22,7 +22,7 @@ export class UsersFormComponent implements OnInit {
     private usersService: UsersService,
     private location: Location,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this._initUserForm();

@@ -15,42 +15,42 @@ export class UsersListComponent implements OnInit {
     private confirmationService: ConfirmationService,
     private messageService: MessageService
 
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this._getUsers();
   }
 
   deleteUser(userId: string) {
-  this.confirmationService.confirm({
-    message: 'Bạn có chắc chắn muốn xóa người dùng này?',
-    header: 'Xác nhận',
-    icon: 'pi pi-exclamation-triangle',
-    accept: () => {
-      this.usersService.deleteUser(userId).subscribe(() => {
-        this._getUsers();
-        this.messageService.add({severity:'success',
-        summary:'Success', 
-        detail:'Đã xóa người dùng thành công'});
-      },
-      (error) => {
-        this.messageService.add({severity:'error', 
-        summary:'Error',
-        detail:'Đã xảy ra lỗi'
-      });
+    this.confirmationService.confirm({
+      message: 'Bạn có chắc chắn muốn xóa người dùng này?',
+      header: 'Xác nhận',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.usersService.deleteUser(userId).subscribe(() => {
+          this._getUsers();
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Success',
+            detail: 'Đã xóa người dùng thành công'
+          });
+        },
+          (error) => {
+            this.messageService.add({
+              severity: 'error',
+              summary: 'Error',
+              detail: 'Đã xảy ra lỗi'
+            });
+          }
+        );
       }
-      );
-    }
-  })
-}
+    })
+  }
 
-  
-updateUser(userId: string): void {
-  console.log(`Navigating to update user with ID: ${userId}`);
-  this.router.navigate([`/users/form/${userId}`]);
-}
-  
-
+  updateUser(userId: string): void {
+    console.log(`Navigating to update user with ID: ${userId}`);
+    this.router.navigate([`/users/form/${userId}`]);
+  }
 
   private _getUsers() {
     this.usersService.getUsers().subscribe((users) => {
@@ -59,3 +59,5 @@ updateUser(userId: string): void {
   }
 
 }
+
+

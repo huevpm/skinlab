@@ -11,17 +11,17 @@ import { Router } from '@angular/router';
 
 export class CategoryComponent implements OnInit {
   categories: Category[] = [];
-    
+
 
   constructor(private categoriesService: CategoriesService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService,
-    private router: Router) {}
-  
+    private router: Router) { }
+
   ngOnInit(): void {
     this._getCategories();
   }
-  deleteCategory(categoryId: string):void {
+  deleteCategory(categoryId: string): void {
     this.confirmationService.confirm({
       message: 'Bạn có muốn xóa danh mục này?',
       header: 'Xóa danh mục',
@@ -29,23 +29,24 @@ export class CategoryComponent implements OnInit {
       accept: () => {
         this.categoriesService.deleteCategory(categoryId).subscribe(() => {
           this._getCategories();
-          this.messageService.add({severity:'success', 
-          summary:'Success',
-          detail:'Đã xóa danh mục thành công'
-        });
-  },
-  (error) => {
-    this.messageService.add({severity:'error', 
-    summary:'Error',
-    detail:'Đã xảy ra lỗi'
-  });
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Success',
+            detail: 'Đã xóa danh mục thành công'
+          });
+        },
+          (error) => {
+            this.messageService.add({
+              severity: 'error',
+              summary: 'Error',
+              detail: 'Đã xảy ra lỗi'
+            });
+          }
+        );
+      },
+      reject: () => { }
+    });
   }
-  );
-},
-reject: () => 
-{}
-});
-}
 
   updateCategory(categoryId: string): void {
     this.router.navigateByUrl(`categories/form/${categoryId}`)
@@ -57,3 +58,4 @@ reject: () =>
     })
   }
 }
+

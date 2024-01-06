@@ -1,88 +1,86 @@
 <p-toast></p-toast>
 <div class="admin-page" *ngIf="order">
-    <p-card 
-        [header]=" 'Xem đơn hàng' " 
-        subheader="Bạn có thể chỉnh sửa tại đây">
-        
-    <p-fieldset legend="Order Detail" [toggleable]="true" styleClass ="p-mb-4">
-        <table class="order-details-table">
-            <tbody>
-              <tr>
-                <th>Mã đơn hàng</th>
-                <td>{{ order.id }}</td>
-              </tr>
-              <tr>
-                <th>Ngày đặt hàng</th>
-                <td>{{ order.dateOrdered | date: 'short' }}</td>
-              </tr>
-              <tr>
-                <th>Trạng thái đơn hàng</th>
-                <td>{{order.status}}</td>
-              </tr>
-              <tr>
-                <th>Tổng đơn hàng</th>
-                <td>{{ order.totalPrice | currency }}</td>
-              </tr>
-            </tbody>
-          </table>
+  <p-card [header]=" 'Xem đơn hàng' " subheader="Bạn có thể chỉnh sửa tại đây">
+
+    <p-fieldset legend="Order Detail" [toggleable]="true" styleClass="p-mb-4">
+      <table class="order-details-table">
+        <tbody>
+          <tr>
+            <th>Mã đơn hàng</th>
+            <td>{{ order.id }}</td>
+          </tr>
+          <tr>
+            <th>Ngày đặt hàng</th>
+            <td>{{ order.dateOrdered | date: 'short' }}</td>
+          </tr>
+          <tr>
+            <th>Trạng thái đơn hàng</th>
+            <td>{{order.status}}</td>
+          </tr>
+          <tr>
+            <th>Tổng đơn hàng</th>
+            <td>{{ order.totalPrice | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
     </p-fieldset>
 
 
-    <p-fieldset legend="Order Items" [toggleable]="true" styleClass ="p-mb-4">
-        <table class="order-items-table">
-            <!-- Table Headers -->
-            <thead>
-              <tr>
-                <th>Tên</th>
-                <th>Danh Mục</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-              </tr>
-            </thead>
-            <!-- Table Body -->
-            <tbody>
-              <tr *ngFor="let orderItem of order.orderItems">
-                <td>{{ orderItem.product?.name || 'N/A' }}</td>
-                <td>{{ orderItem.product?.category?.name || 'N/A' }}</td>
-                <td>{{ orderItem.product?.price | currency }}</td>
-                <td>{{ orderItem.quantity }}</td>
-              </tr>
-            </tbody>
-            <!-- Table Footer for Total Price -->
-            <tfoot>
-              <tr>
-                <td colspan="3">Total Price:</td>
-                <td>{{ order.totalPrice | currency }}</td>
-              </tr>
-            </tfoot>
-          </table>
+    <p-fieldset legend="Order Items" [toggleable]="true" styleClass="p-mb-4">
+      <table class="order-items-table">
+        <!-- Table Headers -->
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Danh Mục</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <!-- Table Body -->
+        <tbody>
+          <tr *ngFor="let orderItem of order.orderItems">
+            <td>{{ orderItem.product?.name || 'N/A' }}</td>
+            <td>{{ orderItem.product?.category?.name || 'N/A' }}</td>
+            <td>{{ orderItem.product?.price | currency }}</td>
+            <td>{{ orderItem.quantity }}</td>
+          </tr>
+        </tbody>
+        <!-- Table Footer for Total Price -->
+        <tfoot>
+          <tr>
+            <td colspan="3">Total Price:</td>
+            <td>{{ order.totalPrice | currency }}</td>
+          </tr>
+        </tfoot>
+      </table>
     </p-fieldset>
 
 
     <!-- Order Address -->
     <p-fieldset legend="Order Address and Customer Info" styleClass="p-mb-4" [toggleable]="true">
-        <table class="order-info-table">
-          <tbody>
-            <tr>
-              <th>Order Address</th>
-              <td>
-                {{ order.shippingAddress1 }}<br>
-                {{ order.shippingAddress2 }}<br>
-                {{ order.city }}<br>
-                {{ order.district }}<br>
-                {{ order.address }}<br>
-              </td>
-            </tr>
-            <tr>
-              <th>Customer Info</th>
-              <td>{{ order.user?.user_name }}</td>
-            </tr>
-            <tr>
-              <th>Contact Info</th>
-              <td>{{ order.phone }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </p-fieldset>
-</p-card>
+      <table class="order-info-table">
+        <tbody>
+          <tr>
+            <th>Order Address</th>
+            <td>
+              {{ order.shippingAddress1 }}<br>
+              {{ order.shippingAddress2 }}<br>
+              {{ order.city }}<br>
+              {{ order.district }}<br>
+              {{ order.address }}<br>
+            </td>
+          </tr>
+          <tr>
+            <th>Customer Info</th>
+            <td>{{ order.user?.user_name }}</td>
+          </tr>
+          <tr>
+            <th>Contact Info</th>
+            <td>{{ order.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </p-fieldset>
+  </p-card>
 </div>

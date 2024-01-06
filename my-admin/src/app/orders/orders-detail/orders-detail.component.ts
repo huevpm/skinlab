@@ -11,13 +11,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './orders-detail.component.css'
 })
 export class OrdersDetailComponent implements OnInit {
-  order!: Order; 
+  order!: Order;
 
-  
-
-  constructor(private orderService:OrdersService
-    ,private route: ActivatedRoute,
-    ) { }
+  constructor(private orderService: OrdersService
+    , private route: ActivatedRoute,
+  ) { }
   ngOnInit(): void {
     this._getOrder();
 

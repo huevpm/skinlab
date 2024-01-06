@@ -14,9 +14,7 @@ export class UsersService {
 
   getUsersCount(): Observable<{userCount: number}> {
     return this.http.get<{userCount: number}> (`${this.apiURLUsers}/get/count`).pipe();
-    
   }
-
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiURLUsers);
@@ -37,6 +35,4 @@ export class UsersService {
  deleteUser(userId: string): Observable<any> {
    return this.http.delete<any>(`${this.apiURLUsers}/${userId}`);
  }
-
-
 }
