@@ -1,0 +1,560 @@
+[{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed63"
+  },
+  "product_id": "product01",
+  "name": "Kem dưỡng ẩm trà xanh Innisfree Green Tea Seed Hyaluronic Cream 50ml",
+  "description": "Kem dưỡng ẩm trà xanh innisfree Green Tea Seed Cream, giải pháp cấp ẩm và làm dịu cho da bổ sung lớp màng dưỡng ẩm để bảo bệ da khỏi những tác hại bởi việc mất nước gây ra.",
+  "richDescription": "Beauty Green Tea TM: Mang đến nhiều lợi ích cho làn da, Beauty Green Tea TM mang màu sắc đậm hơn nhờ có hàm lượng thành phần dưỡng ẩm cho da (theanine) cao gấp 1,67 lần và mức độ chlorophyll cao hơn so với trà xanh thông thường. Tỏa sáng: Thẩm thấu hoàn toàn vào da, giúp da bạn ẩm, mướt, tỏa sáng và sẵn sàng trang điểm. Hàng rào độ ẩm: Tăng cường hàng rào độ ẩm là điều cơ bản cho làn da khỏe mạnh.",
+  "image": "https://i.pinimg.com/736x/07/ad/f5/07adf5680dac93ce191c14cd6bb72b3a.jpg",
+  "images": [],
+  "brand": "INNISFREE",
+  "price": 468000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed64"
+  },
+  "product_id": "product02",
+  "name": "Sữa dưỡng ẩm da từ trà xanh Innisfree Green Tea Hyaluronic Lotion 170 ml",
+  "description": "Sữa dưỡng cân bằng độ ẩm innisfree Green Tea Hyaluronic Lotion chiết xuất từ trà xanh cho làn da mềm mại và mịn màng với lượng dầu và độ ẩm cân bằng.",
+  "richDescription": "Beauty Green Tea TM: Mang đến nhiều lợi ích cho làn da, Beauty Green Tea TM mang màu sắc đậm hơn nhờ có hàm lượng thành phần dưỡng ẩm cho da (theanine) cao gấp 1,67 lần và mức độ chlorophyll cao hơn so với trà xanh thông thường. Kết cấu dạng sữa: Kết cấu dạng sữa nhanh chóng thẩm thấu vào da không gây bếch dính, mang lại lớp nền mịn màng và ngăn ngừa lớp trang điểm bị bong tróc hoặc vón cục. Không gây căng bóng: Cân bằng dầu và độ ẩm mang lại làn da tươi mát tự nhiên",
+  "image": "https://i.pinimg.com/736x/e2/58/75/e25875ee81a7918779a7552a884c0d23.jpg",
+  "images": [],
+  "brand": "INNISFREE",
+  "price": 430000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 1000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed65"
+  },
+  "product_id": "product03",
+  "name": "Tinh chất Innisfree Green Tea Seed Hyaluronic Serum 30 ml",
+  "description": "Sản phẩm dưỡng ẩm số 1 tại Hàn Quốc được nâng cấp với khả năng dưỡng ẩm, giúp giảm tình trạng khô da hiệu quả.",
+  "richDescription": "Sản phẩm dưỡng da Green Tea Seed Hyaluronic Serum với sự kết hợp từ trà xanh và Hyaluronic Acid giúp dưỡng ẩm đem đến làn da trông khỏe mạnh và rạng rỡ. Cảm nhận giảm tình trạng khô da rõ rệt ngay sau khi sử dụng. Dưỡng chất thẩm thấu và bổ sung độ ẩm hiệu quả cho da, từ da khô đến da dầu. Giúp dưỡng ẩm trên da cả ngày dài. Giúp cấp ẩm của da giúp làn da của bạn thoát khỏi tình trạng thiếu ẩm cả ngày do tác động môi trường bên ngoài",
+  "image": "https://i.pinimg.com/736x/87/f4/81/87f481400eeef5ece45cec9203d6bcca.jpg",
+  "images": [],
+  "brand": "INNISFREE",
+  "price": 340000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 1500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed66"
+  },
+  "product_id": "product04",
+  "name": "Sữa rửa mặt dưỡng ẩm trà xanh Innisfree Green Tea Amino Cleansing Foam 150g",
+  "description": "Sữa rửa mặt trà xanh innisfree Green Tea Amino Cleansing Foam làm sạch tạp chất, đồng thời dưỡng ẩm để làn da sạch sẽ, mịn màng.",
+  "richDescription": "Sản phẩm dưỡng ẩm số 1 tại Hàn Quốc được nâng cấp với khả năng dưỡng ẩm, giúp giảm tình trạng khô da hiệu quả. Duy trì độ ẩm cho da trong suốt 72H. Axit Hyaluronic được cải tiến với công thức mới, giúp thẩm thấu vào da và hiệu quả lâu dài. Công thức từ INNISFREE với thành phần chiết xuất từ trà xanh có tên gọi là Beauty Green Tea",
+  "image": "https://i.pinimg.com/736x/57/d4/93/57d493901a0ad75fd292373258abe082.jpg",
+  "images": [],
+  "brand": "INNISFREE",
+  "price": 210000,
+  "category": "6589aaf2bcfeb507d8e3ed4c",
+  "countInStock": 2000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed67"
+  },
+  "product_id": "product05",
+  "name": "Set 5 Mặt Nạ Peptide Săn Chắc Da AHC",
+  "description": "Mặt Nạ Dưỡng Da Cao Cấp Peptide 5 Complex Là Một Giải Pháp Làm Săn Chắc Da Giúp Cải Thiện Độ Đàn Hồi Của Da, Và Tấm Cellulose Phù Hợp Cao, Nhẹ Nhàng Bao Bọc Da. ",
+  "richDescription": "Thành phần: Peptide 5 Complex là hợp chất giúp cải thiện độ đàn hồi và giảm nếp  nhăn, giúp da trông săn chắc . Plankton (patented) trong mặt nạ cải thiện và giữ ẩm cho da, làm giảm sự xuất hiện các nếp nhăn giúp da tràn đầy sức sống  Công dụng: Mặt nạ dưỡng da cao cấp Peptide 5 Complex là một giải pháp làm săn chắc da giúp cải thiện độ đàn hồi của da, và tấm cellulose phù hợp cao, nhẹ nhàng bao bọc da.  Hướng dẫn sử dụng: Sau khi làm sạch và sử dụng một toner, đặt mặt nạ dưỡng ẩm AHC lên mặt, làm mịn các nếp nhăn và bong bóng. Sau 10 đến 20 phút, loại bỏ mặt nạ, và nhẹ dùng các tinh chất còn lại trong gói mặt nạ mát xa cho đến khi da thẩm thấu hoàn toàn. Để có kết quả tốt nhất, hãy làm lạnh trước khi sử dụng cho đến khi vòng tròn nhiệt kế ở mặt sau của túi chuyển sang màu xanh lá cây. ",
+  "image": "https://i.pinimg.com/736x/65/af/7f/65af7fc87e00f1090c1af3e8a46350e9.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 534000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 2500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed68"
+  },
+  "product_id": "product06",
+  "name": "Set 5 Mặt Nạ Vàng 24K Chống Lão Hóa AHC",
+  "description": "Với Cấu Tạo Ba Đặc Biệt Và Mỏng Bao Gồm Lớp Foil, Lớp Matrix, Lớp Tencel Khiến Làn Da Ấm Nóng Tạo Hiệu Ứng Hơi Nước Để Mở Lỗ Chân Lông Và Cho Phép Chất Dinh Dưỡng Nhanh Chóng Thấm Vào Da Khiến Da Luôn Ngậm Nước Và Đàn Hồi.",
+  "richDescription": "Thành phần: Vitamin B5 làm mềm và làm dịu da, giữ ẩm tuyệt vời để nuôi dưỡng làn da tốt nhất. Hyaluronic Acid - một thành phần có trong tế bào da, là nơi lưu trữ các phân tử nước khiến cho làn da căng mịn, và khỏe khoắn. Với cấu tạo ba đặc biệt và mỏng bao gồm lớp Foil, lớp Matrix, lớp Tencel khiến làn da ấm nóng tạo hiệu ứng hơi nước để mở lỗ chân lông và cho phép chất dinh dưỡng nhanh chóng thấm vào da khiến da luôn ngậm nước và đàn hồi. Công dụng: Nuôi dưỡng và khôi phục làn da hư tổn. Duy trì lương độ ẩm cẩn thiết cho làn da căng mọng. Cân bằng các sắc tố dưới da, dưỡng da hồng hào và tươi tắn. Xóa mờ những nếp nhăn, duy trì sự căng mịn",
+  "image": "https://i.pinimg.com/736x/04/93/0d/04930d68ec394171fb3d8be7c0d14c87.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 850000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 3000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed69"
+  },
+  "product_id": "product07",
+  "name": "Kem dưỡng mắt AHC Luminous Glow Eye Cream for Face 30ml",
+  "description": "Một sản phẩm đa năng chống lại 8 dấu hiệu lão hóa chỉ với một bước dưỡng đơn giản, giúp làn da tươi sáng và rạng rỡ hơn.",
+  "richDescription": "Chứa Glutathione giàu chất chống oxy hóa, Axit Hyaluronic, Alpha-bisabolol, dẫn xuất Vitamin C và Adenosine trong một tổ hợp Gluta-i Complex ™ độc đáo - được chứng minh lâm sàng làm sáng màu da trong 14 ngày. Với công nghệ Micro Capsule đã được cấp bằng sáng chế và ứng dụng cho kem dưỡng mắt AHC Luminous Glow Eye Cream for Face, cho kết cấu kem nhẹ và thẩm thấu nhanh, mang đến hiệu quả dưỡng sáng và chống lão hóa toàn diện cho làn da. Đến từ thương hiệu chăm sóc da số 1 tại Hàn Quốc, AHC Luminous Glow Eye Cream for Face đã được bác sĩ da liễu kiểm nghiệm. Công dụng: Kem dưỡng mắt giúp giảm quầng thâm và sáng da trong 14 ngày. Tổ hợp Gluta-i Complex™ độc quyền cùng công nghệ micro-capsule hỗ trợ sáng da toàn diện và hiệu quả cho vùng da mắt và mặt. HDSD: Lấy một lượng sản phẩm vừa đủ và làm ấm sản phẩm bằng cách xoa hai ngón áp út với nhau. Vỗ nhẹ sản phẩm lên khắp vùng da mắt và mặt. Mát xa nhẹ nhàng để tăng khả năng thẩm thấu sản phẩm. Chú ý: Chỉ sử dụng ngoài da. Tránh tiếp xúc với mắt. Để xa tầm tay trẻ em. Không dùng khi có dấu hiệu dị ứng. Bảo quản nơi thoáng mát, tránh ánh nắng trực tiếp.",
+  "image": "https://i.pinimg.com/736x/de/86/6f/de866ff998609966992d6f761f7d09b8.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 528000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 3500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6a"
+  },
+  "product_id": "product08",
+  "name": "Kem Dưỡng Mắt Chống Lão Hóa Cho Toàn Mặt AHC Age Defense Real Eye Cream For Face 40ml",
+  "description": "Kem Dưỡng Chống Lão Hoá 2-Trong-1 Cho Mắt Và Mặt Giúp Chống Lại 7 Loại Nếp Nhăn Trong 7 Ngày. Công Nghệ Độc Quyền Gold Peptide Tăng Tỷ Lệ Sản Sinh Collagen 173% Và Giảm 55% Nếp Nhăn Trong Vòng 4 Tuần. Phức Hợp Power Golden Thread Mang 4 Loại Hợp Chất Sợi Vàng Giúp Tăng Cường Tác Dụng Chống Lão Hoá.",
+  "richDescription": "Kem dưỡng chống lão hoá 2-trong-1 cho mắt và mặt AHC Age Defense Real Eye Cream For Face là cải tiến mới nhất từ AHC, được đặc chế để bổ sung những hoạt chất chống lão hoá hiệu quả nhất cho mắt và mặt, với công dụng nổi bật: Được chứng minh lâm sàng chống lại 7 loại nếp nhăn trong 7 ngày. Cải thiện tức thì 123% độ ẩm & 14% độ đàn hồi ngay sau 1 lần sử dụng. Nâng cơ rõ rệt, săn chắc làn da & giảm sự xuất hiện của nếp nhăn chỉ sau 1 tuần. Công nghệ độc quyền mới giúp đóng băng tuổi thanh xuân Gold Peptide. Phức hợp Power Golden Thread. Công nghệ hạt siêu mịn Ultrafine Micro giúp dưỡng chất có kích thước bằng 1/300 lỗ chân lông, giúp thẩm thấu nhanh và sâu",
+  "image": "https://i.pinimg.com/736x/07/bc/fd/07bcfd1fa1e7e170ce5894ea29e63d73.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 840000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 4000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6b"
+  },
+  "product_id": "product09",
+  "name": "Mặt nạ Cấp Ẩm Phục hồi đa năng - AHC Premium Ex Hydra B5 Double Cushion Sleeping Mask 60g",
+  "description": "Mặt nạ ngủ cấp ẩm phục hồi đa năng với công thức kép với Gel và Kem dưỡng, giúp loại bỏ tế bào chết trên da, đồng thời phục hồi và cung cấp độ ẩm cần thiết nhằm tăng cường hàng rào bảo vệ da. Công nghệ Jelly Liposome giúp dưỡng chất thấm sâu và nhanh chóng. Sản phẩm đã được chứng minh lâm sàng an toàn và lành tính cho da.",
+  "richDescription": "Công dụng:  Mặt nạ ngủ cấp ẩm phục hồi đa năng với công thức kép với Gel và Kem dưỡng, giúp loại bỏ tế bào chết trên da, đồng thời phục hồi và cung cấp độ ẩm cần thiết nhằm tăng cường hàng rào bảo vệ da. Công nghệ Jelly Liposome giúp dưỡng chất thấm sâu và nhanh chóng. Sản phẩm đã được chứng minh lâm sàng an toàn và lành tính cho da.  HDSD: Sau khi làm sạch da, thoa đều một lượng gel lên mặt và chờ gel thấm vào da. Tiếp theo, thoa đều cùng một lượng kem dưỡng lên mặt. Mát xa nhẹ nhàng để sản phẩm thấm đều vào da, để qua đêm và rửa sạch vào sáng hôm sau. Chú ý: Chỉ sử dụng ngoài da. Tránh tiếp xúc với mắt. Để xa tầm tay trẻ em. Không dùng khi có dấu hiệu dị ứng. Bảo quản nơi thoáng mát, tránh ánh nắng trực tiếp.",
+  "image": "https://i.pinimg.com/736x/20/8f/d5/208fd597ca67afadaa63725becc4ea60.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 912000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 4500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6c"
+  },
+  "product_id": "product10",
+  "name": "Kem dưỡng ẩm làm dịu và phục hồi Biome B5 50ml",
+  "description": "Với thành phần hoa cúc xanh và hơn 6.2 tỷ biome lợi khuẩn giúp làm dịu và tăng cường hàng rào bảo vệ và hệ vi sinh da đồng thời cấp ẩm, giúp da trở nên căng mọng hơn mỗi ngày. Sản phẩm sử dụng công nghệ độc quyền Micro Liposome giúp dưỡng chất thấm nhanh vào da mà không gây bết dính.",
+  "richDescription": "Công dụng:  Kem dưỡng ẩm phục hồi Biome B5 với thành phần hoa cúc xanh và hơn 6.2 tỷ biome lợi khuẩn giúp làm dịu và tăng cường hàng rào bảo vệ và hệ vi sinh da đồng thời cấp ẩm, giúp da trở nên căng mọng hơn mỗi ngày. Sản phẩm sử dụng công nghệ độc quyền Micro Liposome giúp dưỡng chất thấm nhanh vào da mà không gây bết dính. HDSD: Sau khi sử dụng tinh chất, lấy một lượng kem vừa đủ lên tay. Thoa đều lên khắp mặt theo chuyển động tròn, mát-xa nhẹ nhàng cho đến khi hấp thụ hoàn toàn. Chú ý: Chỉ sử dụng ngoài da. Tránh tiếp xúc với mắt. Để xa tầm tay trẻ em. Không dùng khi có dấu hiệu dị ứng. Bảo quản nơi thoáng mát, tránh ánh nắng trực tiếp.",
+  "image": "https://i.pinimg.com/736x/23/22/5b/23225b292a4728f360d7b25f9f62265b.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 984000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 5000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6d"
+  },
+  "product_id": "product11",
+  "name": "Tinh chất dưỡng chuyên sâu AHC Premium Ex Hydra B5 30ml",
+  "description": "Tinh chất dưỡng chuyên sâu AHC Premium Ex Hydra B5 với công thức được kiểm nghiệm da liễu có tác dụng cung cấp độ ẩm & dưỡng ẩm chuyên sâu cho da. Hyaluronic Acid và pro vitamin B5 nồng độ tinh khiết cao, kết hợp với công nghệ Trans-Liposomal mới giúp sản phẩm thẩm thấu nhanh và sâu, làn da sẽ được cấp ẩm, làm dịu và căng khỏe rạng rỡ sau 2 tuần.",
+  "richDescription": "AHC Premium Ex Hydra là cải tiến mới nhất từ AHC, chứa : 95% Hyaluronic Acid nồng độ tinh khiết cao: cấp ẩm ngay tức thì cho làn da thô ráp. 98% pro vitamin B5: làm dịu, mềm và góp phần nuôi dưỡng da khỏe. Cùng công nghệ Trans-Liposomal mới. Cấp ẩm & làm dịu da ngay tức thì. Giảm dấu hiệu khô và da bong tróc chỉ sau 2 tuần sử dụng. Làm dịu & phục hồi da bị tổn thương. Hướng dẫn sử dụng: Sử dụng sau bước nước cân bằng, dùng 4-6 giọt đổ lên tay và thoa nhẹ đều trên khuôn mặt và cổ cho đến khi hấp thụ hoàn toàn. ",
+  "image": "https://i.pinimg.com/736x/54/04/05/540405215426b7e259b69f7e4bc653a7.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 840000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 5500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6e"
+  },
+  "product_id": "product12",
+  "name": "Tinh chất dưỡng sáng & cải thiện đốm nâu AHC Niacin Biome Mela Scissors Max Essence 30ml",
+  "description": "Niacin Biome Mela Scissors Max Essence sẽ làm tăng khả năng hấp thụ dưỡng chất của da bằng cách cải thiện kết cấu da & đưa dinh dưỡng đi sâu vào trong tầng biểu bì nhờ sở hữu cấu trúc phân tử siêu nhỏ, dễ dàng len lỏi vào sâu.",
+  "richDescription": "Công dụng: Tinh chất dưỡng Niacin Biome chứa 5% Niacinamide, bổ sung thêm 0.2% Arbutin và 1%Tranexamic axit - bộ ba hoạt chất vàng giúp dưỡng sáng mạnh mẽ nhờ cơ chế tấn công, ngăn chặn hình thành và tổng hợp Melanin, giúp giảm thiểu các vấn đề về da không đều màu và các đốm tàn nhang. Chứa các hạt phân tử siêu nhỏ Ceramide NP giúp thấm nhanh và cấp ẩm cho da. HDSD: Sau bước nước cân bằng, lấy một lượng sản phẩm vừa đủ và thoa đều khắp bề mặt da. Có thể dùng thêm sữa dưỡng sau bước tinh chất. Chú ý: Chỉ sử dụng ngoài da. Tránh tiếp xúc với mắt. Để xa tầm tay trẻ em. Không dùng khi có dấu hiệu dị ứng. Bảo quản nơi thoáng mát, tránh ánh nắng trực tiếp.",
+  "image": "https://i.pinimg.com/736x/af/a7/52/afa75229cfe0a3f3600c400c1bcf0c1e.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 1050000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 6000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed6f"
+  },
+  "product_id": "product13",
+  "name": "Sữa Rửa Mặt Làm Sáng Da AHC Niacin Biome Mela Scissors Cleansing Foam 150ml",
+  "description": "Sữa rửa mặt cấp ẩm và làm sáng da với thành phần Niacin Biome giúp giảm thiểu các vấn đề da không đều màu và các đốm tàn nhang giúp làm sạch da.",
+  "richDescription": "Công dụng:  Sữa rửa mặt cấp ẩm và làm sáng da với thành phần Niacin Biome giúp giảm thiểu các vấn đề da không đều màu và các đốm tàn nhang giúp làm sạch da. HDSD: Lấy sản phẩm ra lòng bàn tay và làm tạo thành bọt bằng nước ấm. Massage khắp mặt và cổ theo chuyển động tròn, sau đó rửa kỹ bằng nước hoặc nước hơi ấm. Chú ý: Chỉ sử dụng ngoài da. Tránh tiếp xúc với mắt. Để xa tầm tay trẻ em. Không dùng khi có dấu hiệu dị ứng. Bảo quản nơi thoáng mát, tránh ánh nắng trực tiếp.",
+  "image": "https://i.pinimg.com/736x/d5/29/b3/d529b3c5d3ccd7c2b0474e6936a42e2f.jpg",
+  "images": [],
+  "brand": "AHC",
+  "price": 693000,
+  "category": "6589aaf2bcfeb507d8e3ed4c",
+  "countInStock": 6500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed70"
+  },
+  "product_id": "product14",
+  "name": "Xịt khoáng dưỡng ẩm Klairs Fundamental Ampule Mist",
+  "description": "Xịt khoáng cấp ẩm Klairs Fundamental Ampule Mist với thành phần từ trà xanh đảo Jeju 82%, gạo, dưa chuột, đậu bắp và ngải cứu bổ sung độ ẩm và dưỡng chất cho da ẩm mượt, tươi sáng, đồng thời ngăn ngừa tình trạng oxy hóa. Công thức tạo sương ẩm tươi mát, không gây nhờn rít.",
+  "richDescription": "\"Công dụng: Thành phần gạo, dưa chuột, đậu bắp và ngải cứu giúp dưỡng ẩm chuyên sâu, phục hồi làn da thiếu nước và chống oxy hóa mạnh mẽ. Thành phần 82% nước trà xanh phục hồi, tái tạo làn da, làm giảm nếp nhăn và ngăn ngừa lão hóa. Công thức Ampule mist cung cấp dưỡng chất cho làn da căng bóng, ẩm mượt. Sản phẩm có thể thay thế toner hoặc cộng thêm vào giữa mỗi bước chăm sóc da để cung cấp thêm độ ẩm.",
+  "image": "https://i.pinimg.com/736x/20/a6/fa/20a6fa73114d1aa84e33090715f0a71a.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 330000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 2000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed71"
+  },
+  "product_id": "product15",
+  "name": "Mặt nạ ngủ dưỡng da Klairs Freshly Juiced Vitamin E Mask 90ml",
+  "description": "Mặt Nạ Ngủ Vitamin E Dưỡng Ẩm, Chống Lão Hóa Klairs Freshly Juiced Vitamin E Mask 90ml là mặt nạ ngủ với khả năng tăng cường sức mạnh chống oxy hóa của Vitamin E giúp làm sáng, cải thiện nếp nhăn và ngăn ngừa các dấu hiệu lão hóa trên da. Đồng thời bảo vệ da khỏi tổn thương UV trong ngày, giúp cải thiện nếp nhăn và tái tạo da trong thời gian ban đêm.",
+  "richDescription": "Đối tượng khuyên dùng: Dành cho mọi loại da. Dành cho làn da mệt mỏi, mất sức sống, da khô sần, thiếu ẩm. Dành cho làn da thiếu độ căng mịn, săn chắc. Hướng dẫn sử dụng: Sử dụng vào bước cuối cùng trong chu trình chăm sóc da. Lấy một lượng kem dưỡng vừa đủ thoa đều lên da vỗ nhẹ để các dưỡng chất được hấp thụ tối đa. Có thể kết hợp với Tinh Chất Vitamin C Giúp Mờ Thâm Nám, Trắng Sáng Dành Cho Da Nhạy Cảm Klairs Freshly Juiced Vitamin Drop để tăng cường khả năng dưỡng trắng lên gấp nhiều lần.",
+  "image": "https://i.pinimg.com/736x/fe/b2/b2/feb2b23d94bf69f6f16e48c90433b6b7.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 360000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 7500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed72"
+  },
+  "product_id": "product16",
+  "name": "Nước Hoa Hồng Klairs Không Mùi Cho Da Nhạy Cảm 180ml",
+  "description": "Nước hoa hồng Dear, Klairs Supple Preparation Facial Toner sản phẩm tối ưu trong việc làm sạch, cân bằng độ PH và dưỡng ẩm, có kết cấu dạng lỏng nhẹ, trong suốt và không màu, thẩm thấu nhanh chóng vào da. Kết hợp cùng mùi hương thảo mộc vô cùng dễ chịu, hoàn toàn không gây kích ứng hay cảm giác nhờn dính.",
+  "richDescription": "\"Thành phần chính: Sodium Hyaluronate, β-glucan: Giúp da được cấp ẩm tức thì và giữ ẩm cho da. Chiết xuất rau má: Giúp làm dịu da, giảm mẩn đỏ, sưng viêm và hồi phục da. Lipidure: Dưỡng ẩm sâu và hình thành hàng rào bảo vệ da. Đặc biệt sản phẩm hoàn toàn không mùi, không chứa hương liệu, phù hợp với những làn da nhạy cảm về hương liệu.",
+  "image": "https://i.pinimg.com/736x/31/3e/1c/313e1c22b08329d1c9550141ac3ec11b.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 252000,
+  "category": "6589aaf2bcfeb507d8e3ed4e",
+  "countInStock": 8000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed73"
+  },
+  "product_id": "product17",
+  "name": "Nước Hoa Hồng Klairs Supple Preparation Facial Toner Dành Cho Da Nhạy Cảm 180m",
+  "description": "Nước hoa hồng Dear, Klairs Supple Preparation Facial Toner sản phẩm tối ưu trong việc làm sạch, cân bằng độ PH và dưỡng ẩm, có kết cấu dạng lỏng nhẹ, trong suốt và không màu, thẩm thấu nhanh chóng vào da. Kết hợp cùng mùi hương thảo mộc vô cùng dễ chịu, hoàn toàn không gây kích ứng hay cảm giác nhờn dính.",
+  "richDescription": "Thành phần chính: Sodium Hyaluronate, β-glucan: Giúp da được cấp ẩm tức thì và giữ ẩm cho da. Chiết xuất rau má: Giúp làm dịu da, giảm mẩn đỏ, sưng viêm và hồi phục da. Lipidure: Dưỡng ẩm sâu và hình thành hàng rào bảo vệ da. Đặc biệt sản phẩm hoàn toàn không mùi, không chứa hương liệu, phù hợp với những làn da nhạy cảm về hương liệu. Hướng dẫn sử dụng Sau bước làm sạch da, cho một lượng toner vừa đủ ra tay hoặc bông tẩy trang và thoa đều lên da mặt theo chiều vòng tròn. Vỗ hoặc mát-xa nhẹ nhàng để toner thẩm thấu hết vào da. Tiếp tục với các bước chăm sóc tiếp theo như serum, kem dưỡng. Sử dụng mỗi ngày 2 lần vào buổi sáng và tối.",
+  "image": "https://i.pinimg.com/736x/20/a6/fa/20a6fa73114d1aa84e33090715f0a71a.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 266000,
+  "category": "6589aaf2bcfeb507d8e3ed4e",
+  "countInStock": 8500,
+  "rating": "5",
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed74"
+  },
+  "product_id": "product18",
+  "name": "Kem Dưỡng Ẩm Klairs Midnight Blue Calming Cream Làm Dịu & Phục Hồi Da Ban Đêm 60g",
+  "description": "Klairs Midnight Blue Calming Cream là sản phẩm kem dưỡng ẩm lý tưởng để sử dụng hằng ngày, giúp dưỡng ẩm dịu nhẹ cho da, đồng thời hỗ trợ phục hồi và tái tạo làn da khỏe mạnh, mịn màng hơn. Bảo vệ làn da nhạy cảm khỏi các tổn thương do tác động từ môi trường bên ngoài.",
+  "richDescription": "Thành phần chính: Guaiazulene (chiết xuất từ dầu hoa cúc): là thành phần tạo nên màu xanh tự nhiên cho sản phẩm, có đặc tính chữa lành tổn thương trên da, giúp làm dịu da và kích thích tái tạo các tế bào da. Ngoài ra Guaiazulene còn kháng khuẩn, kháng viêm, chống oxy hóa, hỗ trợ ngăn ngừa mụn và ngăn ngừa các dấu hiệu lão hóa da. Chiết xuất rau má (Centella Asiatica Extract): thành phần nổi tiếng với công dụng chữa lành các vết thương ngoài da như bỏng, trầy xước, côn trùng cắn…, làm dịu da, giảm kích ứng, giảm mẩn đỏ, kích thích tổng hợp Collagen giúp ngăn ngừa hình thành sẹo mụn. Chiết xuất từ rễ cây dâu tằm trắng (Morus Alba Root Extract): Thành phần có khả năng làm sáng da và giúp da đều màu hơn. Niacinamide (Vitamin B3): giúp củng cố hàng rào bảo vệ da khoẻ mạnh, kháng viêm, giảm mẩn đỏ da. Ceramide 3: thành phần giúp tăng sức đề kháng, giúp da luôn khỏe mạnh, săn chắc. Dầu Argan: giàu axit béo dưỡng ẩm cho da, ngăn ngừa các dấu hiệu lão hóa. Butylene Glycol, Glycerin, Sodium Hyaluronate: cung cấp và duy trì độ ẩm cần thiết cho làn da suốt ngày dài. Cetyl Ethylhexanoate, Stearic Acid: điều tiết lượng dầu, nhờn cho da.",
+  "image": "https://i.pinimg.com/736x/48/65/d9/4865d95c47313a048a6c64665c88d708.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 374000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 9000,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed75"
+  },
+  "product_id": "product19",
+  "name": "Kem Dưỡng Ẩm Klairs Rich Moist Soothing Cream Cho Da Khô, Nhạy Cảm 80ml",
+  "description": "Kem Dưỡng Ẩm Klairs Rich Moist Soothing Cream là sản phẩm kem dưỡng được thương hiệu dear,Klairs thiết kế dành riêng cho tình trạng da khô, mất nước & nhạy cảm. Kem dưỡng có kết cấu đặc giúp cấp ẩm sâu nhằm khôi phục cân bằng độ ẩm, giúp da trở nên rạng rỡ và căng bóng hơn. Bên cạnh đó, sản phẩm còn có tác dụng làm dịu da, giảm mẩn đỏ và các nốt mụn, hỗ trợ làm mờ vết thâm.",
+  "richDescription": "Thành phần chính: Beta Glucan, Shea Butter, dầu Jojoba và các chiết xuất thực vật khác: có tác dụng cấp ẩm, tăng cường khả năng miễn dịch cho da, làm dịu các nốt mụn và hỗ trợ ngăn ngừa tình trạng lão hóa da, giảm thiểu các nếp nhăn nhẹ trên bề mặt da. Tinh dầu oải hương (Lavandula Angustifolia (Lavender) Oil): tạo mùi thơm dễ chịu của thảo mộc, mang đến cảm giác thư giãn khi sử dụng. Hướng dẫn sử dụng: Có thể sử dụng cho cả ngày và đêm. Sử dụng sau các sản phẩm đặc trị (như Toner/Essence/Serum hoặc các sản phẩm tẩy da chết hóa học). Lấy một lượng vừa đủ cho ra lòng bàn tay. Thoa nhẹ, massage đều và vỗ nhẹ nhàng để da dễ dàng hấp thụ dưỡng chất.",
+  "image": "https://i.pinimg.com/736x/ee/6d/67/ee6d67faccb9145f74f786178424291f.jpg",
+  "images": [],
+  "brand": "Klairs",
+  "price": 333000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 9500,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed76"
+  },
+  "product_id": "product20",
+  "name": "Mặt Nạ Ngủ Dưỡng Ẩm Laneige Water Sleeping Mask EX 70ml",
+  "description": "Mặt Nạ Ngủ LANEIGE Water Sleeping Mask_EX 2021 là phiên bản cải tiến mới nhất của dòng mặt nạ ngủ nổi tiếng Water Sleeping Mask đến từ thương hiệu mỹ phẩm cao cấp Laneige của Hàn Quốc, với công nghệ Sleeping Micro Biome™ & Pro-Biotics Complex giúp dưỡng ẩm và tăng khả năng tự vệ của da, hỗ trợ phục hồi sự cân bằng hệ vi sinh trên da trong suốt đêm dài, giúp da tươi mới, căng tràn sức sống hơn mỗi khi thức dậy.",
+  "richDescription": "Hướng dẫn sử dụng: Sau khi làm sạch mặt, sử dụng nước cân bằng dưỡng da. Lấy một lượng vừa đủ chấm lên đầu mũi, má, trán, cằm. Thoa nhẹ nhàng theo chiều kết cấu da, từ trong ra ngoài. Để qua đêm và không cần rửa lại với nước. Sử dụng 2-3 lần/tuần. Lưu ý:  Nếu các triệu chứng sau xảy ra sau khi sử dụng sản phẩm, ngừng sử dụng sản phẩm ngay và tham khảo ý kiến bác sĩ da liễu (việc sử dụng liên tục có thể làm trầm trọng thêm các triệu chứng): Đốm đỏ, sưng tấy, ngứa, và các kích ứng da khác. Nếu các triệu chứng trên xảy ra sau khi khu vực ứng dụng được phơi ra ánh sáng mặt trời trực tiếp. Không sử dụng trên vết thương hở, vùng da bị viêm, chàm bội nhiễm và các chứng mẩn da khác.",
+  "image": "https://i.pinimg.com/736x/bf/69/e1/bf69e1c1f03979c3f712a5c0a86d4da8.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 632000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 10000,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed77"
+  },
+  "product_id": "product21",
+  "name": "Mặt Nạ Ngủ Phục Hồi Laneige Cica Sleeping Mask EX 60ml",
+  "description": "Mặt Nạ Ngủ Laneige Phục Hồi Da 60ml là dòng mặt nạ ngủ đến từ thương hiệu mỹ phẩm cao cấp Laneige của Hàn Quốc, thành phần từ Nấm Men Rừng cùng công nghệ Sleeping Micro Biome™ cân bằng hệ vi sinh trong lúc ngủ tạo nên lớp hàng rào bảo vệ da mạnh mẽ, làn da được cung cấp ẩm nhanh chóng. Sản phẩm giúp chăm sóc làn da nhạy cảm, làm giảm hiện tượng khô căng, tái tạo da cho làn da ẩm mịn, mượt mà. Mặt nạ ngủ với công thức 9 không, an toàn và không gây kích ứng cho mọi loại da.",
+  "richDescription": "Hướng dẫn sử dụng: Sau khi làm sạch da với sữa rửa mặt và sử dụng nước cân bằng da. Ở bước cuối quy trình chăm sóc da ban đêm, lấy một lượng kem vừa đủ, thoa đều lên da. Sau khi sản phẩm được hấp thụ và để qua đêm ( rửa sạch mặt vào sáng hôm sau ). Nếu bạn cảm thấy làn da vẫn căng khô, hãy thoa thêm 2-3 lần để tăng hiệu quả làm dịu da.",
+  "image": "https://i.pinimg.com/736x/16/25/60/1625602d9e287997fd3069d96bbee29e.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 540000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 10500,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed78"
+  },
+  "product_id": "product22",
+  "name": "Kem Dưỡng Chống Lão Hóa Laneige Perfect Renew 3X Cream 50ml",
+  "description": "Làm đầy nếp nhăn, tăng cường độ săn chắc và cải thiện vùng da bị xỉn màu mang lại làn da sáng khỏe, căng mịn tận sâu bên trong.",
+  "richDescription": "\"Ưu điểm nổi bật: Chống lão hóa, làm mờ nếp nhăn, thâm nám giúp da căng bóng; Làm đầy nếp nhăn ở vùng mắt, cánh mũi chỉ sau 4 tuần sử dụng; Giảm thiểu tình trạng chảy xệ, chùng nhão da; Công thức không gây kích ứng, bảo vệ an toàn cho làn da nhạy cảm; Bổ sung ẩm, duy trì nước giúp da căng mịn, ẩm mượt; Hiệu ứng căng bóng, tràn đầy sức sống chỉ sau 60 giây; Kết cấu kem mỏng nhẹ, thấm nhanh không gây nhờn rít, bết dính trên da.\"",
+  "image": "https://i.pinimg.com/736x/04/93/0d/04930d68ec394171fb3d8be7c0d14c87.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 1750000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 1000,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed79"
+  },
+  "product_id": "product23",
+  "name": "Mặt Nạ Ngủ Dưỡng Môi Laneige Lip Sleeping Mask EX 20g",
+  "description": "Mặt Nạ Ngủ Môi Laneige Lip Sleeping Mask EX là dòng sản phẩm mặt nạ môi bán chạy nhất của thương hiệu mỹ phẩm cao cấp Laneige (Hàn Quốc), giúp chăm sóc cho đôi môi bạn ngay cả trong giấc ngủ. Sản phẩm nhẹ nhàng làm sạch tế bào chết trên môi, làm cho đôi môi trở nên mềm mại và đàn hồi hơn, cùng với mùi thơm nhẹ nhàng từ các chiết xuất tự nhiên.",
+  "richDescription": "\"Thành phần chính: Chiết xuất từ các loại quả mọng \"\"Berry Mix Complex\"\": chiết xuất quả mọng giàu vitamin C và ngăn ngừa oxi hoá sẽ làm cho môi mềm và mượt mà hơn, tránh tình trạng khô môi và nhiều da chết. Công thức dưỡng ẩm Moisture Wrap™: chứa nước khoáng ion và các thành phần hoạt tính dưới lớp màng ẩm để chắc chắn rằng những thành phần hoạt tính này có thể thẩm thấu sâu vào bên trong da.",
+  "image": "https://i.pinimg.com/736x/4d/2e/c3/4d2ec3337db15dc331ca1690c778719e.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 400000,
+  "category": "6589aaf2bcfeb507d8e3ed53",
+  "countInStock": 11500,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed7a"
+  },
+  "product_id": "product24",
+  "name": "Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry 20ml",
+  "description": "Kem Dưỡng Ẩm Làm Dịu Phục Hồi Cho Da Thường, Da Khô Laneige Water Bank Blue Hyaluronic Cream For Normal To Dry Skin là kem dưỡng chứa thành phần chính là hạt Blue Hyaluronic Acid với kích thước siêu nhỏ chỉ 1/2000 kích thước ban đầu.",
+  "richDescription": "Ưu thế nổi bật: Blue Hyaluronic Acid sửa chữa, phục hồi hàng rào bảo vệ da, dưỡng ẩm từ sâu bên trong, cải thiện tình trạng khô ráp nhanh chóng mang lại làn da căng mọng nước. Squalane, Ceramide và Glycerin nuôi dưỡng da khoẻ mạnh và bộ sung độ ẩm dồi dào. Độ hiệu quả: Tác dụng dưỡng ẩm da bên trong lên đến 213,6% ở lớp thứ 10 của lớp sừng. Độ ẩm tăng đến 196,6% ngay sau khi sử dụng và 56,5% độ ẩm duy trì ngay cả sau 10 giờ. Khả năng phục hồi đến 62,2% tổn thương hàng rào bảo vệ da, sửa chữa hàng rào bảo vệ da sau 1 giờ sử dụng. Giảm 68,2% lượng da chết, ngăn tình trạng khô căng da.",
+  "image": "https://i.pinimg.com/736x/1e/9c/a1/1e9ca1d86a97a6d28cef594cc821de0a.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 1000000,
+  "category": "6589aaf2bcfeb507d8e3ed50",
+  "countInStock": 12000,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed7b"
+  },
+  "product_id": "product25",
+  "name": "Tinh Chất Làm Sáng Da, Ngừa Thâm Nám Laneige White Dew Original Ampoule Essence 40ml",
+  "description": "Sản phẩm có khả năng thẩm thấu nhanh chóng và sâu bên trong da mang lại hiệu quả dưỡng ẩm và dưỡng sáng làn da hiệu quả.",
+  "richDescription": "Ưu thế nổi bật:  Công nghệ dưỡng sáng “Mela-vita Crusher ™” ngăn chặn sự xuất hiện của các sắc tố melanin, làm đều và sáng màu da nhanh chóng. Thành phần nước đường từ thực vật “Phyto Sugar Water” tăng khả năng dưỡng ẩm, dưỡng sáng làn da. Panthenol và Beta-Glucan giúp giảm các vấn đề về kích ứng da, làm dịu và tăng cường hàng rào bảo vệ da. Hyaluronic Acid và Glycerin cung cấp nước, giữ nước và tăng độ ẩm bên trong da. Kết cấu cô đặc cung cấp độ ẩm sâu cho da và thẩm thấu nhanh vào da mang lại hiệu quả dưỡng da tối ưu.",
+  "image": "https://i.pinimg.com/736x/af/a7/52/afa75229cfe0a3f3600c400c1bcf0c1e.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 1300000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 12500,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed7c"
+  },
+  "product_id": "product26",
+  "name": "Tinh Chất Dưỡng Ẩm Laneige Water Bank Blue HA Serum 50ml",
+  "description": "Với Blue Hyaluronic Acid có kích thước siêu nhỏ với khả năng dưỡng ẩm, cải thiện giúp da trở nên mịn màng và rạng rỡ. Serum dưỡng ẩm tức thì với công thức dịu nhẹ mềm tan ngay lập tức bổ sung độ ẩm và tăng cường độ săn chắc cho da, cung cấp các chất dinh dưỡng để nuôi dưỡng cho da và tăng vẻ rạng rỡ làn da khỏe đẹp, phù hợp với cả da nhạy cảm.",
+  "richDescription": "Công thức cung cấp nước cho làn da của bạn tức thời và tăng độ ẩm lên 575% ngay sau khi sử dụng để giữ cho làn da luôn tràn đầy sức sống và căng mọng. Serum có chứa Blue Hyaluronic Acid có tác dụng sửa chữa mạnh hơn 300% và các peptide có liên quan đến độ đàn hồi của da giúp phục hồi hàng rào và độ săn chắc của da khỏi những tổn thương do tiếp xúc hàng ngày với các yếu tố gây kích ứng bên ngoài. Công thức không gây dị ứng, dễ chịu ngay cả đối với da nhạy cảm",
+  "image": "https://i.pinimg.com/736x/8d/c0/71/8dc071ac5bb98abb6024a1cf756e43ab.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 1020000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 13000,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed7d"
+  },
+  "product_id": "product27",
+  "name": "Sữa Rửa Mặt Dưỡng Ẩm Laneige Water Bank Blue HA Cleansing Foam 150g",
+  "description": "Sữa Rửa Mặt Dưỡng Ẩm Laneige Water Bank Blue HA Cleansing Foam 150g dạng bọt xốp có các hạt Cellulose siêu mềm tan chảy giúp loại bỏ hoàn toàn cặn trang điểm và tạp chất từ sâu bên trong lỗ chân lông. Enzym Papain (một loại men phân giải protein tồn tại trong đu đủ) làm sạch tế bào da chết khi rửa mặt làm sáng da.",
+  "richDescription": "Sự khác biệt của Blue Hyaluronic Acid― THÀNH PHẦN CHÍNH Blue Hyaluronic Acid. Trải qua 10 bước tính chế (hoặc vi lọc). Blue HA có trọng lượng phân tử với kích thước nhỏ hơn 4000x lần so với HA bình thường, cho phép hiệu quả hấp thụ vào da lên đến 80% và có khả năng phục hồi da mạnh mẽ. 0,5kDa - Nhỏ nhất từ trước đến nay. Axit hyaluronic siêu nhỏ và cực mạnh được chia nhỏ đến 1/2000 kích thước ban đầu để thẩm thấu sâu và nhanh hơn. Sự khác biệt này có thể so sánh với cốc nước 100ml và một giọt nước đơn lẻ! Blue Hyaluronic Acid siêu nhỏ thẩm thấu vào da nhanh hơn gấp 264 lần so với HA thông thường!",
+  "image": "https://i.pinimg.com/736x/83/da/42/83da42f107b00c8127422b5d3b1bee06.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 510000,
+  "category": "6589aaf2bcfeb507d8e3ed54",
+  "countInStock": 13500,
+  "rating": 5,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6589b537bcfeb507d8e3ed7e"
+  },
+  "product_id": "product28",
+  "name": "Sữa Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Emulsion Dry 120ml",
+  "description": "Với Blue Hyaluronic Acid có kích thước siêu nhỏ với khả năng dưỡng ẩm, cải thiện giúp da trở nên mịn màng và rạng rỡ. Công thức được phát triển dành cho da khô và da thường giúp tinh chất dễ dàng thẩm thấu, cung cấp các chất dinh dưỡng để nuôi dưỡng cho da và tăng vẻ rạng rỡ làn da khỏe đẹp.",
+  "richDescription": "Đối tượng khuyên dùng: Dành cho những làn da khô, da thường. Dành cho làn da mệt mỏi, mất sức sống. Dành cho da thường xuyên bị khô, bông tóc, căng cứng bên trong. Hướng dẫn sử dụng: Sau bước dùng toner, lấy một lượng sản phẩm vừa đủ và thoa nhẹ nhàng và tán đều theo cấu trúc da, massage vùng da cho dưỡng chất thẩm thấu tối ưu.",
+  "image": "https://i.pinimg.com/736x/c3/d0/0f/c3d00fcd84ab8bee36f0cd89a9b663d2.jpg",
+  "images": [],
+  "brand": "Laneige",
+  "price": 820000,
+  "category": "6589aaf2bcfeb507d8e3ed52",
+  "countInStock": 14000,
+  "rating": 4,
+  "isFeatured": true,
+  "dateCreated": {
+    "$date": "2023-07-11T17:00:00.000Z"
+  }
+}]
