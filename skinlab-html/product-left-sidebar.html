@@ -198,7 +198,7 @@
                     <div class="row justify-content-between flex-xl-row-reverse">
                         <div class="col-xl-9">
                             <div class="row g-3 g-sm-6">
-                             
+
                                 <div class="products-container">
                                     <!-- Các sản phẩm sẽ được load vào đây -->
                                 </div>
@@ -279,30 +279,30 @@
                     })
                     .catch(error => console.error('Error loading product data:', error));
 
-                    fetch('data/products.json') // Thay đổi đường dẫn tới file JSON của sản phẩm bán chạy
-    .then(response => response.json())
-    .then(data => {
-        updateBestsellers(data);
-    })
-    .catch(error => console.error('Error loading bestsellers data:', error));
+                fetch('data/products.json') // Thay đổi đường dẫn tới file JSON của sản phẩm bán chạy
+                    .then(response => response.json())
+                    .then(data => {
+                        updateBestsellers(data);
+                    })
+                    .catch(error => console.error('Error loading bestsellers data:', error));
 
 
-function updateBestsellers(bestsellers) {
-    const productsContainer = document.querySelector('.bestsellers-container');
+                function updateBestsellers(bestsellers) {
+                    const productsContainer = document.querySelector('.bestsellers-container');
 
-    // Chỉ lấy 3 sản phẩm đầu tiên từ mảng
-    const displayedBestsellers = bestsellers.slice(0, 3);
+                    // Chỉ lấy 3 sản phẩm đầu tiên từ mảng
+                    const displayedBestsellers = bestsellers.slice(0, 3);
 
-    // Khởi tạo biến HTML cho sản phẩm bán chạy
-    let bestsellersHTML = '';
+                    // Khởi tạo biến HTML cho sản phẩm bán chạy
+                    let bestsellersHTML = '';
 
-    displayedBestsellers.forEach((products, index) => {
-        // Thêm sản phẩm bán chạy
-        if (index % 3 === 0) {
-            bestsellersHTML += `<div class="row">`; // Mở một hàng mới mỗi khi index chia hết cho 3
-        }
+                    displayedBestsellers.forEach((products, index) => {
+                        // Thêm sản phẩm bán chạy
+                        if (index % 3 === 0) {
+                            bestsellersHTML += `<div class="row">`; // Mở một hàng mới mỗi khi index chia hết cho 3
+                        }
 
-        bestsellersHTML += `
+                        bestsellersHTML += `
             <div class="col-4 mb-4 mb-sm-10">
                 <div class="product-item product-st2-item">
                     <div class="product-thumb">
@@ -344,18 +344,18 @@ function updateBestsellers(bestsellers) {
                 </div>
             </div>
         `;
-    });
+                    });
 
-    // Thêm sản phẩm bán chạy vào container
-    productsContainer.innerHTML = bestsellersHTML;
-}
+                    // Thêm sản phẩm bán chạy vào container
+                    productsContainer.innerHTML = bestsellersHTML;
+                }
 
                 function updateProducts(products) {
                     const productsContainer = document.querySelector('.products-container');
 
                     // Khởi tạo một biến để chứa HTML
                     let productsHTML = '';
-                    
+
 
                     products.forEach((product, index) => {
                         // Mở một hàng mới mỗi khi index chia hết cho 3
@@ -437,7 +437,7 @@ function updateBestsellers(bestsellers) {
                     // Thêm sản phẩm vào container
                     productsContainer.innerHTML = productsHTML;
                 }
-                
+
 
             </script>
 
@@ -688,7 +688,7 @@ function updateBestsellers(bestsellers) {
                 <ul class="aside-cart-product-list">
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
-                        <a href="product-details.html">
+                        <a href="product-details.html?product_id=product02">
                             <img src="assets/images/shop/cart1.png" width="68" height="84" alt="Image">
                             <span class="product-title">Sữa dưỡng Innisfree</span>
                         </a>
@@ -696,7 +696,7 @@ function updateBestsellers(bestsellers) {
                     </li>
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
-                        <a href="product-details.html">
+                        <a href="product-details.html?product_id=product01">
                             <img src="assets/images/shop/cart2.png" width="68" height="84" alt="Image">
                             <span class="product-title">Kem dưỡng Innisfree</span>
                         </a>

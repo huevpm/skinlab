@@ -209,8 +209,7 @@
                     <div class="row product-details">
                         <div class="col-lg-6">
                             <div class="product-details-thumb">
-                                <img src="" width="470" height="593"
-                                    alt="Image">
+                                <img src="" width="470" height="593" alt="Image">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -420,7 +419,7 @@
                     var urlParams = new URLSearchParams(window.location.search);
                     var productId = urlParams.get('product_id');
                     // "product01";
-            
+
                     if (productId) {
                         // Gọi API hoặc đọc file JSON và hiển thị chi tiết sản phẩm dựa trên productId
                         fetch('data/products.json')
@@ -434,7 +433,7 @@
                             })
                             .catch(error => console.error('Error fetching data:', error));
                     }
-            
+
                     function updateProductDetails(product) {
                         // Cập nhật nội dung trang product-details.html dựa trên thông tin sản phẩm
                         document.querySelector('.product-details-thumb img').src = product.image;
@@ -445,7 +444,7 @@
                         document.querySelector('.price').textContent = product.price + ' VNĐ';
                         document.querySelector('.tab-pane').innerHTML = product.richDescription;
                     }
-            
+
                     // Hàm tạo chuỗi HTML cho đánh giá sao
                     function generateStarRating(rating) {
                         var starHTML = '';
@@ -488,14 +487,14 @@
                         <div class="col-12">
                             <div class="swiper related-product-slide-container">
                                 <div class="swiper-wrapper">
-                                    
+
                                     <div class="swiper-slide mb-10">
                                         <!--== Start Product Item ==-->
                                         <div class="product-item product-st2-item">
                                             <div class="product-thumb">
                                                 <a class="d-block" href="product-details.html?product_id=product07">
-                                                    <img src="https://i.pinimg.com/736x/de/86/6f/de866ff998609966992d6f761f7d09b8.jpg" width="370" height="450"
-                                                        alt="Image-HasTech" >
+                                                    <img src="https://i.pinimg.com/736x/de/86/6f/de866ff998609966992d6f761f7d09b8.jpg"
+                                                        width="370" height="450" alt="Image-HasTech">
                                                 </a>
                                                 <span class="flag-new">new</span>
                                             </div>
@@ -510,7 +509,9 @@
                                                     </div>
                                                     <div class="reviews">150 đánh giá</div>
                                                 </div>
-                                                <h4 class="title"><a href="product-details.html?product_id=product07">Kem dưỡng mắt AHC Luminous Glow Eye Cream for Face 30ml</a></h4>
+                                                <h4 class="title"><a
+                                                        href="product-details.html?product_id=product07">Kem dưỡng mắt
+                                                        AHC Luminous Glow Eye Cream for Face 30ml</a></h4>
                                                 <div class="prices">
                                                     <span class="price">680.000 VNĐ</span>
                                                     <span class="price-old">528.000 VNĐ</span>
@@ -539,8 +540,8 @@
                                         <div class="product-item product-st2-item">
                                             <div class="product-thumb">
                                                 <a class="d-block" href="product-details.html?product_id=product05">
-                                                    <img src="https://i.pinimg.com/736x/65/af/7f/65af7fc87e00f1090c1af3e8a46350e9.jpg" width="370" height="450"
-                                                        alt="Image-HasTech">
+                                                    <img src="https://i.pinimg.com/736x/65/af/7f/65af7fc87e00f1090c1af3e8a46350e9.jpg"
+                                                        width="370" height="450" alt="Image-HasTech">
                                                 </a>
                                                 <span class="flag-new">mới</span>
                                             </div>
@@ -555,7 +556,9 @@
                                                     </div>
                                                     <div class="reviews">150 đánh giá</div>
                                                 </div>
-                                                <h4 class="title"><a href="product-details.html?product_id=product05">Set 5 Mặt Nạ Peptide Săn Chắc Da AHC</a>
+                                                <h4 class="title"><a
+                                                        href="product-details.html?product_id=product05">Set 5 Mặt Nạ
+                                                        Peptide Săn Chắc Da AHC</a>
                                                 </h4>
                                                 <div class="prices">
                                                     <span class="price">534.000 VNĐ</span>
@@ -585,8 +588,8 @@
                                         <div class="product-item product-st2-item">
                                             <div class="product-thumb">
                                                 <a class="d-block" href="product-details.html?product_id=product08">
-                                                    <img src="https://i.pinimg.com/736x/07/bc/fd/07bcfd1fa1e7e170ce5894ea29e63d73.jpg" width="370" height="450"
-                                                        alt="Image-HasTech">
+                                                    <img src="https://i.pinimg.com/736x/07/bc/fd/07bcfd1fa1e7e170ce5894ea29e63d73.jpg"
+                                                        width="370" height="450" alt="Image-HasTech">
                                                 </a>
                                                 <span class="flag-new">mới</span>
                                             </div>
@@ -601,7 +604,9 @@
                                                     </div>
                                                     <div class="reviews">150 đánh giá</div>
                                                 </div>
-                                                <h4 class="title"><a href="product-details.html?product_id=product08">Kem Dưỡng Mắt Chống Lão Hóa Cho Toàn Mặt AHC 40ml</a>
+                                                <h4 class="title"><a
+                                                        href="product-details.html?product_id=product08">Kem Dưỡng Mắt
+                                                        Chống Lão Hóa Cho Toàn Mặt AHC 40ml</a>
                                                 </h4>
                                                 <div class="prices">
                                                     <span class="price">840.000 VNĐ</span>
@@ -846,7 +851,7 @@
                 <ul class="aside-cart-product-list">
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
-                        <a href="product-details.html">
+                        <a href="product-details.html?product_id=product02">
                             <img src="assets/images/shop/cart1.png" width="68" height="84" alt="Image">
                             <span class="product-title">Sữa dưỡng Innisfree</span>
                         </a>
@@ -854,7 +859,7 @@
                     </li>
                     <li class="aside-product-list-item">
                         <a href="#/" class="remove">×</a>
-                        <a href="product-details.html">
+                        <a href="product-details.html?product_id=product01">
                             <img src="assets/images/shop/cart2.png" width="68" height="84" alt="Image">
                             <span class="product-title">Kem dưỡng Innisfree</span>
                         </a>
